@@ -1,0 +1,41 @@
+<header id="top_header">
+        <nav id="main_nav">
+            <div class="container">
+                <div class="nav_content">
+                    <div class="logo">
+                        <img src="https://ntcumc.org/logo-dark.png" alt="logo_img">
+                    </div><!-- ./logo -->
+                    <div class="midle_nav_items flex-center">
+                        <ul>
+                            <li><a href="#"><span class="icon-user"></span></a></li>
+                            <li><a href="#"><span class="icon-search"></span></a></li>
+                            <li><a href="#"><span class="icon-heart"></span></a></li>
+                            <li><a href="#"><span class="icon-shopping-cart"></span></a></li>
+                        </ul>
+
+                    </div><!-- ./midle_nav_items -->
+                    <div class="links_nav_btn">
+                        <div id="nav_btn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                        </div><!-- ./nav_btn -->
+                    </div><!-- ./right_nav_items -->
+                </div><!-- ./nav_content -->
+            </div><!-- ./container -->
+        </nav>
+        <nav id="links_nav" class="links_nav_is_off">
+            <div class="links_nav_content">
+                <ul class="flex-center">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Games</a></li>
+                    <li><a href="#">Top rated</a></li>
+                    <li><a href="#">trend</a></li>
+
+
+
+                </ul>
+            </div><!-- ./links_nav_content -->
+        </nav>
+    </header>
