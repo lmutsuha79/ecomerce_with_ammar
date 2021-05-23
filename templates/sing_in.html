@@ -19,7 +19,8 @@
 
 
     <!-- main style css start -->
-    <link rel="stylesheet" href="style/sing.css">
+    <!-- <link rel="stylesheet" href="style/sing.css">-->
+    <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='style/sing.css') }}">
     <!-- main style css end -->
 
 
@@ -38,42 +39,31 @@
     <section class="sing_form">
         <div class="sing-box">
             <h2>SIGN IN!</h2>
-            <form action="">
+            <form method="POST" action="{{ url_for('login_page') }}" >
                 <div class="user-box">
-                    <input type="text" name="" required="">
+                    <input type="text" name="username" required="">
                     <label>Username</label>
                 </div>
 
                 <div class="user-box">
-                    <input type="password">
+                    <input type="password" name="password">
                     <label for="">Password</label>
                 </div>
-
-
-                <a id="confirm" href="">
+                <!--onclick="this.parentNode.submit();"-->
+                <button id="confirm" type="submit" >
                     <span></span>
                     <span></span>
                     <span></span>
                     <span></span>
                     Sing Up
-                </a>
-                <a class="other_links" id="recovery_password" href="#">Recovery password</a>
-                <a class="other_links" href="sing_up.html">you don't have account Sing Up</a>
+                </button>
+                <a class="other_links" id="recovery_password" href="{{ url_for('recovery_page') }}">Recovery password</a>
+                <a class="other_links" href="{{ url_for('registration_page') }}">you don't have account Sing Up</a>
             </form>
         </div>
     </section>
 
     <!-- ./sing form end -->
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -84,10 +84,6 @@ body {
 }
 
 .sing-box form #confirm {
-  background: var(--nav_height);
-    outline: none;
-    border: 0px;
-    cursor: pointer;
   position: relative;
   display: inline-block;
   padding: 10px 20px;
@@ -249,30 +245,3 @@ body {
   color: var(--baby-color);
 }
 /*# sourceMappingURL=sing.css.map */
-
-
-.valid_message{
-  display: inline-block;
-  color: var(--baby-color);
-  position: absolute;
-  right: 0;
-  font-size: 0.8rem;
-  text-decoration: underline;
- 
-  transition: var(--slow-transition) ease;
-}
-.valid_mail_message{
-
-   
-}
-
-.valid_message_true{
-  top: 23px;
-  opacity: 0;
-  visibility: hidden;
-}
-.valid_message_false{
-  top: -8px;
-  opacity: 1;
-  visibility: visible;
-}

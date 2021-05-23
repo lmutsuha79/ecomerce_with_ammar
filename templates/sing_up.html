@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yasser & 3amar Project</title>
+    <!-- font_family start -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- font_family end -->
+
+
+
+
+    <!-- main style css start -->
+    <!--    <link rel="stylesheet" href="style/sing.css">-->
+    <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='style/sing.css') }}">
+    <!-- main style css end -->
+
+
+
+</head>
+
+<body>
+
+    <!-- top header start  -->
+
+    <!-- top header end -->
+
+
+    <!-- login form start -->
+
+    <section class="sing_form">
+        <div class="sing-box">
+            <h2>SIGN UP!</h2>
+            <form action="" method="POST">
+                <div class="user-box">
+                    <input type="text" name="username" required="">
+                    <label>Username</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="email">
+                    <label for="">Email</label>
+                </div>
+                <div class="user-box">
+                    <input type="password" name="password">
+                    <label for="">Password</label>
+                </div>
+                <div class="user-box">
+                    <input type="password" name="confirm">
+                    <label for="">Confirm Password</label>
+                </div>
+
+                <button id="confirm" type="submit">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Sing Up
+                </button>
+                <a class="other_links" href="{{ url_for('login_page') }}">you already have account Sing in</a>
+            </form>
+        </div>
+    </section>
+
+    <!-- ./login form end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- java script files src start -->
+    <!-- java script files src end -->
+
+</body>
+
+</html>
