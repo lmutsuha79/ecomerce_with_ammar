@@ -39,29 +39,32 @@
             <h2>SIGN UP!</h2>
             <form action="">
                 <div class="user-box">
-                    <input type="text" name="" required="">
+                    <input type="text" name="" required="true">
                     <label>Username</label>
                 </div>
                 <div class="user-box">
-                    <input type="text">
+                    <input id="email_inp" type="text" required="true">
                     <label for="">Email</label>
+                    <div class="valid_message valid_mail_message valid_message_true">invalid address email !</div>
                 </div>
                 <div class="user-box">
-                    <input type="password">
+                    <input id="password_inp" type="password" required="true">
                     <label for="">Password</label>
                 </div>
                 <div class="user-box">
-                    <input type="password">
+                    <input id="confirm_password_inp" type="password" required="true">
                     <label for="">Confirme Password</label>
+                    <div class="valid_message valid_confirm_pass valid_message_true">password not much !</div>
+
                 </div>
 
-                <a id="confirm" href="">
+                <button id="confirm">
                     <span></span>
                     <span></span>
                     <span></span>
                     <span></span>
                     Sing Up
-                </a>
+                </button>
                 <a class="other_links" href="sing_in.html">you already have account Sing in</a>
             </form>
         </div>
@@ -85,5 +88,81 @@
     <!-- java script files src end -->
 
 </body>
+
+
+<script>
+
+    let confirm_but = document.getElementById('confirm');
+
+    // mail validation:
+    function ValidateEmail(mail) {
+        if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(mail)) {
+            return (true);
+        }
+        return (false);
+    }
+    function valid_message_style(input, true_or_false) {
+        if (true_or_false == 1) {
+            input.classList.remove("valid_message_false");
+            input.classList.add("valid_message_true");
+            confirm_but.disabled = false;
+
+        }
+        else {
+            input.classList.remove("valid_message_true");
+            input.classList.add("valid_message_false");
+            confirm_but.disabled = true;
+
+        }
+    }
+    let email_inp = document.getElementById('email_inp');
+    let valid_mail_message = document.querySelector(".valid_mail_message");
+    email_inp.onkeyup = (e) => {
+        let email_value = email_inp.value;
+
+        if (email_value != '') {
+
+            if (ValidateEmail(email_value)) {
+                // true valide mail
+
+
+                valid_message_style(valid_mail_message, 1);
+
+            }
+            else {
+                // for note valide mail
+
+                valid_message_style(valid_mail_message, 0);
+
+            }
+
+
+
+        }
+
+    };
+
+    // confirme password  validation:
+    let password_inp = document.getElementById('password_inp');
+    let confirm_password_inp = document.getElementById('confirm_password_inp');
+    let valid_confirm_pass = document.querySelector('.valid_confirm_pass');
+
+    confirm_password_inp.onkeyup = (e) => {
+        let password_inp_value = password_inp.value;
+        let confirm_password_inp_value = confirm_password_inp.value;
+
+        if (confirm_password_inp_value == password_inp_value) {
+            valid_message_style(valid_confirm_pass, 1);
+
+        } else {
+            valid_message_style(valid_confirm_pass, 0);
+
+
+
+        }
+    }
+
+
+</script>
 
 </html>
