@@ -39,16 +39,20 @@
     <section class="sing_form">
         <div class="sing-box">
             <h2>SIGN IN!</h2>
-            <form method="POST" action="{{ url_for('login_page') }}" >
+            <form method="POST">
+
                 <div class="user-box">
-                    <input type="text" name="username" required="">
+                    <input type="text" name="username" required>
                     <label>Username</label>
                 </div>
 
                 <div class="user-box">
-                    <input type="password" name="password">
+                    <input type="password" name="password" required>
                     <label for="">Password</label>
                 </div>
+                {% if errors %}
+                    <div>{{ errors }}</div>
+                {% endif %}
                 <!--onclick="this.parentNode.submit();"-->
                 <button id="confirm" type="submit" >
                     <span></span>
@@ -68,6 +72,12 @@
 
 
     <!-- java script files src start -->
+    <script>
+        {# Delet All Data         #}
+        if ( window.history.replaceState ) {
+          window.history.replaceState( null, null, window.location.href );
+        }
+    </script>
     <!-- java script files src end -->
 
 </body>

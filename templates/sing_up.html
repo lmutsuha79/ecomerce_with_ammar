@@ -20,7 +20,6 @@
     <!-- main style css start -->
     <!--    <link rel="stylesheet" href="style/sing.css">-->
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style/sing.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style/sing.css') }}">
     <!-- main style css end -->
 
 
@@ -39,20 +38,20 @@
     <section class="sing_form">
         <div class="sing-box">
             <h2>SIGN UP!</h2>
-            <form action="" method="POST" onsubmit="return valid_form()">
+            <form method="POST" onsubmit="return valid_form()">
                 <div class="user-box">
                     <input type="text" name="username" required="true">
                     <label>Username</label>
                     {% if errors.get('username')%}
-                        <div class="valid_message valid_user_message valid_message_false">{{ errors.get('username') }}</div>
+                        <div class="valid_message valid_user valid_message_false">{{ errors.get('username') }}</div>
                     {% else%}
-                        <div class="valid_message valid_user_message valid_message_true"></div>
+                        <div class="valid_message valid_user valid_message_true"></div>
                     {% endif %}
                 </div>
                 <div class="user-box">
                     <input required='true' type="text" name="email">
                     <label for="">Email</label>
-                    <div class="valid_message valid_mail_message valid_message_true">invalid address email !</div>
+                    <div class="valid_message valid_email valid_message_true">invalid address email !</div>
 
                 </div>
                 <div class="user-box">
@@ -63,7 +62,7 @@
                 <div class="user-box">
                     <input required='true' type="password" name="confirm">
                     <label for="">Confirm Password</label>
-                    <div class="valid_message valid_confirm_pass valid_message_true">password not much !</div>
+                    <div class="valid_message valid_confirm valid_message_true">password not much !</div>
 
                 </div>
 

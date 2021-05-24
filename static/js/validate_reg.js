@@ -2,11 +2,11 @@
 let confirm_but = document.getElementById('confirm');
 
 let username = document.querySelector('input[name="username"]');
-let valid_username = document.querySelector('.valid_user_message');
+let valid_username = document.querySelector('.valid_user');
 let valid_username_value = true;
-username.onkeyup = (e) => {
+username.onkeyup = () => {
     let user_value = username.value;
-    if (user_value != '') {
+    if (user_value !== '') {
 
         if (username.value.toString().length < 2){
         valid_message_style(valid_username, 0, 'username must be more than 2 characters');
@@ -26,15 +26,9 @@ username.onkeyup = (e) => {
 };
 
 
-// mail validation:
-function ValidateEmail(mail) {
-    if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(mail)) {
-        return (true);
-    }
-    return (false);
-}
+
 function valid_message_style(input, true_or_false, text) {
-    if (true_or_false == 1) {
+    if (true_or_false === 1) {
         input.classList.remove("valid_message_false");
         input.classList.add("valid_message_true");
         confirm_but.disabled = false;
@@ -50,14 +44,14 @@ function valid_message_style(input, true_or_false, text) {
 }
 
 let email_inp = document.querySelector('input[name="email"]');
-let valid_mail_message = document.querySelector(".valid_mail_message");
-email_inp.onkeyup = (e) => {
+let valid_mail_message = document.querySelector(".valid_email");
+email_inp.onkeyup = () => {
     let email_value = email_inp.value;
-    if (email_value != '') {
+    if (email_value !== '') {
 
 
         if (ValidateEmail(email_value)) {
-            // true valide mail
+            // true valid mail
 
 
             valid_message_style(valid_mail_message, 1);
@@ -82,10 +76,10 @@ email_inp.onkeyup = (e) => {
 // validate of password
 let password_inp = document.querySelector('input[name="password"]');
 let valid_pass = document.querySelector('.valid_pass');
-password_inp.onkeyup = (e) => {
+password_inp.onkeyup = () => {
     let password_inp_value = password_inp.value;
 
-     if (password_inp_value != '') {
+     if (password_inp_value !== '') {
         if (password_inp_value.toString().length < 6 ) {
         valid_message_style(valid_pass, 0);
 
@@ -103,13 +97,13 @@ password_inp.onkeyup = (e) => {
 
 // confirm password  validation:
 let confirm_password_inp = document.querySelector('input[name="confirm"]');
-let valid_confirm_pass = document.querySelector('.valid_confirm_pass');
+let valid_confirm_pass = document.querySelector('.valid_confirm');
 
-confirm_password_inp.onkeyup = (e) => {
+confirm_password_inp.onkeyup = () => {
     let password_inp_value = password_inp.value;
     let confirm_password_inp_value = confirm_password_inp.value;
 
-    if (confirm_password_inp_value == password_inp_value) {
+    if (confirm_password_inp_value === password_inp_value) {
         valid_message_style(valid_confirm_pass, 1);
 
     } else {
@@ -117,6 +111,7 @@ confirm_password_inp.onkeyup = (e) => {
     }
 }
 
+// final check for form
 function valid_form() {
     if (username.value.toString().length < 2){
         valid_message_style(valid_username, 0, 'username must more 2');
@@ -134,21 +129,22 @@ function valid_form() {
         valid_message_style(valid_pass, 0);
         return false
     }
-    else if (confirm_password_inp.value != password_inp.value){
+    else if (confirm_password_inp.value !== password_inp.value){
         valid_message_style(valid_confirm_pass, 0);
         return false
     }
     else {
-        console.log('tmam')
+        console.log('tam')
 
     }
 
 }
 
+// check Username
 function check_filed(value) {
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
+    if (this.readyState === 4 && this.status === 200) {
 
         let result = JSON.parse(this.responseText).result
 
@@ -173,3 +169,8 @@ function check_filed(value) {
 }
 
 
+// mail validation:
+function ValidateEmail(mail) {
+    return /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(mail);
+
+}

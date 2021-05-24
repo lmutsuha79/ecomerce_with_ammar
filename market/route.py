@@ -1,5 +1,5 @@
 from . import app, login_manager
-from flask import render_template, request, redirect, url_for, jsonify
+from flask import render_template, request, redirect, url_for, jsonify, session
 from .model import db, User
 from flask_login import login_user, current_user, logout_user
 
@@ -14,6 +14,7 @@ def profile_page():
     return 'Profile'
 
 
+@app.route('/')
 @app.route('/home')
 def home_page():
     return 'HOme'
@@ -21,29 +22,28 @@ def home_page():
 
 @app.route('/login', methods=['POST', 'GET'])
 def login_page():
-
+    errors = None
+    print(request.method)
     if request.method == 'POST':
         username = request.form.get("username", )
         password = request.form.get("password", )
-        print(username, password)
-        #     if form.validate_on_submit():
+
         user = User.query.filter_by(username=username).first()
         if user:
             if user.check_password(password):
                 login_user(user)
                 return redirect(url_for('home_page'))
-            print('wronge user')
-        print('not found')
 
-    return render_template('sing_in.html')
+        errors = 'wrong input'
+
+    return render_template('sing_in.html', errors=errors)
 
 
-@app.route('/', methods=['POST', 'GET'])
 @app.route('/registration', methods=['POST', 'GET'])
 def registration_page():
     errors = dict()
-    if current_user.is_authenticated:
-        return redirect(url_for('home_page'))
+    # if current_user.is_authenticated:
+    #     return redirect(url_for('home_page'))
 
     if request.method == 'POST':
         username = request.form.get("username", )
