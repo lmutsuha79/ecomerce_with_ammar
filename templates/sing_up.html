@@ -20,6 +20,7 @@
     <!-- main style css start -->
     <!--    <link rel="stylesheet" href="style/sing.css">-->
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style/sing.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style/sing.css') }}">
     <!-- main style css end -->
 
 
@@ -38,10 +39,15 @@
     <section class="sing_form">
         <div class="sing-box">
             <h2>SIGN UP!</h2>
-            <form action="" method="POST">
+            <form action="" method="POST" onsubmit="return valid_form()">
                 <div class="user-box">
                     <input type="text" name="username" required="true">
                     <label>Username</label>
+                    {% if errors.get('username')%}
+                        <div class="valid_message valid_user_message valid_message_false">{{ errors.get('username') }}</div>
+                    {% else%}
+                        <div class="valid_message valid_user_message valid_message_true"></div>
+                    {% endif %}
                 </div>
                 <div class="user-box">
                     <input required='true' type="text" name="email">
@@ -52,6 +58,7 @@
                 <div class="user-box">
                     <input required='true' type="password" name="password">
                     <label for="">Password</label>
+                    <div class="valid_message valid_pass valid_message_true">password must be more 5 characters</div>
                 </div>
                 <div class="user-box">
                     <input required='true' type="password" name="confirm">
@@ -87,80 +94,7 @@
 
 
     <!-- java script files src start -->
-    <script>
-
-        let confirm_but = document.getElementById('confirm');
-
-        // mail validation:
-        function ValidateEmail(mail) {
-            if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(mail)) {
-                return (true);
-            }
-            return (false);
-        }
-        function valid_message_style(input, true_or_false) {
-            if (true_or_false == 1) {
-                input.classList.remove("valid_message_false");
-                input.classList.add("valid_message_true");
-                confirm_but.disabled = false;
-
-            }
-            else {
-                input.classList.remove("valid_message_true");
-                input.classList.add("valid_message_false");
-                confirm_but.disabled = true;
-
-            }
-        }
-        let email_inp = document.getElementById('email_inp');
-        let valid_mail_message = document.querySelector(".valid_mail_message");
-        email_inp.onkeyup = (e) => {
-            let email_value = email_inp.value;
-
-            if (email_value != '') {
-
-                if (ValidateEmail(email_value)) {
-                    // true valide mail
-
-
-                    valid_message_style(valid_mail_message, 1);
-
-                }
-                else {
-                    // for note valide mail
-
-                    valid_message_style(valid_mail_message, 0);
-
-                }
-
-
-
-            }
-
-        };
-
-        // confirme password  validation:
-        let password_inp = document.getElementById('password_inp');
-        let confirm_password_inp = document.getElementById('confirm_password_inp');
-        let valid_confirm_pass = document.querySelector('.valid_confirm_pass');
-
-        confirm_password_inp.onkeyup = (e) => {
-            let password_inp_value = password_inp.value;
-            let confirm_password_inp_value = confirm_password_inp.value;
-
-            if (confirm_password_inp_value == password_inp_value) {
-                valid_message_style(valid_confirm_pass, 1);
-
-            } else {
-                valid_message_style(valid_confirm_pass, 0);
-
-
-
-            }
-        }
-
-
-    </script>
+    <script src="{{url_for('static', filename='js/validate_reg.js')}}"></script>
     <!-- java script files src end -->
 
 </body>

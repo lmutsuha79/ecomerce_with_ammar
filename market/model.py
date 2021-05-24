@@ -1,4 +1,4 @@
-from market import db, bcrypt, login_manager
+from . import db, bcrypt
 from flask_bcrypt import check_password_hash
 from flask_login import UserMixin
 from datetime import datetime
@@ -7,7 +7,7 @@ from datetime import datetime
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(), nullable=False, unique=True)
-    email = db.Column(db.String(), nullable=False, unique=True)
+    email = db.Column(db.String(), nullable=False)
     _password = db.Column(db.String(), nullable=False)
     wallet = db.Column(db.Integer, nullable=False, default=1000)
     # items = db.relationship('Product', backref='owned_user', lazy=True)
