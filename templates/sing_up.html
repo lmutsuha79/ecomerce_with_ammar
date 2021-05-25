@@ -43,9 +43,9 @@
                     <input type="text" name="username" required="true">
                     <label>Username</label>
                     {% if errors.get('username')%}
-                        <div class="valid_message valid_user valid_message_false">{{ errors.get('username') }}</div>
+                    <div class="valid_message valid_user valid_message_false">{{ errors.get('username') }}</div>
                     {% else%}
-                        <div class="valid_message valid_user valid_message_true"></div>
+                    <div class="valid_message valid_user valid_message_true"></div>
                     {% endif %}
                 </div>
                 <div class="user-box">

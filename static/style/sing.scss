@@ -83,6 +83,10 @@ body {
 
 
 .sing-box form #confirm{
+	border: 0px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    background: var(--dark-blue);
 	position: relative;
 	display: inline-block;
 	padding: 10px 20px;
@@ -199,3 +203,27 @@ body {
 }
 
 
+.valid_message{
+    position: absolute;
+    // top: -12px;
+    right: 0;
+    font-size: 11px;
+    color: var(--blue-color);
+	transition: var(--slow-transition);
+}
+
+.valid_email{
+
+}
+.valid_message_true{
+	top: 10px;
+	opacity: 0;
+	visibility: hidden;
+
+
+}
+.valid_message_false{
+	top: -11px;
+	opacity: 1;
+	visibility: visible;
+}

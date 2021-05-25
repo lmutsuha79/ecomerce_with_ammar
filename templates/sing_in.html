@@ -20,7 +20,7 @@
 
     <!-- main style css start -->
     <!-- <link rel="stylesheet" href="style/sing.css">-->
-    <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='style/sing.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style/sing.css') }}">
     <!-- main style css end -->
 
 
@@ -29,9 +29,6 @@
 
 <body>
 
-    <!-- top header start  -->
-
-    <!-- top header end -->
 
 
     <!-- sing form start -->
@@ -51,17 +48,18 @@
                     <label for="">Password</label>
                 </div>
                 {% if errors %}
-                    <div>{{ errors }}</div>
+                <div>{{ errors }}</div>
                 {% endif %}
                 <!--onclick="this.parentNode.submit();"-->
-                <button id="confirm" type="submit" >
+                <button id="confirm" type="submit">
                     <span></span>
                     <span></span>
                     <span></span>
                     <span></span>
                     Sing Up
                 </button>
-                <a class="other_links" id="recovery_password" href="{{ url_for('recovery_page') }}">Recovery password</a>
+                <a class="other_links" id="recovery_password" href="{{ url_for('recovery_page') }}">Recovery
+                    password</a>
                 <a class="other_links" href="{{ url_for('registration_page') }}">you don't have account Sing Up</a>
             </form>
         </div>
@@ -73,12 +71,13 @@
 
     <!-- java script files src start -->
     <script>
-        {# Delet All Data         #}
-        if ( window.history.replaceState ) {
-          window.history.replaceState( null, null, window.location.href );
+        {# Delet All Data         # }
+        if (window.history.replaceState) {
+            window.history.replaceState(null, null, window.location.href);
         }
     </script>
     <!-- java script files src end -->
+
 
 </body>
 

@@ -8,20 +8,20 @@ username.onkeyup = () => {
     let user_value = username.value;
     if (user_value !== '') {
 
-        if (username.value.toString().length < 2){
-        valid_message_style(valid_username, 0, 'username must be more than 2 characters');
+        if (username.value.toString().length < 2) {
+            valid_message_style(valid_username, 0, 'username must be more than 2 characters');
         }
         else {
             check_filed(user_value)
             // if not validate user
         }
     }
-     else {
-            // remove error when delete every thing
+    else {
+        // remove error when delete every thing
 
-            valid_message_style(valid_username, 1);
+        valid_message_style(valid_username, 1);
 
-        }
+    }
 
 };
 
@@ -35,7 +35,7 @@ function valid_message_style(input, true_or_false, text) {
 
     }
     else {
-        if (text){input.innerText = text}
+        if (text) { input.innerText = text }
         input.classList.remove("valid_message_true");
         input.classList.add("valid_message_false");
         confirm_but.disabled = true;
@@ -64,12 +64,12 @@ email_inp.onkeyup = () => {
 
         }
     }
-     else {
-            // remove error when delete every thing
+    else {
+        // remove error when delete every thing
 
-            valid_message_style(valid_mail_message, 1);
+        valid_message_style(valid_mail_message, 1);
 
-        }
+    }
 
 };
 
@@ -79,20 +79,20 @@ let valid_pass = document.querySelector('.valid_pass');
 password_inp.onkeyup = () => {
     let password_inp_value = password_inp.value;
 
-     if (password_inp_value !== '') {
-        if (password_inp_value.toString().length < 6 ) {
-        valid_message_style(valid_pass, 0);
+    if (password_inp_value !== '') {
+        if (password_inp_value.toString().length < 6) {
+            valid_message_style(valid_pass, 0);
 
-    } else {
-        valid_message_style(valid_pass, 1);
-
-     }
-    }
-    else {
-            // remove error when delete every thing
+        } else {
             valid_message_style(valid_pass, 1);
 
         }
+    }
+    else {
+        // remove error when delete every thing
+        valid_message_style(valid_pass, 1);
+
+    }
 }
 
 // confirm password  validation:
@@ -113,23 +113,23 @@ confirm_password_inp.onkeyup = () => {
 
 // final check for form
 function valid_form() {
-    if (username.value.toString().length < 2){
+    if (username.value.toString().length < 2) {
         valid_message_style(valid_username, 0, 'username must more 2');
         return false
     }
-    else if (!valid_username_value){
+    else if (!valid_username_value) {
         valid_message_style(valid_username, 0, 'user exist');
         return false
     }
-    else if ( ! ValidateEmail(email_inp.value) ) {
+    else if (!ValidateEmail(email_inp.value)) {
         valid_message_style(valid_mail_message, 0);
         return false
     }
-    else if (password_inp.value.toString().length < 6){
+    else if (password_inp.value.toString().length < 6) {
         valid_message_style(valid_pass, 0);
         return false
     }
-    else if (confirm_password_inp.value !== password_inp.value){
+    else if (confirm_password_inp.value !== password_inp.value) {
         valid_message_style(valid_confirm_pass, 0);
         return false
     }
@@ -143,29 +143,29 @@ function valid_form() {
 // check Username
 function check_filed(value) {
     let xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-    if (this.readyState === 4 && this.status === 200) {
+    xhttp.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200) {
 
-        let result = JSON.parse(this.responseText).result
+            let result = JSON.parse(this.responseText).result
 
-        if (!result){
-            valid_message_style(valid_username, 0, 'this user exist ');
-            valid_username_value = false
+            if (!result) {
+                valid_message_style(valid_username, 0, 'this user exist ');
+                valid_username_value = false
 
+            }
+            else {
+                valid_message_style(valid_username, 1);
+                valid_username_value = true
+            }
         }
         else {
             valid_message_style(valid_username, 1);
             valid_username_value = true
         }
-    }
-    else {
-        valid_message_style(valid_username, 1);
-        valid_username_value = true
-        }
-  };
-  xhttp.open("POST", "/check-reg", true);
-  xhttp.setRequestHeader('content-type', 'application/x-www-form-urlencoded;charset=UTF-8');
-  xhttp.send("username="+ value);
+    };
+    xhttp.open("POST", "/check-reg", true);
+    xhttp.setRequestHeader('content-type', 'application/x-www-form-urlencoded;charset=UTF-8');
+    xhttp.send("username=" + value);
 }
 
 
