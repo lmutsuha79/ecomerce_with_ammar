@@ -17,7 +17,7 @@ def profile_page():
 @app.route('/')
 @app.route('/home')
 def home_page():
-    return 'HOme'
+    return render_template('index.html')
 
 
 @app.route('/login', methods=['POST', 'GET'])

@@ -84,10 +84,10 @@ body {
 }
 
 .sing-box form #confirm {
-  background: var(--nav_height);
-    outline: none;
-    border: 0px;
-    cursor: pointer;
+  border: 0px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  background: var(--dark-blue);
   position: relative;
   display: inline-block;
   padding: 10px 20px;
@@ -248,31 +248,25 @@ body {
 .other_links:hover {
   color: var(--baby-color);
 }
-/*# sourceMappingURL=sing.css.map */
 
-
-.valid_message{
-  display: inline-block;
-  color: var(--baby-color);
+.valid_message {
   position: absolute;
   right: 0;
-  font-size: 0.8rem;
-  text-decoration: underline;
- 
-  transition: var(--slow-transition) ease;
-}
-.valid_mail_message{
-
-   
+  font-size: 11px;
+  color: var(--blue-color);
+  -webkit-transition: var(--slow-transition);
+  transition: var(--slow-transition);
 }
 
-.valid_message_true{
-  top: 23px;
+.valid_message_true {
+  top: 10px;
   opacity: 0;
   visibility: hidden;
 }
-.valid_message_false{
-  top: -8px;
+
+.valid_message_false {
+  top: -11px;
   opacity: 1;
   visibility: visible;
 }
+/*# sourceMappingURL=sing.css.map */

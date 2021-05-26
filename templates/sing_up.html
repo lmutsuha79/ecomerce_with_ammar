@@ -42,12 +42,12 @@
                 <div class="user-box">
                     <input type="text" name="username" required="true">
                     <label>Username</label>
-                    <!--  هنعمل ستايل أخر لهذا الديف و الإرورز  -->
-                    <!-- {% if errors.get('username')%}
+                    <!-- هنعمل ستايل أخر لهذا الديف و الإرورز  -->
+                    {% if errors.get('username')%}
                     <div class="valid_message valid_user valid_message_false">{{ errors.get('username') }}</div>
                     {% else%}
                     <div class="valid_message valid_user valid_message_true"></div>
-                    {% endif %} -->
+                    {% endif %}
                 </div>
                 <div class="user-box">
                     <input required='true' type="text" name="email">
@@ -96,6 +96,10 @@
     <!-- java script files src start -->
     <script src="{{url_for('static', filename='js/validate_reg.js')}}"></script>
     <!-- java script files src end -->
+
+    <script>
+        alert('hello');
+    </script>
 
 </body>
 
