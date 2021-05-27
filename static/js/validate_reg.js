@@ -2,7 +2,7 @@
 let confirm_but = document.getElementById('confirm');
 
 let username = document.querySelector('input[name="username"]');
-let valid_username = document.querySelector('.valid_user');
+let valid_username = document.querySelector('.valid_username');
 let valid_username_value = true;
 username.onkeyup = () => {
     let user_value = username.value;
@@ -60,7 +60,7 @@ email_inp.onkeyup = () => {
         else {
             // if not validate mail
 
-            valid_message_style(valid_mail_message, 0);
+            valid_message_style(valid_mail_message, 0, 'Email Not Valide');
 
         }
     }
@@ -75,13 +75,13 @@ email_inp.onkeyup = () => {
 
 // validate of password
 let password_inp = document.querySelector('input[name="password"]');
-let valid_pass = document.querySelector('.valid_pass');
+let valid_pass = document.querySelector('.valid_password');
 password_inp.onkeyup = () => {
     let password_inp_value = password_inp.value;
 
     if (password_inp_value !== '') {
         if (password_inp_value.toString().length < 6) {
-            valid_message_style(valid_pass, 0);
+            valid_message_style(valid_pass, 0, 'Password Not Valid');
 
         } else {
             valid_message_style(valid_pass, 1);
@@ -96,8 +96,8 @@ password_inp.onkeyup = () => {
 }
 
 // confirm password  validation:
-let confirm_password_inp = document.querySelector('input[name="confirm"]');
-let valid_confirm_pass = document.querySelector('.valid_confirm');
+let confirm_password_inp = document.querySelector('input[name="confirm_"]');
+let valid_confirm_pass = document.querySelector('.valid_confirm_');
 
 confirm_password_inp.onkeyup = () => {
     let password_inp_value = password_inp.value;
@@ -107,7 +107,7 @@ confirm_password_inp.onkeyup = () => {
         valid_message_style(valid_confirm_pass, 1);
 
     } else {
-        valid_message_style(valid_confirm_pass, 0);
+        valid_message_style(valid_confirm_pass, 0, 'must like password');
     }
 }
 
@@ -122,15 +122,15 @@ function valid_form() {
         return false
     }
     else if (!ValidateEmail(email_inp.value)) {
-        valid_message_style(valid_mail_message, 0);
+        valid_message_style(valid_mail_message, 0, 'Email Not valid');
         return false
     }
     else if (password_inp.value.toString().length < 6) {
-        valid_message_style(valid_pass, 0);
+        valid_message_style(valid_pass, 0, 'password not valid');
         return false
     }
     else if (confirm_password_inp.value !== password_inp.value) {
-        valid_message_style(valid_confirm_pass, 0);
+        valid_message_style(valid_confirm_pass, 0, 'must = password');
         return false
     }
     else {
@@ -165,7 +165,8 @@ function check_filed(value) {
     };
     xhttp.open("POST", "/check-reg", true);
     xhttp.setRequestHeader('content-type', 'application/x-www-form-urlencoded;charset=UTF-8');
-    xhttp.send("username=" + value);
+    let csrf_ = document.querySelector('#csrf_token').value
+    xhttp.send("username=" + value + '&csrf_token=' + csrf_);
 }
 
 

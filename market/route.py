@@ -1,5 +1,6 @@
 from . import app, login_manager
-from flask import render_template, request, redirect, url_for, jsonify, session
+from flask import render_template, request, redirect, url_for, jsonify
+from .form import RegistrationForm, LoginForm
 from .model import db, User
 from flask_login import login_user, current_user, logout_user
 
@@ -22,52 +23,63 @@ def home_page():
 
 @app.route('/login', methods=['POST', 'GET'])
 def login_page():
-    errors = None
+    form = LoginForm(request.form)
+
     if request.method == 'POST':
-        username = request.form.get("username")
-        password = request.form.get("password")
+        if form.validate_on_submit():
+            user = User.query.filter_by(username=form.username.data).first()
+            if user:
+                if user.check_password(form.password.data):
+                    login_user(user)
+                    return redirect(url_for('home_page'))
+                form.new_errors = {'password': ['Not valid']}
+            else:
+                form.new_errors = {'username': ['not found user']}
 
-        user = User.query.filter_by(username=username).first()
-        if user:
-            if user.check_password(password):
-                login_user(user)
-                return redirect(url_for('home_page'))
-
-        errors = 'wrong input'
-
-    return render_template('sing_in.html', errors=errors)
+    return render_template('sing_in.html', form=form)
 
 
 @app.route('/registration', methods=['POST', 'GET'])
 def registration_page():
-    errors = dict()
+    static = True
+    form = RegistrationForm(request.form)
     # if current_user.is_authenticated:
     #     return redirect(url_for('home_page'))
 
     if request.method == 'POST':
-        username = request.form.get("username", )
-        email = request.form.get("email", )
-        password = request.form.get("password", )
-        if User.query.filter_by(username=username).first():
-            errors['username'] = 'user exist'
+        if form.validate_on_submit():
+            username = form.username.data
+            email = form.email.data
+            password = form.password.data
+            if username and User.query.filter_by(username=username).first():
+                form.new_errors = {'username': ['This username exist enter other one']}
+                static = False
 
-        else:
-            u1 = User(username=username,
-                      email=email,
-                      password=password)
+            if not email:
+                form.new_errors = {'email': ['Not valid']}
+                static = False
 
-            db.session.add(u1)
-            db.session.commit()
-            login_user(u1)
-            print('done')
-            return redirect(url_for('home_page'))
-            # 204
+            if not password:
+                form.new_errors = {'password': ['Not valid']}
+                static = False
 
-    return render_template('sing_up.html', errors=errors)
+            if static:
+                u1 = User(username=username,
+                          email=email,
+                          password=password)
+
+                db.session.add(u1)
+                db.session.commit()
+                login_user(u1)
+                return redirect(url_for('home_page'))
+                # 204
+
+    return render_template('sing_up.html', form=form)
 
 
 @app.route('/check-reg', methods=['POST'])
 def check_user_mail():
+
     field_ = request.form.get('username')
     if field_:
         if User.query.filter_by(username=field_).first():

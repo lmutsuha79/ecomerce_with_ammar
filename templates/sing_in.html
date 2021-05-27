@@ -37,20 +37,10 @@
         <div class="sing-box">
             <h2>SIGN IN!</h2>
             <form method="POST">
-
-                <div class="user-box">
-                    <input type="text" name="username" required>
-                    <label>Username</label>
-                </div>
-
-                <div class="user-box">
-                    <input type="password" name="password" required>
-                    <label for="">Password</label>
-                </div>
-                {% if errors %}
-                <div>{{ errors }}</div>
-                {% endif %}
-                <!--onclick="this.parentNode.submit();"-->
+                {{ form.hidden_tag() }}
+                {% from "macros.html" import form_filed %}
+                {{form_filed(form, "username")}}
+                {{form_filed(form, "password")}}
                 <button id="confirm" type="submit">
                     <span></span>
                     <span></span>

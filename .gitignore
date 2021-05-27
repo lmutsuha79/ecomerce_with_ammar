@@ -8,3 +8,6 @@
 *.pyc
 **/__pycache__/
 market/__pycache__/
+market/__pycache__/__init__.cpython-39.pyc
+market/__pycache__/model.cpython-39.pyc
+market/__pycache__/route.cpython-39.pyc

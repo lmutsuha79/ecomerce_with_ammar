@@ -1,0 +1,12 @@
+{% macro form_filed(form, filed) %}
+    <div class="user-box">
+        {{ form[filed] }}
+        {{ form[filed].label }}
+
+        {% if form.new_errors[filed]%}
+            <div class="valid_message valid_email valid_message_false">{{ form.new_errors[filed][0] }}</div>
+        {% else %}
+            <div class="valid_message valid_{{filed}} valid_message_false"></div>
+        {% endif%}
+    </div>
+{% endmacro %}
