@@ -77,7 +77,7 @@ body {
 }
 
 .sing-box .user-box input:focus ~ label, .sing-box .user-box input:valid ~ label {
-  top: -20px;
+  top: -27px;
   left: 0px;
   color: var(--blue-color);
   font-size: 12px;
@@ -270,3 +270,15 @@ body {
   visibility: visible;
 }
 /*# sourceMappingURL=sing.css.map */
+
+/* Change the white to any color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active
+{
+ -webkit-box-shadow: 0 0 0 30px var(--dark-blue) inset !important;
+ -webkit-text-fill-color: var(--baby-color) !important;
+ border: 0px;
+
+}
