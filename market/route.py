@@ -23,10 +23,9 @@ def home_page():
 @app.route('/login', methods=['POST', 'GET'])
 def login_page():
     errors = None
-    print(request.method)
     if request.method == 'POST':
-        username = request.form.get("username", )
-        password = request.form.get("password", )
+        username = request.form.get("username")
+        password = request.form.get("password")
 
         user = User.query.filter_by(username=username).first()
         if user:
@@ -88,3 +87,10 @@ def logout_page():
 @app.route('/recovery')
 def recovery_page():
     return 'Recovery'
+
+
+@app.errorhandler(404)
+def page_not_found(e):
+    # note that we set the 404 status explicitly
+    return render_template('404_page.html'), 404
+

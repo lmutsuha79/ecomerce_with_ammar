@@ -5,3 +5,6 @@
 .idea/vcs.xml
 .idea/
 .vscode/
+*.pyc
+**/__pycache__/
+market/__pycache__/

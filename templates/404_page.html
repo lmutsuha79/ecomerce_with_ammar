@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 page</title>
-    <link rel="stylesheet" href="../static/style/normalize.css">
-    <link rel="stylesheet" href="../static/style/404_page_style.css">
+    <!-- <link rel="stylesheet" href="../static/style/normalize.css">
+    <link rel="stylesheet" href="../static/style/404_page_style.css"> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style/normalize.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style/404_page_style.css') }}">
 </head>
 
 <body>
@@ -26,7 +28,7 @@
             <hr>
             <div class='_1'>THE PAGE</div>
             <div class='_2'>WAS NOT FOUND</div>
-            <a class='btn' href='#'>BACK TO HOME</a>
+            <a class='btn' href="{{ url_for('home_page') }}">BACK TO HOME</a>
         </div>
     </div>
 

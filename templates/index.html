@@ -13,12 +13,14 @@
         rel="stylesheet">
     <!-- font_family end -->
 
-    <!-- normalize style start -->
-    <link rel="stylesheet" href="../static/style/normalize.css">
+    <!-- normalize style start
+    <link rel="stylesheet" href="../static/style/normalize.css"> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style/normalize.css') }}">
     <!-- normalize style end -->
 
-    <!-- main style css start -->
-    <link rel="stylesheet" href="../static/style/main.css">
+    <!-- main style css start
+    <link rel="stylesheet" href="../static/style/main.css"> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style/main.css') }}">
     <!-- main style css end -->
 
 </head>
@@ -32,7 +34,7 @@
         <div class="container">
             <div class="main_header_content">
                 <div class="logo">
-                    <img src="images/logo.png" alt="logo">
+                    <img src="{{ url_for('static',filename='images/logo.png') }}" alt="logo">
                 </div><!-- ./logo -->
                 <div class="nav_links">
                     <div id="mb_nav_btn" class="flex-center">
@@ -54,7 +56,7 @@
                 </div><!-- ./nav_links -->
                 <div class="user_links">
                     <ul>
-                        <li><a href="sing_in.html"><span class="icon-user"></span></a></li>
+                        <li><a href="{{ url_for('login_page') }}"><span class="icon-user"></span></a></li>
                         <li><a href="#"><span class="icon-search"></span></a></li>
                         <li><a href="#"><span class="icon-heart"></span></a></li>
                         <li><a href="#"><span class="icon-shopping-cart"></span></a></li>
