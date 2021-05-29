@@ -1,6 +1,6 @@
 {% macro form_filed(form, filed) %}
 <div class="user-box">
-    {{ form[filed] }}
+    {{ form[filed](autocomplete="off" ) }}
     {{ form[filed].label}}
 
     {% if form.new_errors[filed]%}
