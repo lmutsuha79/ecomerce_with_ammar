@@ -18,7 +18,9 @@
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) { 
     .container{
-        width: 720px;
+        // width: 720px;
+        width: 90%;
+
         // background-color: red;
 
     
@@ -28,7 +30,9 @@
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) { 
     .container{
-        width: 960px;
+        // width: 960px;
+        width: 85%;
+
         // background-color: black;    
     }
  }
@@ -36,7 +40,9 @@
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { 
     .container{
-        width: 1140px;
+        // width: 1140px;
+        width: 80%;
+
         // background-color: blueviolet;
 
     
