@@ -11,19 +11,19 @@
 
 @media (min-width: 768px) {
   .container {
-    width: 720px;
+    width: 90%;
   }
 }
 
 @media (min-width: 992px) {
   .container {
-    width: 960px;
+    width: 85%;
   }
 }
 
 @media (min-width: 1200px) {
   .container {
-    width: 1140px;
+    width: 80%;
   }
 }
 
@@ -31,8 +31,9 @@
   --baby-color: #B1D4E0;
   --blue-color: #2E8BC0;
   --over-blue: #299fe3;
+  --gray-color:#839199;
   --dark-blue: #0C2D48;
-  --Midnight-blue: #145DA0;
+  --Midnight-blue: #134675;
   --slow-transition: 0.3s;
   --nav_height: 100px;
 }
@@ -587,6 +588,88 @@ a {
   }
   50%, 100% {
     left: 100%;
+  }
+}
+
+.freatures_extra_show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  .freatures_extra_show {
+    display: block;
+    margin-top: 70px;
+  }
+}
+
+.freatures_extra_show .item {
+  line-height: 1.2rem;
+  width: calc(100%/3);
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+.freatures_extra_show .item .icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.freatures_extra_show .item .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.freatures_extra_show .item:nth-child(1) {
+  border-right: 1px solid var(--gray-color);
+}
+
+.freatures_extra_show .item:nth-child(3) {
+  border-left: 1px solid var(--gray-color);
+}
+
+.freatures_extra_show .item span {
+  display: block;
+}
+
+.freatures_extra_show .item .title {
+  color: white;
+  font-weight: 600;
+}
+
+.freatures_extra_show .item .desc {
+  font-size: 0.8rem;
+  color: var(--gray-color);
+}
+
+@media (max-width: 768px) {
+  .freatures_extra_show .item {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0px;
+  }
+  .freatures_extra_show .item:nth-child(2) {
+    padding: 10px 0px;
+    border-top: 1px solid var(--gray-color);
+    border-bottom: 1px solid var(--gray-color);
+    border-right: 0px;
+    border-left: 0px;
+  }
+  .freatures_extra_show .item:nth-child(1), .freatures_extra_show .item:nth-child(3) {
+    border: 0px;
   }
 }
 /*# sourceMappingURL=main.css.map */

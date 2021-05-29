@@ -36,7 +36,7 @@
     <section class="sing_form">
         <div class="sing-box">
             <h2>SIGN IN!</h2>
-            <form method="POST">
+            <form autocomplete="off" method="POST">
                 {{ form.hidden_tag() }}
                 {% from "macros.html" import form_filed %}
                 {{form_filed(form, "username")}}
@@ -46,7 +46,7 @@
                     <span></span>
                     <span></span>
                     <span></span>
-                    Sing Up
+                    Log_in
                 </button>
                 <a class="other_links" id="recovery_password" href="{{ url_for('recovery_page') }}">Recovery
                     password</a>

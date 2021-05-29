@@ -18,7 +18,9 @@
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) { 
     .container{
-        width: 720px;
+        // width: 720px;
+        width: 90%;
+
         // background-color: red;
 
     
@@ -28,7 +30,9 @@
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) { 
     .container{
-        width: 960px;
+        // width: 960px;
+        width: 85%;
+
         // background-color: black;    
     }
  }
@@ -36,7 +40,9 @@
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { 
     .container{
-        width: 1140px;
+        // width: 1140px;
+        width: 80%;
+
         // background-color: blueviolet;
 
     
@@ -53,9 +59,12 @@ $main_font : 'Work Sans', sans-serif;
     --baby-color : #B1D4E0;
     --blue-color : #2E8BC0;
     --over-blue : #299fe3;
-
+    --gray-color:#839199;
     --dark-blue : #0C2D48;
-    --Midnight-blue : #145DA0;
+    // --Midnight-blue : #145DA0;
+    
+        --Midnight-blue : #134675;
+// 
 
     --slow-transition : 0.3s;
     --nav_height : 100px;
@@ -838,94 +847,86 @@ a{
   }
 }
 
-// .sing-box span:nth-child(2) {
-//   top: -100%;
-//   right: 0;
-//   width: 2px;
-//   height: 100%;
-//   background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(var(--blue-color)));
-//   background: linear-gradient(180deg, transparent, var(--blue-color));
-//   -webkit-animation: btn-anim2 1s linear infinite;
-//           animation: btn-anim2 1s linear infinite;
-//   -webkit-animation-delay: .25s;
-//           animation-delay: .25s;
-// }
 
-// @-webkit-keyframes btn-anim2 {
-//   0% {
-//     top: -100%;
-//   }
-//   50%, 100% {
-//     top: 100%;
-//   }
-// }
 
-// @keyframes btn-anim2 {
-//   0% {
-//     top: -100%;
-//   }
-//   50%, 100% {
-//     top: 100%;
-//   }
-// }
+// ##########################################
+.freatures_extra_show{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    @media(max-width:768px){
+        display: block;
+        margin-top: 70px;
 
-// .sing-box span:nth-child(3) {
-//   bottom: 0;
-//   tight: -100%;
-//   width: 100%;
-//   height: 2px;
-//   background: -webkit-gradient(linear, right top, left top, from(transparent), to(var(--blue-color)));
-//   background: linear-gradient(270deg, transparent, var(--blue-color));
-//   -webkit-animation: btn-anim3 1s linear infinite;
-//           animation: btn-anim3 1s linear infinite;
-//   -webkit-animation-delay: .5s;
-//           animation-delay: .5s;
-// }
 
-// @-webkit-keyframes btn-anim3 {
-//   0% {
-//     right: -100%;
-//   }
-//   50%, 100% {
-//     right: 100%;
-//   }
-// }
+    }
+    .item{
+        line-height: 1.2rem;
+        width: calc(100%/3);
+       
+        text-align: center;
+       // center with flext class .flex-center
+       flex-direction: column-reverse;
+        .text{
 
-// @keyframes btn-anim3 {
-//   0% {
-//     right: -100%;
-//   }
-//   50%, 100% {
-//     right: 100%;
-//   }
-// }
+        }
+        .icon{
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+            overflow: hidden;
+            svg{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        
 
-// .sing-box span:nth-child(4) {
-//   bottom: -100%;
-//   left: 0;
-//   width: 2px;
-//   height: 100%;
-//   background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(var(--blue-color)));
-//   background: linear-gradient(360deg, transparent, var(--blue-color));
-//   -webkit-animation: btn-anim4 1s linear infinite;
-//           animation: btn-anim4 1s linear infinite;
-//   animation-dealy: .75s;
-// }
+        &:nth-child(2){
 
-// @-webkit-keyframes btn-anim4 {
-//   0% {
-//     bottom: -100%;
-//   }
-//   50%, 100% {
-//     bottom: 100%;
-//   }
-// }
+        }
+        &:nth-child(1){
+            border-right: 1px solid var(--gray-color);
 
-// @keyframes btn-anim4 {
-//   0% {
-//     bottom: -100%;
-//   }
-//   50%, 100% {
-//     bottom: 100%;
-//   }
-// }
+
+        }
+        &:nth-child(3){
+            border-left: 1px solid var(--gray-color);
+
+        }
+        span{
+            display: block;
+         
+        }
+        .title{
+            color: white;
+            font-weight: 600;
+            
+
+        }
+        .desc{
+            font-size: 0.8rem;
+            color: var(--gray-color);
+
+        }
+
+        @media(max-width:768px){
+            width: 100%;
+            text-align: center;
+            padding: 10px 0px;
+
+            &:nth-child(2){
+                padding: 10px 0px;
+                border-top: 1px solid var(--gray-color);
+                border-bottom: 1px solid var(--gray-color);
+                border-right: 0px;
+                border-left: 0px;
+            }
+            &:nth-child(1),&:nth-child(3){
+                border: 0px;
+            }            
+        }
+    }
+
+}
