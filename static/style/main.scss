@@ -595,16 +595,7 @@ a{
         @media (max-width:767px) {
             flex-direction: column;
             .item{
-                // width: 100%;
-
-                // height: 100%;
-                
-                // .item_big{
-                //     // background-image: url(https://cdn.shopify.com/s/files/1/0337/2734/8781/files/shop31_home_banner1.jpg);
-                //     background-image: url(https://hb.imgix.net/eff21a2d1510373ac10d1512bd4fa470a5ec4ada.jpg?auto=compress,format&fit=crop&h=353&w=616&s=be5b568aa7a3c6a79b97c381ed623541);
-                //     width: 100%;
-                //     height: 100%;
-                // }
+            
     
                 &:nth-child(1){
                     
@@ -633,13 +624,7 @@ a{
         @media (min-width:767px) {
             .item{
             
-                // height: 100%;
-                
-                // .item_big{
-                //     background-image: url(https://cdn.shopify.com/s/files/1/0337/2734/8781/files/shop31_home_banner1.jpg);
-                //     width: 100%;
-                //     height: 100%;
-                // }
+           
     
                 &:nth-child(1){
                     width: calc(100% - (100%/3));
@@ -868,10 +853,21 @@ a{
         text-align: center;
        // center with flext class .flex-center
        flex-direction: column-reverse;
+
+
+       &:hover{
+           .icon{
+               transform: translateY(-5px);
+           }
+       }
         .text{
 
         }
         .icon{
+
+
+            transition: var(--slow-transition) ease;
+
             width: 50px;
             height: 50px;
             margin-bottom: 10px;

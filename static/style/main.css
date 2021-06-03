@@ -621,7 +621,14 @@ a {
           flex-direction: column-reverse;
 }
 
+.freatures_extra_show .item:hover .icon {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
 .freatures_extra_show .item .icon {
+  -webkit-transition: var(--slow-transition) ease;
+  transition: var(--slow-transition) ease;
   width: 50px;
   height: 50px;
   margin-bottom: 10px;
