@@ -8,7 +8,7 @@
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) { 
     .container{
-        width: 540px;
+        width: 95%;
         // background-color: grey;
 
     
@@ -1136,3 +1136,37 @@ a{
 
 
 }
+// ###########################################################
+// add_section
+// #############################################################
+.add_section{
+    hr{
+        border: 1px solid var(--baby-color);
+    }
+
+    .container{
+        flex-wrap: wrap;
+
+    }
+    .add_info{
+        text-align: center;
+        width: 600px;
+        h2{
+            color: var(--baby-color);
+
+        }
+        p{
+            color: var(--over-blue);
+        }
+        .shop_now_add_info_btn{
+            padding: 10px;
+            border: 1px solid var(--blue-color);
+            margin-top: 10px;
+        }
+    }
+    .add_img{
+
+    }
+}
+
+

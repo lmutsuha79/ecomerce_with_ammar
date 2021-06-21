@@ -6,7 +6,7 @@
 
 @media (min-width: 576px) {
   .container {
-    width: 540px;
+    width: 95%;
   }
 }
 
@@ -882,5 +882,33 @@ a {
 .offers_section .offers_content .item_info .item_price .price.price_now {
   font-size: 1.3rem;
   color: var(--baby-color);
+}
+
+.add_section hr {
+  border: 1px solid var(--baby-color);
+}
+
+.add_section .container {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.add_section .add_info {
+  text-align: center;
+  width: 600px;
+}
+
+.add_section .add_info h2 {
+  color: var(--baby-color);
+}
+
+.add_section .add_info p {
+  color: var(--over-blue);
+}
+
+.add_section .add_info .shop_now_add_info_btn {
+  padding: 10px;
+  border: 1px solid var(--blue-color);
+  margin-top: 10px;
 }
 /*# sourceMappingURL=main.css.map */
