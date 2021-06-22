@@ -923,6 +923,12 @@ section {
 .popular_games_section .slider {
   width: 25%;
   padding: 20px 10px;
+  text-align: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  border: 1px solid var(--Midnight-blue);
+  border-radius: 5px;
 }
 
 .popular_games_section .other_games {
@@ -932,7 +938,24 @@ section {
 }
 
 .popular_games_section .other_games .item {
-  padding: 20px 10px;
+  padding: 0px 10px;
+  margin: 40px 0px;
   width: 200px;
+  height: 350px;
+}
+
+@media (max-width: 768px) {
+  .popular_games_section .slider, .popular_games_section .other_games {
+    width: 100%;
+  }
+  .popular_games_section .slider .item {
+    width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .popular_games_section .slider .item {
+    width: 250px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
