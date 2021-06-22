@@ -1194,11 +1194,61 @@ section{
         width: 25%;
         padding: 20px 10px;
         text-align: center;
-        align-items: flex-start;
         border: 1px solid var(--Midnight-blue);
         border-radius: 5px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+        overflow: hidden;
+        .item{
+            // position: absolute;
+            width: 100%;
+            
+        }
+       
+    }
+
+    .slider_content{
+        height: 430px;        // for position absolute problems
+
+        width: 300%;
+        display: flex;
+        z-index: 99;
+        left: -0%;
+        position: absolute;
+        transition: var(--slow-transition) ease;
 
     }
+    .slider_controller{
+        width: 100%;
+        // height: 20px;
+        margin-top: 470px;
+        span{
+            background-color: var(--Midnight-blue);
+            margin: 0px 5px;
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: 0.1s ease;
+            &:hover{
+                border: 2px solid var(--baby-color)
+
+                // background-color: var(--blue-color);
+            }
+        }
+        .bolet_active{
+            border: 2px solid var(--baby-color)
+        }
+    }
+
+
+
+
+
+
     .other_games{
         width: 75%;
         flex-wrap: wrap;
@@ -1207,6 +1257,7 @@ section{
             margin: 40px 0px;
             width: 200px;
             height: 350px;
+            text-align: center;
 
         }
     }
@@ -1216,7 +1267,7 @@ section{
         }
       .slider{
           .item{
-              width: 300px;
+              width: 100%;
           }
       }
 
@@ -1224,10 +1275,116 @@ section{
     @media (max-width:480px){
         .slider{
             .item{
-                width: 250px;
+                width: 100%;
             }
         }
     }
 }
 
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  .deals_section{
+    height: 500px;
+
+    
+      .container{
+          height: 100%;
+      }
+      .confirm{
+        padding: 20px;
+        position: absolute;
+        transition: 0.2s ease;
+        transition-delay: 0.2s;
+    }
+      .swiper-slide{
+          img{
+              width: 100%;
+              height: 100%;
+          }
+          .slid_item_info{
+              position: absolute;
+          }
+          .key_bord_slid_info{
+              bottom: 50px;
+              width: 85%;
+            
+              .confirm{
+                  margin-top: 20px;
+
+              }
+          }
+          &:hover .slider_shadow{
+              bottom: 0%;
+          }
+          &:hover .confirm{
+              opacity: 1;
+              visibility: visible;
+          }
+      }
+      .play_station_slid_add{
+        .confirm{
+            bottom: 20px;
+            left: 20px;
+            padding: 20px;
+            
+        }
+      }
+      .cyber_panck_slider_add{
+          .confirm{
+              bottom: 40px;
+              padding: 15px;
+          }
+      }
+      .xbox_slider_add{
+          .confirm{
+            top: 50%;
+            left: 10%;
+          }
+      }
+      .keyboard_slid_add{
+        .confirm{
+            bottom: 0px;
+            right: -30px;
+          }
+      }
+      .confirm{
+          opacity: 0;
+          visibility: hidden;
+      }
+      .slider_shadow{
+        width: 100%;
+        background-color: black;
+        position: absolute;
+        bottom: -70%;
+        left: 0;
+        height: 0%;
+        box-shadow: 0px 40px 175px 64px var(--baby-color);
+        transition: var(--slow-transition) ease;
+      }
+    
+      
+  }
