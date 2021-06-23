@@ -12,7 +12,9 @@
         href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <!-- font_family end -->
-
+    <!-- ./swip js css start-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- ./swip js css end -->
     <!-- normalize style start
     <link rel="stylesheet" href="../static/style/normalize.css"> -->
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style/normalize.css') }}">
@@ -23,8 +25,7 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style/main.css') }}">
     <!-- main style css end -->
 
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" /> -->
 
 
 </head>
@@ -893,7 +894,7 @@
     <!-- hot deals section -->
     <section class="deals_section">
         <div class="container">
-            <div class="section_title">check out our Hot Deals Check your Hot Deals</div>
+            <div class="section_title">check out our Hot Deals </div>
             <!-- Swiper -->
             <div class="swiper-container">
                 <div class="swiper-wrapper">
@@ -901,8 +902,8 @@
                         <img src="https://site-cdn.givemesport.com/images/20/07/05/9621be202ebd3acab63018ccc98f6ae1/960.jpg"
                             alt="img">
 
-                        <div class="slider_shadow">
-                        </div>
+                        <div class="slider_shadow shadow_light">
+                        </div><!-- ./slider_shadow -->
                         <div class="slider_add_info">
                             <a class="confirm " href="#">
                                 <span></span>
@@ -911,7 +912,7 @@
                                 <span></span>
                                 Shop Now
                             </a>
-                        </div>
+                        </div> <!-- ./slider_add_info -->
                     </div>
                     <div class="swiper-slide xbox_slider_add">
                         <img src="https://image.jeuxvideo.com/medias-md/162400/1624002802-8803-card.jpg" alt="">
@@ -922,6 +923,17 @@
                             <span></span>
                             Shop Now
                         </a>
+                        <div class="slider_shadow shadow_light">
+                        </div><!-- ./slider_shadow -->
+                        <div class="slider_add_info">
+                            <a class="confirm " href="#">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                Shop Now
+                            </a>
+                        </div> <!-- ./slider_add_info -->
                     </div>
                     <div class="swiper-slide cyber_panck_slider_add">
                         <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2020/09/cyberpunk-2077-character-customization-options-header.jpg?q=50&fit=crop&w=960&h=500&dpr=1.5"
@@ -933,22 +945,54 @@
                             <span></span>
                             Show More
                         </a>
-                    </div>
-                    <div class="swiper-slide "><img
-                            src="https://cdn.akamai.steamstatic.com/steam/apps/1262540/capsule_616x353.jpg?t=1598621991"
-                            alt=""></div>
-                    <div class="swiper-slide keyboard_slid_add">
-                        <img src="https://cdn.mos.cms.futurecdn.net/yzCUjLmpUSgVYeuE44eHk8-1200-80.jpg" alt="">
-                        <!-- <a class="confirm " href="#">
+                        <div class="slider_shadow shadow_dark">
+                        </div><!-- ./slider_shadow -->
+                        <div class="slider_add_info">
+                            <a class="confirm " href="#">
                                 <span></span>
                                 <span></span>
                                 <span></span>
                                 <span></span>
                                 Shop Now
-                            </a> -->
-                        <div class="slider_shadow">
+                            </a>
+                        </div> <!-- ./slider_add_info -->
+                    </div>
+                    <div class="swiper-slide ">
+                        <img src="https://cdn.akamai.steamstatic.com/steam/apps/1262540/capsule_616x353.jpg?t=1598621991"
+                            alt="">
 
-                        </div>
+                        <div class="slider_shadow shadow_light">
+                        </div><!-- ./slider_shadow -->
+                        <div class="slider_add_info">
+                            <a class="confirm " href="#">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                Shop Now
+                            </a>
+                        </div> <!-- ./slider_add_info -->
+                    </div>
+                    <div class="swiper-slide keyboard_slid_add">
+                        <img src="https://cdn.mos.cms.futurecdn.net/yzCUjLmpUSgVYeuE44eHk8-1200-80.jpg" alt="">
+                        <a class="confirm " href="#">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Shop Now
+                        </a>
+                        <div class="slider_shadow shadow_light">
+                        </div><!-- ./slider_shadow -->
+                        <div class="slider_add_info">
+                            <a class="confirm " href="#">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                Shop Now
+                            </a>
+                        </div> <!-- ./slider_add_info -->
                     </div>
                     <!-- <div class="swiper-slide">Slide 6</div>
                     <div class="swiper-slide">Slide 7</div>
@@ -966,13 +1010,131 @@
     </section>
 
 
+    <!-- ./gift section -->
+    <section class="gift_section">
+        <div class="container">
+            <div class="section_title">
+                Best Gaming Gift Card Spring Deals
+            </div>
+            <div class="gift_section_content flex-center">
+                <div class="gift_item">
+                    <div class="gift_item_content">
+                        <img src="https://images.g2a.com/newlayout/1024x600/1x1x0/steam-gift-card-10-eur-steam-key-for-eur-currency-only-i10000000258072/5a5ce623ae653a15dc59d173"
+                            alt="img">
+                        <div class="view_item_btn">
+                            <a href="#">learn more</a>
+                        </div><!-- ./view_item_btn -->
+                    </div><!-- ./gift_item_content -->
+                </div><!-- ./git_item -->
+
+                <div class="gift_item">
+                    <div class="gift_item_content">
+                        <img src="https://www.allkeyshop.com/blog/wp-content/uploads/ps-store-1.jpg" alt="img">
+                        <div class="view_item_btn">
+                            <a href="#">learn more</a>
+                        </div><!-- ./view_item_btn -->
+                    </div><!-- ./gift_item_content -->
+                </div><!-- ./git_item -->
+            </div><!-- ./gift_section_content -->
+
+        </div><!-- ./container -->
+    </section>
 
 
+    <!-- ./payment methods section -->
+    <section class="payment_methods_section">
+        <div class="container">
+            <div class="section_title">
+                we accept multiple payment methods !
+            </div>
+            <!-- Swiper -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <img src="https://lh3.googleusercontent.com/proxy/QXplEc13hz_3_SdJvSn0VpvVMdqD29xZjMGW9kDKo-8fvZWiAQxgVJ2fEi3FZl0-027vYd_Eh_PVL5ixJz5LfWbRpgjiNGq7dhenPeTiZS3W5pWIwnRQf7dcYRmfIe6LLOJT7sUdms0f2uBOPDABDr6ltCP7JcrxcwEUkmMKxHaPiO_y9A"
+                            alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://www.bitcoinhunts.com/wp-content/uploads/2020/07/cryptocurrency-1.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://smhttp-nex.nexcesscdn.net/803313/static/images/blog/2014-02-20/credit-banner.png"
+                            alt="">
+                    </div>
+                    <!-- <div class="swiper-slide">Slide 4</div>
+                    <div class="swiper-slide">Slide 5</div>
+                    <div class="swiper-slide">Slide 6</div>
+                    <div class="swiper-slide">Slide 7</div>
+                    <div class="swiper-slide">Slide 8</div>
+                    <div class="swiper-slide">Slide 9</div>
+                    <div class="swiper-slide">Slide 10</div> -->
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div><!-- ./container -->
+    </section>
+
+    <footer id="main_footer">
+        <div class="container">
+            <div class="footer_content">
+                <div class="column_footer">
+                    <img src="../static/images/logo.png" alt="logo_footer">
+                </div>
+                <div class="column_footer">
+                    <div class="footer_title">main_links</div>
+                    <div class="main_links footer_links">
+                        <ul>
+                            <li><a href="#">home</a></li>
+                            <li><a href="#">services</a></li>
+                            <li><a href="#">contact us</a></li>
+                            <li><a href="#">about us</a></li>
+                            <li><a href="#">sing up</a></li>
+                            <li><a href="#">sing in</a></li>
+                            <li><a href="#">your compt</a></li>
+                        </ul>
+                    </div><!-- ./main_links -->
+                </div>
+                <div class="column_footer">
+                    <div class="footer_title">Tags</div>
+                    <div class="tags-links footer_links">
+                        <ul>
+                            <li><a href="#">fps</a></li>
+                            <li><a href="#">hot summer</a></li>
+                            <li><a href="#">shooter</a></li>
+                            <li><a href="#">speed</a></li>
+                            <li><a href="#">horor</a></li>
+                            <li><a href="#">sport</a></li>
+                            <li><a href="#">adventure</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="column_footer">
+                    <div class="footer_title">
+                        follow us on:
+                    </div>
+                    <div class="social_media_footer_links">
+                        <a href="#">
+                            <span class="icon-facebook-square"></span>
+                        </a>
+                        <a href="#"><span class="icon-github-square"></span></a>
+                        <a href="#"><span class="icon-twitter"></span></a>
+                        <a href="#"><span class="icon-pinterest"></span></a>
+                        <a href="#"><span class="icon-instagram"></span></a>
+                    </div>
+                </div>
+
+            </div><!-- ./footer_content -->
+        </div><!-- ./container -->
+        <div class="footer_of_footer">
+            ©Copyright 2021 by yasser and ammar. All Rights Reserved.
+
+        </div><!-- ./footer_of_footer -->
+    </footer>
 
 
-
-
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
 
 
 
