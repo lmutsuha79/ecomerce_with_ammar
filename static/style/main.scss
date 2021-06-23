@@ -241,99 +241,6 @@ section{
 // End GLobal rules
 
 // ##################################:
-//top header start 
-// #top_header{
-//     background-color: var(--Midnight-blue);
-//     height: max-content;
-//     a{
-//         color: var(--baby-color);
-//         transition: var(--slow-transition);
-        
-//         &:hover{
-//             color: var(--blue-color);
-//         }
-//     }
-//     #main_nav{
-       
-//         ul{
-//             display: flex;
-//         }
-
-//         .container{
-//             width: 90%;
-
-//         }
-//         .nav_content{
-//             // display: flex;
-//             // justify-content: space-between;
-//             // align-items: center;
-//             // display: grid;
-//             // grid-template-rows: 70px;
-//             // grid-template-columns: repeat(3,1fr);
-//             // align-items: center;
-//             // justify-content: center;
-//             height: 100px;
-
-//             display: grid;
-//             grid-template-columns: 1fr 1fr;
-//             grid-template-rows: 50px;
-
-         
-
-         
-//             .logo{
-//                 width: 200px;
-//                 grid-column: 1/3;
-//                 margin: 0 auto;
-
-              
-//                 img{
-//                     width: 100%;
-//                     height: 100%;
-//                 }
-
-//             }
-
-//             .midle_nav_items{
-//                 justify-content: flex-start;
-
-//                 ul li{
-//                     margin: 0 10px;
-//                 }
-//                 span{
-//                     font-size: 24px;
-//                 }
-//             }
-//             .links_nav_btn{
-//                 display: flex;
-//                 justify-content: flex-end;
-//                 #nav_btn{
-//                     width: 50px;
-//                     height: 50px;
-//                     padding: 8px;
-//                     cursor: pointer;
-
-//                     &:hover span{
-//                         background-color: var(--blue-color);
-//                         transition: var(--slow-transition);
-//                     }
-                  
-
-//                     span{
-//                         display: block;
-//                         background-color: #B1D4E0;
-//                         width: 30px;
-//                         height: 5px;
-//                         border-radius: 10px;
-
-//                         &:nth-child(2){
-//                             margin: 5px 0px;
-//                         }
-//                     }
-//                 }
-            
-//             }
-            
 
 
 
@@ -342,72 +249,8 @@ section{
 
 
 
-//         }
-//     }
 
-//     .links_nav_is_off{
-//         width: 0%;
-//         opacity: 0;
-//         visibility: hidden;
-//     }
-//     .links_nav_is_on{
-//         width: 50%;
-//         opacity: 1;
-//         visibility: visible;
 
-       
-//     }
-
-//     #links_nav{
-//         height: 100vh;
-//         background-color: var(--Midnight-blue);
-//         position: fixed;
-//         top: var(--nav_height);
-//         right: 0;
-//         transition: var(--slow-transition) ease;
-
-//         .links_nav_content{
-//             height: 100%;
-
-//             ul{
-//                 height: 100%;
-//                 flex-direction: column;
-
-//             }
-//             li{
-//                 margin: 20px 0px;
-                
-//             }
-//             a{
-//                 position: relative;
-//                 &::after{
-//                     position: absolute;
-//                     content: "";
-//                     width: 100%;
-//                     height: 3px;
-//                     background-color: var(--baby-color);
-//                    display: block;
-//                     transform: scaleX(0);
-//                     transition: transform var(--slow-transition) ease-in-out;
-                    
-//                 }
-    
-                
-//                 &:hover{
-//                     color: var(--baby-color);
-//                     font-weight: 600;
-//                     &::after{
-//                         transform: scale(1);
-
-//                     }
-//                 }
-
-//             }
-//         }
-
-//     }
-
-// }
 //top header end
 // ##################################:
 #main_header{
@@ -453,9 +296,22 @@ section{
             display: flex;
             
         }
+        .mb_nav_open_style{
+            span:nth-child(1){
+                transform: rotate(45deg) translate(0px, 0px);
+            }
+            span:nth-child(2){
+                opacity: 0;
+            }
+            span:nth-child(3){
+                transform: rotate(-45deg) translate(1px, 3px);
+            }
+            
+        }
 
         .nav_links{
             #mb_nav_btn{
+
                 position: fixed;
                 top: 20px;
                 right: 20px;;
@@ -472,6 +328,9 @@ section{
                 }
 
                span{
+                transform-origin: 0 100%;
+
+                   transition: 0.2s ease;
                    width: 100%;
                    height: 5px;
                    background-color: var(--baby-color);

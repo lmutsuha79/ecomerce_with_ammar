@@ -266,6 +266,20 @@ section {
   display: flex;
 }
 
+#main_header .main_header_content .mb_nav_open_style span:nth-child(1) {
+  -webkit-transform: rotate(45deg) translate(0px, 0px);
+          transform: rotate(45deg) translate(0px, 0px);
+}
+
+#main_header .main_header_content .mb_nav_open_style span:nth-child(2) {
+  opacity: 0;
+}
+
+#main_header .main_header_content .mb_nav_open_style span:nth-child(3) {
+  -webkit-transform: rotate(-45deg) translate(1px, 3px);
+          transform: rotate(-45deg) translate(1px, 3px);
+}
+
 #main_header .main_header_content .nav_links #mb_nav_btn {
   position: fixed;
   top: 20px;
@@ -288,6 +302,10 @@ section {
 }
 
 #main_header .main_header_content .nav_links #mb_nav_btn span {
+  -webkit-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
   width: 100%;
   height: 5px;
   background-color: var(--baby-color);
