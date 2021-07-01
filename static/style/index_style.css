@@ -221,10 +221,10 @@
 .offers_section .offers_content {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  gap: 20px;
 }
 
 .offers_section .offers_content .item {
-  padding: 20px 10px;
   width: 250px;
   height: auto;
 }
@@ -331,10 +331,10 @@
   width: 75%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  gap: 10px;
 }
 
 .popular_games_section .other_games .item {
-  padding: 0px 10px;
   margin: 40px 0px;
   width: 200px;
   height: 350px;
@@ -470,18 +470,24 @@
 .gift_section .gift_section_content {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  gap: 20px;
 }
 
 .gift_section .gift_item {
   width: 45%;
   height: 400px;
-  padding: 10px;
+}
+
+@media (max-width: 767px) {
+  .gift_section .gift_item {
+    height: 330px;
+  }
 }
 
 @media (max-width: 576px) {
   .gift_section .gift_item {
     width: 280px;
-    height: 400px;
+    height: 300px;
   }
 }
 

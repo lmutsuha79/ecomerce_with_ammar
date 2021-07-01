@@ -286,9 +286,9 @@
     .offers_content{
         // flex_center;
         flex-wrap: wrap;
+        gap: 20px;
 
         .item{
-            padding: 20px 10px;
             width: 250px;
             height: auto;
 
@@ -420,8 +420,10 @@
     .other_games{
         width: 75%;
         flex-wrap: wrap;
+        gap: 10px;
         .item{
-            padding: 0px 10px;
+            // padding: 0px 10px;
+            // replaced with gap 10px
             margin: 40px 0px;
             width: 200px;
             height: 350px;
@@ -569,15 +571,17 @@
     .gift_section_content{
         // flex center class;
         flex-wrap: wrap;
+        gap: 20px;
     }
     .gift_item{
         width: 45%;
         height: 400px;
-        padding: 10px;
-
+        @media (max-width: 767px){
+            height: 330px;
+        }
         @media(max-width: 576px){
             width: 280px;
-            height: 400px;
+            height: 300px;
         }
 
     }

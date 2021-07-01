@@ -142,6 +142,10 @@ body {
   background-color: var(--dark-blue);
 }
 
+#main_body {
+  margin-top: 70px;
+}
+
 html {
   scroll-behavior: smooth;
 }

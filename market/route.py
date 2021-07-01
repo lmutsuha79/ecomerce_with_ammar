@@ -52,7 +52,8 @@ def registration_page():
             email = form.email.data
             password = form.password.data
             if username and User.query.filter_by(username=username).first():
-                form.new_errors = {'username': ['This username exist enter other one']}
+                form.new_errors = {'username': [
+                    'This username exist enter other one']}
                 static = False
 
             if not email:
@@ -106,3 +107,7 @@ def page_not_found(e):
     # note that we set the 404 status explicitly
     return render_template('404_page.html'), 404
 
+
+@app.route('/games')
+def games():
+    return render_template('games.html')

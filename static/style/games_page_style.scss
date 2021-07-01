@@ -1,0 +1,220 @@
+
+:root{
+    --baby-color : #B1D4E0;
+    --blue-color : #2E8BC0;
+    --over-blue : #299fe3;
+    --gray-color:#839199;
+    --dark-blue : #0C2D48;
+    --baby-gray:#b1d4e07d;
+    // --Midnight-blue : #145DA0;
+    
+        --Midnight-blue : #134675;
+// 
+
+    --slow-transition : 0.3s;
+    --nav_height : 100px;
+
+    
+}
+// end variables
+.container.flex-center{
+    flex-wrap: nowrap;
+    gap: 10px;
+    margin-top: 120px;
+    align-items: flex-start;
+
+}
+
+
+#games_show{
+    width: 75%;
+    height: 100%;
+    margin-top: 0px; // for section class margin top 50px ;
+
+    //sort_options:
+    .sort_options{
+        margin-bottom: 20px;
+        transition: var(--slow-transition) ease;
+      
+       
+        span{
+            font-weight: 600;
+            color: var(--blue-color);
+            transition: var(--slow-transition) ease;
+        }
+       
+        .sort_option_title{
+            cursor: pointer;
+
+            color: var(--baby-color);
+        }
+        .hidden_sort_option_list{
+            background-color: var(--baby-color);
+            width: 200px;
+            opacity: 0.8;
+            padding: 10px;
+            border-radius: 6px;
+
+
+            position: absolute;
+            z-index: 99;
+            max-height: 200px;
+            font-size: 0.8rem;
+
+            transition: var(--slow-transition) ease;
+            visibility: hidden;
+            opacity: 0;
+
+
+
+
+           
+            span{
+                color: var(--Midnight-blue);
+                cursor: pointer;
+                &:hover{
+                    color: var(--Midnight-blue);
+                    text-decoration: underline;
+                }
+                text-decoration-color: var(--Midnight-blue);
+                text-transform: capitalize;
+               
+            }
+
+            ul{
+                li{
+                    margin: 10px 0px;
+                }
+            }
+           
+        }
+
+        .sort_list_open{
+            opacity: 0.8;
+            visibility: visible;
+        }
+        .icon-angle-double-up{
+            position: absolute;
+            transform: translateX(10px);
+        }
+        .sort_arrow_down{
+            transform: translateX(10px) rotate(180deg);
+        }
+
+    }
+
+
+    .games_show_content{
+        flex-wrap: wrap;
+        gap: 10px;
+        .item{
+            width: 200px;
+        }
+    }
+}
+
+
+#main_aside{
+    width: 25%;
+    height: 100%;
+   
+    //form
+    .search_bar_for_main_aside{
+      
+        height: 30px;
+        background-color: var(--Midnight-blue);
+        border-radius: 3px;
+        overflow: hidden;
+        gap: 5px;
+
+
+        
+
+
+        input{
+            width: 79%;
+            background-color: inherit;
+
+        
+
+
+            
+            &::placeholder{
+                color: var(--baby-color);
+                opacity: 0.4;
+            }
+            outline: none;
+        }
+        .icon-search{
+            height: 100%;
+            width: 20%;
+            cursor: pointer;
+            background: var(--blue-color);
+            opacity: 0.4;
+            &:hover{
+                opacity: 1;
+            }
+        }
+        input,.icon-search{
+         color: var(--baby-color);  
+         border: 0px;
+         transition: 0.2s ease;
+         
+
+        }
+    }
+
+    .filter_text{
+        color: var(--baby-color);
+        font-size: 1.1rem;
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+    .filters_options_container{
+        border-top: 1Px solid var(--baby-color);
+        border-bottom: 1px solid var(--baby-color);
+
+    }
+    .filter_option{
+        padding: 10px;
+        max-height: 165px;
+        overflow: hidden;
+        span{
+            cursor: pointer;
+        }
+
+        .fliter_option_title{
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--baby-color);
+            &::after{
+                content: ':';
+            }
+            .icon-chevron-down{
+                font-size: 1rem;
+            }
+            
+
+        }
+        .fliter_option_list{
+            padding: 10px;
+            
+            li{
+                margin: 10px 0px;
+                span{
+                    color: var(--baby-gray);
+                    &:hover{
+                        text-decoration: underline;
+                        color: var(--baby-color);
+                        &:text-decoration{
+                            color: var(--baby-color);
+                        }
+                    }
+                    
+                }
+            }
+
+        }
+    }
+    
+}

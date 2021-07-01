@@ -170,6 +170,9 @@ body{
     background-color: var(--dark-blue);
 
 }
+#main_body{
+    margin-top: 70px;
+}
 html {
     scroll-behavior: smooth;
   }
@@ -584,6 +587,7 @@ section{
 
 
 // ##########################################
+// item stufs
 .img_info{
     position: relative;
     height: 80%;
