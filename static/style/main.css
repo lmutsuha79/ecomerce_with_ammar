@@ -211,6 +211,8 @@ section {
 }
 
 #main_header {
+  -webkit-box-shadow: 0px -4px 20px 1px var(--blue-color);
+          box-shadow: 0px -4px 20px 1px var(--blue-color);
   z-index: 999;
   height: 70px;
   width: 100%;
@@ -414,6 +416,8 @@ section {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-shadow: 0px 7px 20px 1px var(--blue-color);
+            box-shadow: 0px 7px 20px 1px var(--blue-color);
   }
   #main_header .main_header_content .user_links li {
     margin: 0px 10px;
