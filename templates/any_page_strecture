@@ -1,0 +1,29 @@
+
+{% extends 'base.html' %}
+
+{%block title%}games page{%endblock%}
+
+{% block page_style_css %}
+<!-- css with python code-->
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style/games_page_style.css') }}">
+
+{% endblock %}
+
+
+
+{% block content %} 
+<!-- content start-->
+<!-- content end-->
+
+{% endblock %}
+
+
+
+{% block js_src %} 
+<!-- js code-->
+
+
+
+
+{% endblock %}

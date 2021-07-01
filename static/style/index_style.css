@@ -1,0 +1,532 @@
+.extra_show_section {
+  margin-top: 100px;
+}
+
+.extra_show_section .extra_show_content {
+  height: 70vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.extra_show_section .extra_show_content .item {
+  width: 100%;
+  height: 100%;
+}
+
+.extra_show_section .extra_show_content .item .item_big {
+  background-image: url(https://hb.imgix.net/eff21a2d1510373ac10d1512bd4fa470a5ec4ada.jpg?auto=compress,format&fit=crop&h=353&w=616&s=be5b568aa7a3c6a79b97c381ed623541);
+  width: 100%;
+  height: 100%;
+}
+
+.extra_show_section .extra_show_content .item .item_simple:nth-child(1) {
+  background-image: url(https://cdn.shopify.com/s/files/1/0337/2734/8781/files/shop30_home_banner3.jpg);
+}
+
+.extra_show_section .extra_show_content .item .item_simple:nth-child(2) {
+  background-image: url(https://www.gannett-cdn.com/presto/2021/05/14/USAT/acee7f67-a20f-426a-a66d-984969049dc1-Galaxy-Global-Assets-Range1-Blog-post-16x9-4K-04-26apr21-FI.jpg);
+}
+
+@media (max-width: 767px) {
+  .extra_show_section .extra_show_content {
+    height: 140vh;
+  }
+}
+
+@media (max-width: 767px) {
+  .extra_show_section .extra_show_content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .extra_show_section .extra_show_content .item:nth-child(2) .item_simple {
+    width: 100%;
+    height: 50%;
+  }
+  .extra_show_section .extra_show_content .item:nth-child(2) .item_simple:nth-child(1) {
+    margin: 20px 0px;
+  }
+}
+
+@media (min-width: 767px) {
+  .extra_show_section .extra_show_content .item:nth-child(1) {
+    width: calc(100% - (100%/3));
+    padding-right: 20px;
+  }
+  .extra_show_section .extra_show_content .item:nth-child(2) {
+    padding-bottom: 20px;
+    width: calc(100%/3);
+  }
+  .extra_show_section .extra_show_content .item:nth-child(2) .item_simple {
+    width: 100%;
+    height: 50%;
+  }
+  .extra_show_section .extra_show_content .item:nth-child(2) .item_simple:nth-child(1) {
+    margin-bottom: 20px;
+    background-image: url(https://cdn.wccftech.com/wp-content/uploads/2020/06/PS5-Reveal.jpg);
+  }
+  .extra_show_section .extra_show_content .item:nth-child(2) .item_simple:nth-child(2) {
+    background-image: url(https://www.gannett-cdn.com/presto/2021/05/14/USAT/acee7f67-a20f-426a-a66d-984969049dc1-Galaxy-Global-Assets-Range1-Blog-post-16x9-4K-04-26apr21-FI.jpg);
+  }
+}
+
+.extra_show_section .extra_show_content .background_class {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+
+.extra_show_section .extra_show_content .background_class::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  -webkit-transition: var(--slow-transition);
+  transition: var(--slow-transition);
+  background: white;
+  background: linear-gradient(152deg, rgba(255, 255, 255, 0) 0%, #0c2d48 85%);
+}
+
+.extra_show_section .extra_show_content .background_class:hover::before {
+  opacity: 0.8;
+}
+
+.extra_show_section .extra_show_content .background_class:hover .shop_now_link {
+  opacity: 1;
+  visibility: visible;
+  right: 20px;
+}
+
+.extra_show_section .extra_show_content .shop_now_link {
+  opacity: 0;
+  visibility: hidden;
+  right: -40px;
+  position: absolute;
+  bottom: 20px;
+  border-radius: 5px;
+}
+
+.extra_show_section .extra_show_content .item_big, .extra_show_section .extra_show_content .item_simple {
+  position: relative;
+}
+
+.extra_show_section .extra_show_content .item_big .shop_now_link {
+  padding: 20px 40px;
+}
+
+.extra_show_section .extra_show_content .item_simple .shop_now_link {
+  padding: 10px 20px;
+}
+
+.extra_show_section .features_extra_show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  .extra_show_section .features_extra_show {
+    display: block;
+    margin-top: 70px;
+  }
+}
+
+.extra_show_section .features_extra_show .item {
+  line-height: 1.2rem;
+  width: calc(100%/3);
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+.extra_show_section .features_extra_show .item:hover .icon {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+.extra_show_section .features_extra_show .item .icon {
+  -webkit-transition: var(--slow-transition) ease;
+  transition: var(--slow-transition) ease;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.extra_show_section .features_extra_show .item .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.extra_show_section .features_extra_show .item:nth-child(1) {
+  border-right: 1px solid var(--gray-color);
+}
+
+.extra_show_section .features_extra_show .item:nth-child(3) {
+  border-left: 1px solid var(--gray-color);
+}
+
+.extra_show_section .features_extra_show .item span {
+  display: block;
+}
+
+.extra_show_section .features_extra_show .item .title {
+  color: white;
+  font-weight: 600;
+}
+
+.extra_show_section .features_extra_show .item .desc {
+  font-size: 0.8rem;
+  color: var(--gray-color);
+}
+
+@media (max-width: 768px) {
+  .extra_show_section .features_extra_show .item {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0px;
+  }
+  .extra_show_section .features_extra_show .item:nth-child(2) {
+    padding: 10px 0px;
+    border-top: 1px solid var(--gray-color);
+    border-bottom: 1px solid var(--gray-color);
+    border-right: 0px;
+    border-left: 0px;
+  }
+  .extra_show_section .features_extra_show .item:nth-child(1), .extra_show_section .features_extra_show .item:nth-child(3) {
+    border: 0px;
+  }
+}
+
+.offers_section .offers_content {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.offers_section .offers_content .item {
+  padding: 20px 10px;
+  width: 250px;
+  height: auto;
+}
+
+.add_section hr {
+  border: 1px solid var(--baby-color);
+}
+
+.add_section .container {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.add_section .add_info {
+  text-align: center;
+  width: 600px;
+}
+
+.add_section .add_info h2 {
+  color: var(--baby-color);
+}
+
+.add_section .add_info p {
+  color: var(--over-blue);
+}
+
+.add_section .add_info .shop_now_add_info_btn {
+  padding: 10px;
+  border: 1px solid var(--blue-color);
+  margin-top: 10px;
+}
+
+.popular_games_section .popular_games_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.popular_games_section .slider {
+  width: 25%;
+  padding: 20px 10px;
+  text-align: center;
+  border: 1px solid var(--Midnight-blue);
+  border-radius: 5px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+
+.popular_games_section .slider .item {
+  width: 100%;
+}
+
+.popular_games_section .slider_content {
+  height: 430px;
+  width: 300%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 99;
+  left: -0%;
+  position: absolute;
+  -webkit-transition: var(--slow-transition) ease;
+  transition: var(--slow-transition) ease;
+}
+
+.popular_games_section .slider_controller {
+  width: 100%;
+  margin-top: 470px;
+}
+
+.popular_games_section .slider_controller span {
+  background-color: var(--Midnight-blue);
+  margin: 0px 5px;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: 0.1s ease;
+  transition: 0.1s ease;
+}
+
+.popular_games_section .slider_controller span:hover {
+  border: 2px solid var(--baby-color);
+}
+
+.popular_games_section .slider_controller .bolet_active {
+  border: 2px solid var(--baby-color);
+}
+
+.popular_games_section .other_games {
+  width: 75%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.popular_games_section .other_games .item {
+  padding: 0px 10px;
+  margin: 40px 0px;
+  width: 200px;
+  height: 350px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .popular_games_section .slider, .popular_games_section .other_games {
+    width: 100%;
+  }
+  .popular_games_section .slider .item {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .popular_games_section .slider .item {
+    width: 100%;
+  }
+}
+
+:root {
+  --swiper-theme-color: var(--Midnight-blue);
+}
+
+.deals_section {
+  height: 450px;
+  width: 100%;
+}
+
+.deals_section .container {
+  height: 100%;
+}
+
+.deals_section .confirm {
+  padding: 20px;
+  position: absolute;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.deals_section .swiper-container {
+  width: 70%;
+}
+
+@media (max-width: 776px) {
+  .deals_section .swiper-container {
+    width: 100%;
+  }
+}
+
+.deals_section .swiper-slide img {
+  width: 100%;
+  height: 100%;
+}
+
+.deals_section .swiper-slide .slid_item_info {
+  position: absolute;
+}
+
+.deals_section .swiper-slide .key_bord_slid_info {
+  bottom: 50px;
+  width: 85%;
+}
+
+.deals_section .swiper-slide .key_bord_slid_info .confirm {
+  margin-top: 20px;
+}
+
+.deals_section .swiper-slide:hover .slider_shadow {
+  bottom: 0%;
+}
+
+.deals_section .swiper-slide:hover .confirm {
+  opacity: 1;
+  visibility: visible;
+}
+
+.deals_section .play_station_slid_add .confirm {
+  bottom: 20px;
+  left: 20px;
+  padding: 20px;
+}
+
+.deals_section .cyber_panck_slider_add .confirm {
+  bottom: 40px;
+  padding: 15px;
+}
+
+.deals_section .xbox_slider_add .confirm {
+  top: 50%;
+  left: 10%;
+}
+
+.deals_section .keyboard_slid_add .confirm {
+  bottom: 0px;
+  right: -30px;
+}
+
+.deals_section .confirm {
+  opacity: 0;
+  visibility: hidden;
+  z-index: 99;
+}
+
+.deals_section .slider_shadow {
+  width: 100%;
+  background-color: black;
+  position: absolute;
+  bottom: -70%;
+  left: 0;
+  height: 0%;
+  -webkit-transition: var(--slow-transition) ease;
+  transition: var(--slow-transition) ease;
+}
+
+.deals_section .shadow_light {
+  -webkit-box-shadow: 0px 40px 175px 64px var(--baby-color);
+          box-shadow: 0px 40px 175px 64px var(--baby-color);
+}
+
+.deals_section .shadow_dark {
+  -webkit-box-shadow: 0px 40px 175px 170px var(--dark-blue);
+          box-shadow: 0px 40px 175px 170px var(--dark-blue);
+}
+
+.gift_section {
+  margin-top: 100px;
+}
+
+.gift_section .gift_section_content {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.gift_section .gift_item {
+  width: 45%;
+  height: 400px;
+  padding: 10px;
+}
+
+@media (max-width: 576px) {
+  .gift_section .gift_item {
+    width: 280px;
+    height: 400px;
+  }
+}
+
+.gift_section .gift_item_content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.gift_section .gift_item_content img {
+  width: 100%;
+  height: 100%;
+}
+
+.gift_section .gift_item_content:hover .view_item_btn {
+  opacity: 1;
+  visibility: visible;
+  height: 50px;
+}
+
+.payment_methods_section {
+  height: 200px;
+}
+
+.payment_methods_section .container {
+  height: 100%;
+}
+
+.payment_methods_section img {
+  width: 100%;
+  height: 100%;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  cursor: pointer;
+  -webkit-transition: var(--slow-transition) ease;
+  transition: var(--slow-transition) ease;
+}
+
+.payment_methods_section img:hover {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+}
+
+.payment_methods_section .swiper-container {
+  border-radius: 7px;
+}
+/*# sourceMappingURL=index_style.css.map */

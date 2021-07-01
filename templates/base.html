@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{%block title%}{%endblock%}</title>
+    <!-- font_family start -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- font_family end -->
+    <!-- ./swip js css start-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- ./swip js css end -->
+    <!-- normalize style start
+    <link rel="stylesheet" href="../static/style/normalize.css"> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style/normalize.css') }}">
+    <!-- normalize style end -->
+
+    <!-- main style css start
+    <link rel="stylesheet" href="../static/style/main.css"> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style/main.css') }}">
+    <!-- main style css end -->
+
+    <!-- page style css start -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style/index_style.css') }}">
+    {% block page_style_css %} {% endblock %}
+    <!-- page style css end -->
+
+
+
+
+</head>
+
+
+<body>
+
+<!-- ##############################################################-->
+
+    <!-- main header start -->
+    <header id="main_header">
+        <div class="container">
+            <div class="main_header_content">
+                <div class="logo">
+                    <img src="{{ url_for('static',filename='images/logo.png') }}" alt="logo">
+                </div><!-- ./logo -->
+                <div class="nav_links">
+                    <div id="mb_nav_btn" class="flex-center">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </div><!-- ./mb_nav_btn -->
+
+
+                    <nav id="main_nav_of_links">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Top ever</a></li>
+                            <li><a href="#">Trend</a></li>
+
+                        </ul>
+                    </nav>
+                </div><!-- ./nav_links -->
+                <div class="user_links">
+                    <ul>
+                        <li><a href="{{ url_for('login_page') }}"><span class="icon-user"></span></a></li>
+                        <li><a href="#"><span class="icon-search"></span></a></li>
+                        <li><a href="#"><span class="icon-heart"></span></a></li>
+                        <li><a href="#"><span class="icon-shopping-cart"></span></a></li>
+
+                    </ul>
+                </div><!-- ./user_links -->
+            </div>
+        </div><!-- ./container -->
+    </header>
+  <!-- main header end -->
+<!-- ##############################################################-->
+    {% block content %} 
+    
+    {% endblock %}
+    <!-- ###########################################################-->
+
+    <!-- ./ main footer start -->
+
+    <footer id="main_footer">
+            <div class="container">
+                <div class="footer_content">
+                    <div class="column_footer">
+                        <img src="../static/images/logo.png" alt="logo_footer">
+                    </div>
+                    <div class="column_footer">
+                        <div class="footer_title">main_links</div>
+                        <div class="main_links footer_links">
+                            <ul>
+                                <li><a href="#">home</a></li>
+                                <li><a href="#">services</a></li>
+                                <li><a href="#">contact us</a></li>
+                                <li><a href="#">about us</a></li>
+                                <li><a href="#">sing up</a></li>
+                                <li><a href="#">sing in</a></li>
+                                <li><a href="#">your compt</a></li>
+                            </ul>
+                        </div><!-- ./main_links -->
+                    </div>
+                    <div class="column_footer">
+                        <div class="footer_title">Tags</div>
+                        <div class="tags-links footer_links">
+                            <ul>
+                                <li><a href="#">fps</a></li>
+                                <li><a href="#">hot summer</a></li>
+                                <li><a href="#">shooter</a></li>
+                                <li><a href="#">speed</a></li>
+                                <li><a href="#">horor</a></li>
+                                <li><a href="#">sport</a></li>
+                                <li><a href="#">adventure</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="column_footer">
+                        <div class="footer_title">
+                            follow us on:
+                        </div>
+                        <div class="social_media_footer_links">
+                            <a href="#">
+                                <span class="icon-facebook-square"></span>
+                            </a>
+                            <a href="#"><span class="icon-github-square"></span></a>
+                            <a href="#"><span class="icon-twitter"></span></a>
+                            <a href="#"><span class="icon-pinterest"></span></a>
+                            <a href="#"><span class="icon-instagram"></span></a>
+                        </div>
+                    </div>
+
+                </div><!-- ./footer_content -->
+            </div><!-- ./container -->
+            <div class="footer_of_footer">
+                ©Copyright 2021 by yasser and ammar. All Rights Reserved.
+
+            </div><!-- ./footer_of_footer -->
+    </footer>
+    <!-- ./ main footer end -->
+<!-- ###########################################################-->
+
+
+
+
+<script src="../static/js/main.js"></script>
+
+{% block js_src %} {% endblock %}
+
+</body>
+</html>

@@ -1,1167 +1,1205 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %} {%block title%}index page{%endblock%} {% block
+page_style_css %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{ url_for('static',filename='style/index_style.css') }}"
+/>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index</title>
-    <!-- font_family start -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <!-- font_family end -->
-    <!-- ./swip js css start-->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <!-- ./swip js css end -->
-    <!-- normalize style start
-    <link rel="stylesheet" href="../static/style/normalize.css"> -->
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style/normalize.css') }}">
-    <!-- normalize style end -->
+{% endblock %} {% block content %}
 
-    <!-- main style css start
-    <link rel="stylesheet" href="../static/style/main.css"> -->
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style/main.css') }}">
-    <!-- main style css end -->
+<!-- extra_show start -->
 
-    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" /> -->
-
-
-</head>
-
-
-
-<body>
-
-
-    <header id="main_header">
-        <div class="container">
-            <div class="main_header_content">
-                <div class="logo">
-                    <img src="{{ url_for('static',filename='images/logo.png') }}" alt="logo">
-                </div><!-- ./logo -->
-                <div class="nav_links">
-                    <div id="mb_nav_btn" class="flex-center">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-
-                    </div><!-- ./mb_nav_btn -->
-
-
-                    <nav id="main_nav_of_links">
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Top ever</a></li>
-                            <li><a href="#">Trend</a></li>
-
-                        </ul>
-                    </nav>
-                </div><!-- ./nav_links -->
-                <div class="user_links">
-                    <ul>
-                        <li><a href="{{ url_for('login_page') }}"><span class="icon-user"></span></a></li>
-                        <li><a href="#"><span class="icon-search"></span></a></li>
-                        <li><a href="#"><span class="icon-heart"></span></a></li>
-                        <li><a href="#"><span class="icon-shopping-cart"></span></a></li>
-
-                    </ul>
-                </div><!-- ./user_links -->
-            </div>
-        </div><!-- ./container -->
-    </header>
-
-
-    <section class="extra_show">
-        <div class="container">
-            <div class="extra_show_content">
-                <div class="item">
-                    <div class="item_big background_class">
-                        <div class="off_discont off_discont_type1"><span>50% OFF</span></div>
-                        <a class="confirm shop_now_link" href="#">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            Shop Now
-                        </a>
-                    </div><!-- ./item_big -->
-                </div><!-- ./grid_item_big -->
-
-                <div class="item">
-                    <div class="item_simple background_class">
-                        <!-- <div class="off_discont"><span>50% OFF</span></div> -->
-
-                        <a class="confirm shop_now_link" href="#">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            Shop Now
-                        </a>
-                    </div><!-- ./grid_item_simple -->
-                    <div class="item_simple background_class">
-                        <div class="off_discont off_discont_type2"><span>20% OFF</span></div>
-
-                        <a class="confirm shop_now_link" href="#">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            Shop Now
-                        </a>
-                    </div><!-- ./grid_item_simple -->
-                </div>
-
-            </div><!-- ./extra_grid_show_content -->
-        </div><!-- ./container -->
-
-        <div class="freatures_extra_show">
-            <div class="item flex-center">
-                <div class="text">
-                    <span class="title">FREE SHIPPING & RETURN
-                    </span>
-                    <span class="desc">Free shipping on all orders over $99.
-                    </span>
-                </div>
-                <div class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="96" height="96" viewBox="0 0 172 172"
-                        style=" fill:#000000;">
-                        <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
-                            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
-                            font-family="none" font-weight="none" font-size="none" text-anchor="none"
-                            style="mix-blend-mode: normal">
-                            <path d="M0,172v-172h172v172z" fill="none"></path>
-                            <g fill="#b1d4e0">
-                                <path
-                                    d="M23.29167,25.08333c-8.89025,0 -16.125,7.23475 -16.125,16.125v78.83333c0,8.89025 7.23475,16.125 16.125,16.125h2.56152c2.36282,8.23598 9.98109,14.33333 18.93848,14.33333c8.95739,0 16.57565,-6.09735 18.93848,-14.33333h31.22819c2.967,0 5.375,-2.40442 5.375,-5.375v-89.58333c0,-8.89025 -7.23475,-16.125 -16.125,-16.125zM45.78548,48.17204c3.12467,0 5.93993,1.29879 7.96452,3.36637c2.02458,-2.07116 4.83985,-3.36637 7.96452,-3.36637c6.15617,0 11.14193,4.99276 11.14193,11.14893c0,2.0425 -0.58638,3.92963 -1.54671,5.57796c6.13825,0.02508 11.10693,5.00709 11.10693,11.14893c0,5.88383 -4.56774,10.64569 -10.34408,11.06494c0.4945,1.26133 0.78385,2.62932 0.78385,4.06624c0,6.15617 -4.98576,11.14893 -11.14193,11.14893c-3.12467,0 -5.93993,-1.29879 -7.96452,-3.36637c-2.02458,2.07116 -4.83985,3.36637 -7.96452,3.36637c-6.15617,0 -11.14193,-4.99276 -11.14193,-11.14893c0,-1.43691 0.28935,-2.80491 0.78385,-4.06624c-5.77633,-0.41925 -10.34408,-5.18111 -10.34408,-11.06494c0,-6.14183 4.96868,-11.12384 11.10693,-11.14893c-0.96033,-1.64475 -1.54671,-3.53546 -1.54671,-5.57796c0,-6.15617 4.98576,-11.14893 11.14193,-11.14893zM107.5,57.33333v73.45833c0,10.82021 8.88812,19.70833 19.70833,19.70833c8.95739,0 16.57565,-6.09735 18.93848,-14.33333h2.56152c8.90458,0 16.125,-7.22042 16.125,-16.125v-22.80176c0,-2.2575 -0.47541,-4.49036 -1.39274,-6.55078l-10.56803,-23.77458c-2.58717,-5.8265 -8.36109,-9.58122 -14.73226,-9.58122zM53.75,64.5c-5.94117,0 -10.75,4.80883 -10.75,10.75c0,5.94117 4.80883,10.75 10.75,10.75c5.94117,0 10.75,-4.80883 10.75,-10.75c0,-5.94117 -4.81242,-10.74642 -10.75,-10.75zM121.83333,68.08333h16.30697c2.12492,0 4.04609,1.24924 4.90609,3.19141l5.8929,13.26953c1.0535,2.36858 -0.67764,5.03906 -3.26839,5.03906h-23.83757c-1.978,0 -3.58333,-1.60533 -3.58333,-3.58333v-14.33333c0,-1.978 1.60533,-3.58333 3.58333,-3.58333zM44.79167,121.83333c5.00379,0 8.95833,3.95455 8.95833,8.95833c0,5.00379 -3.95455,8.95833 -8.95833,8.95833c-5.00379,0 -8.95833,-3.95455 -8.95833,-8.95833c0,-5.00379 3.95455,-8.95833 8.95833,-8.95833zM127.20833,121.83333c5.00379,0 8.95833,3.95455 8.95833,8.95833c0,5.00379 -3.95455,8.95833 -8.95833,8.95833c-5.00379,0 -8.95833,-3.95455 -8.95833,-8.95833c0,-5.00379 3.95455,-8.95833 8.95833,-8.95833z">
-                                </path>
-                            </g>
-                        </g>
-                    </svg>
-                </div>
-            </div>
-            <div class="item flex-center">
-                <div class="text"><span class="title">MONEY BACK GUARANTEE
-
-                    </span>
-                    <span class="desc">100% money back guarantee.
-                    </span>
-                </div><!-- ./text -->
-                <div class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 172 172"
-                        style=" fill:#000000;">
-                        <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
-                            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
-                            font-family="none" font-weight="none" font-size="none" text-anchor="none"
-                            style="mix-blend-mode: normal">
-                            <path d="M0,172v-172h172v172z" fill="none"></path>
-                            <g fill="#b1d4e0">
-                                <path
-                                    d="M86,14.33333c-39.5815,0 -71.66667,32.08517 -71.66667,71.66667c0,39.5815 32.08517,71.66667 71.66667,71.66667c5.18867,0 10.23669,-0.57737 15.11719,-1.62369c-1.89917,-7.10934 -0.14636,-15.11798 5.50098,-20.75814c7.98367,-7.998 20.75691,-8.34547 29.17058,-1.0498l11.92578,-11.92578c6.28517,-10.65683 9.95215,-23.04374 9.95215,-36.30924c0,-39.5815 -32.08517,-71.66667 -71.66667,-71.66667zM87.53972,40.48047h0.04199c1.98517,0 3.59733,1.61216 3.59733,3.59733v6.84473c1.90633,0.3655 11.0697,2.44059 14.15137,13.87142c1.13233,4.20683 -2.13063,8.32845 -6.4808,8.32845h-0.028c-3.18917,0 -5.84094,-2.27866 -6.56477,-5.389c-1.18967,-5.06683 -4.02016,-6.00488 -5.389,-6.00488c-0.96033,0 -5.417,0.25162 -5.417,8.32845c0,14.09684 24.78939,9.70758 24.78939,32.68392c0,16.68399 -13.70267,18.93142 -16.125,19.23242v5.94889c0,1.98517 -1.59817,3.58333 -3.58333,3.58333c-1.98517,0 -3.59733,-1.59817 -3.59733,-3.58333v-5.94889c-1.88483,-0.258 -12.83248,-1.47185 -16.25098,-14.22135c-1.1395,-4.26417 2.03813,-8.46842 6.4528,-8.46842c3.096,0 5.89178,2.09871 6.53679,5.12304c1.4835,6.966 6.00723,6.60677 6.80273,6.60677c1.0535,0 6.22884,-0.19048 6.22884,-8.18848c0,-15.9745 -24.78939,-8.88006 -24.78939,-32.82389c0,-16.41167 13.59752,-18.98024 16.02702,-19.28841v-6.63477c0,-1.98517 1.61216,-3.59733 3.59733,-3.59733zM164.90332,128.31413c-1.81496,0 -3.62432,0.69886 -5.01107,2.08561l-24.48145,24.46745l-8.63639,-9.46224c-2.7735,-2.7735 -7.26263,-2.7735 -10.03614,0c-2.7735,2.77351 -2.7735,7.26264 0,10.03614l13.66146,14.48731c2.77351,2.7735 7.2698,2.7735 10.03614,0l29.49252,-29.49252c2.7735,-2.7735 2.7735,-7.26263 0,-10.03614c-1.38676,-1.38675 -3.21011,-2.08561 -5.02507,-2.08561z">
-                                </path>
-                            </g>
-                        </g>
-                    </svg>
-                </div><!-- ./icon -->
-            </div>
-            <div class="item flex-center">
-                <div class="text">
-                    <span class="title">ONLINE SUPPORT 24/7
-
-                    </span>
-                    <span class="desc">Lorem ipsum dolor sit amet.
-                    </span>
-                </div><!-- ./text -->
-                <div class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="80" height="80" viewBox="0 0 172 172"
-                        style=" fill:#000000;">
-                        <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
-                            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
-                            font-family="none" font-weight="none" font-size="none" text-anchor="none"
-                            style="mix-blend-mode: normal">
-                            <path d="M0,172v-172h172v172z" fill="none"></path>
-                            <g fill="#b1d4e0">
-                                <path
-                                    d="M34.4,6.88c-5.68406,0 -10.32,4.63594 -10.32,10.32v20.7475l-3.44,3.44c-8.68062,12.69844 -13.76,28.07094 -13.76,44.6125c0,43.69875 35.42125,79.12 79.12,79.12c43.69875,0 79.12,-35.42125 79.12,-79.12c0,-43.69875 -35.42125,-79.12 -79.12,-79.12c-15.14406,0 -29.25344,4.34031 -41.28,11.7175v-1.3975c0,-5.68406 -4.63594,-10.32 -10.32,-10.32zM34.4,13.76c1.89469,0 3.44,1.54531 3.44,3.44v15.05c13.18219,-11.825 30.23438,-18.49 48.16,-18.49c39.82875,0 72.24,32.41125 72.24,72.24c0,39.82875 -32.41125,72.24 -72.24,72.24c-39.82875,0 -72.24,-32.41125 -72.24,-72.24c0,-11.5025 2.82188,-22.95125 8.0625,-33.11l6.02,3.1175c-4.81062,9.31219 -7.2025,19.43063 -7.2025,29.9925c0,36.03938 29.32063,65.36 65.36,65.36c36.03938,0 65.36,-29.32062 65.36,-65.36c0,-36.03937 -29.32062,-65.36 -65.36,-65.36c-16.4475,0 -32.08875,6.22156 -44.075,17.2h16.555c1.89469,0 3.44,1.54531 3.44,3.44c0,1.89469 -1.54531,3.44 -3.44,3.44h-27.52v-27.52c0,-1.89469 1.54531,-3.44 3.44,-3.44zM86,27.52c1.90813,0 3.44,1.54531 3.44,3.44c0,1.89469 -1.53187,3.44 -3.44,3.44c-1.89469,0 -3.44,-1.54531 -3.44,-3.44c0,-1.89469 1.54531,-3.44 3.44,-3.44zM114.2725,35.045c0.44344,0.05375 0.88688,0.18813 1.29,0.43c1.63938,0.95406 2.13656,3.09063 1.1825,4.73c-0.95406,1.63938 -3.09062,2.24406 -4.73,1.29c-1.63937,-0.95406 -2.13656,-3.09062 -1.1825,-4.73c0.72563,-1.23625 2.10969,-1.89469 3.44,-1.72zM133.4075,55.255c1.33031,-0.16125 2.63375,0.48375 3.3325,1.72c0.94063,1.65281 0.36281,3.78938 -1.29,4.73c-1.65281,0.94063 -3.68187,0.36281 -4.6225,-1.29c-0.94062,-1.65281 -0.36281,-3.78937 1.29,-4.73c0.41656,-0.24187 0.84656,-0.37625 1.29,-0.43zM63.21,58.1575c9.20469,0 15.91,5.87219 15.91,13.8675c0,5.13313 -2.40531,9.29875 -10.535,17.5225l-10.8575,10.965v0.5375h22.2525v6.7725h-32.68v-5.4825l16.34,-16.985c6.49031,-6.75906 8.0625,-9.33906 8.0625,-12.9c0,-4.43437 -3.81625,-7.74 -8.815,-7.74c-5.34812,0 -8.9225,3.42656 -8.9225,8.6v0.1075h-7.095v-0.1075c0,-8.93594 6.79938,-15.1575 16.34,-15.1575zM108.6825,59.34h10.6425v32.3575h6.7725v6.7725h-6.7725v9.3525h-7.2025v-9.3525h-23.65v-6.9875c4.34031,-7.92812 11.56969,-19.20219 20.21,-32.1425zM111.8,66.005c-4.79719,6.94719 -10.41406,15.45313 -16.125,25.37v0.5375h16.555v-25.9075zM30.96,82.56c1.89469,0 3.44,1.54531 3.44,3.44c0,1.90813 -1.54531,3.44 -3.44,3.44c-1.89469,0 -3.44,-1.53187 -3.44,-3.44c0,-1.89469 1.54531,-3.44 3.44,-3.44zM141.04,82.56c1.90813,0 3.44,1.54531 3.44,3.44c0,1.90813 -1.53187,3.44 -3.44,3.44c-1.90812,0 -3.44,-1.53187 -3.44,-3.44c0,-1.89469 1.53188,-3.44 3.44,-3.44zM37.84,109.865c1.33031,-0.16125 2.62031,0.48375 3.3325,1.72c0.94063,1.65281 0.36281,3.78938 -1.29,4.73c-1.65281,0.94063 -3.68187,0.36281 -4.6225,-1.29c-0.94062,-1.65281 -0.36281,-3.78937 1.29,-4.73c0.41656,-0.24187 0.84656,-0.37625 1.29,-0.43zM133.945,110.4025c0.44344,0.05375 0.88688,0.18813 1.29,0.43c1.63938,0.95406 2.2575,3.09063 1.29,4.73c-0.95406,1.63938 -3.09062,2.13656 -4.73,1.1825c-1.63937,-0.95406 -2.24406,-3.09062 -1.29,-4.73c0.71219,-1.23625 2.10969,-1.78719 3.44,-1.6125zM58.695,130.075c0.44344,0.05375 0.88688,0.18813 1.29,0.43c1.63938,0.95406 2.13656,3.09063 1.1825,4.73c-0.95406,1.63938 -3.09062,2.2575 -4.73,1.29c-1.63937,-0.95406 -2.13656,-3.09062 -1.1825,-4.73c0.72563,-1.23625 2.10969,-1.89469 3.44,-1.72zM112.7675,130.505c1.33031,-0.16125 2.63375,0.48375 3.3325,1.72c0.92719,1.65281 0.36281,3.68188 -1.29,4.6225c-1.65281,0.94063 -3.68187,0.36281 -4.6225,-1.29c-0.94062,-1.65281 -0.36281,-3.68187 1.29,-4.6225c0.41656,-0.22844 0.84656,-0.37625 1.29,-0.43zM86,137.6c1.90813,0 3.44,1.53188 3.44,3.44c0,1.90813 -1.53187,3.44 -3.44,3.44c-1.89469,0 -3.44,-1.53187 -3.44,-3.44c0,-1.90812 1.54531,-3.44 3.44,-3.44z">
-                                </path>
-                            </g>
-                        </g>
-                    </svg>
-                </div><!-- ./icons -->
-            </div>
-
+<section class="extra_show_section">
+  <div class="container">
+    <div class="extra_show_content">
+      <div class="item">
+        <div class="item_big background_class">
+          <div class="off_discont off_discont_type1"><span>50% OFF</span></div>
+          <a class="confirm shop_now_link" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Shop Now
+          </a>
         </div>
-
-    </section>
-
-
-    <section class="offers_section">
-        <div class="container">
-            <div class="section_title">
-                Featured Product and Offers
-            </div><!-- ./ -->
-            <div class="offers_content flex-center">
-
-                <!-- ./###########  1 ################# -->
-
-                <div class="item">
-                    <div class="img_info">
-                        <img src="../static/images/Epic_Future_3_300x420_crop_center.jpg" alt="game_img">
-                        <div class="view_item_btn">
-                            <a href="#">quick view</a>
-                        </div><!-- ./view_item_btn -->
-                        <div class="item_discount">-17%
-                        </div><!-- ./item_discount -->
-                        <div class="action_btns">
-                            <div class="add_to_card_btn">
-                                <span class="icon-shopping-cart"></span>
-                            </div>
-                            <div class="add_to_wich_list_btn">
-                                <span class="icon-heart"></span>
-                            </div>
-                        </div><!-- ./action_btns -->
-                    </div><!-- ./img_info -->
-                    <div class="item_info">
-                        <div class="tags">
-                            <a href="#">Featured Product</a>
-                            <a href="#">Esports</a>
-                        </div><!-- ./tags -->
-                        <div class="item_title">
-                            epic Future 3
-                        </div><!-- ./item_title -->
-                        <div class="item_rate stars4">
-
-                        </div><!-- ./item_rate -->
-                        <div class="item_price">
-                            <span class="price price_before">59.00</span>
-                            <span class="price price_now">49.00</span>
-                        </div><!-- ./item_price -->
-                    </div><!-- ./item_info -->
-                </div><!-- ./item -->
-                <!-- ./################################# -->
-
-                <div class="item">
-                    <div class="img_info">
-                        <img src="https://cdn.shopify.com/s/files/1/0337/2734/8781/products/War_2_300x420_crop_center.jpg?v=1582565571"
-                            alt="game_img">
-                        <div class="view_item_btn">
-                            <a href="#">quick view</a>
-                        </div><!-- ./view_item_btn -->
-                        <div class="item_discount">-17%
-                        </div><!-- ./item_discount -->
-                        <div class="action_btns">
-                            <div class="add_to_card_btn">
-                                <span class="icon-shopping-cart"></span>
-                            </div>
-                            <div class="add_to_wich_list_btn">
-                                <span class="icon-heart"></span>
-                            </div>
-                        </div><!-- ./action_btns -->
-                    </div><!-- ./img_info -->
-                    <div class="item_info">
-                        <div class="tags">
-                            <a href="#">ACTION</a>
-                            <a href="#">FEATURED PRODUCT</a>
-                        </div><!-- ./tags -->
-                        <div class="item_title">
-                            War 2
-                        </div><!-- ./item_title -->
-                        <div class="item_rate stars5">
-
-                        </div><!-- ./item_rate -->
-                        <div class="item_price">
-                            <span class="price price_before">59.00</span>
-                            <span class="price price_now">49.00</span>
-                        </div><!-- ./item_price -->
-                    </div><!-- ./item_info -->
-                </div><!-- ./item -->
-
-
-                <!-- ./################################# -->
-
-                <div class="item">
-                    <div class="img_info">
-                        <img src="https://cdn.shopify.com/s/files/1/0337/2734/8781/products/Porto_Speed_300x420_crop_center.jpg?v=1582565516"
-                            alt="game_img">
-                        <div class="view_item_btn">
-                            <a href="#">quick view</a>
-                        </div><!-- ./view_item_btn -->
-                        <div class="item_discount">-17%
-                        </div><!-- ./item_discount -->
-                        <div class="action_btns">
-                            <div class="add_to_card_btn">
-                                <span class="icon-shopping-cart"></span>
-                            </div>
-                            <div class="add_to_wich_list_btn">
-                                <span class="icon-heart"></span>
-                            </div>
-                        </div><!-- ./action_btns -->
-                    </div><!-- ./img_info -->
-                    <div class="item_info">
-                        <div class="tags">
-                            <a href="#">Featured Product</a>
-                            <a href="#">FPS</a>
-                        </div><!-- ./tags -->
-                        <div class="item_title">
-                            need for speed
-                        </div><!-- ./item_title -->
-                        <div class="item_rate stars4">
-
-                        </div><!-- ./item_rate -->
-                        <div class="item_price">
-                            <span class="price price_before">59.00</span>
-                            <span class="price price_now">49.00</span>
-                        </div><!-- ./item_price -->
-                    </div><!-- ./item_info -->
-                </div><!-- ./item -->
-
-                <!-- ./################################# -->
-
-                <div class="item">
-                    <div class="img_info">
-                        <img src="https://cdn.shopify.com/s/files/1/0337/2734/8781/products/Gas_Station_5_300x420_crop_center.jpg?v=1582564384"
-                            alt="game_img">
-                        <div class="view_item_btn">
-                            <a href="#">quick view</a>
-                        </div><!-- ./view_item_btn -->
-                        <div class="item_discount">-17%
-                        </div><!-- ./item_discount -->
-                        <div class="action_btns">
-                            <div class="add_to_card_btn">
-                                <span class="icon-shopping-cart"></span>
-                            </div>
-                            <div class="add_to_wich_list_btn">
-                                <span class="icon-heart"></span>
-                            </div>
-                        </div><!-- ./action_btns -->
-                    </div><!-- ./img_info -->
-                    <div class="item_info">
-                        <div class="tags">
-                            <a href="#">Featured Product</a>
-                            <a href="#">Horor</a>
-                            <a href="#">ACTION</a>
-                            <a href="#">FPS</a>
-
-
-                        </div><!-- ./tags -->
-                        <div class="item_title">
-                            Gas Station 5
-                        </div><!-- ./item_title -->
-                        <div class="item_rate stars5">
-
-                        </div><!-- ./item_rate -->
-                        <div class="item_price">
-                            <span class="price price_before">59.00</span>
-                            <span class="price price_now">49.00</span>
-                        </div><!-- ./item_price -->
-                    </div><!-- ./item_info -->
-                </div><!-- ./item -->
-
-            </div><!-- ./offers_content -->
-        </div><!-- ./container -->
-    </section>
-
-    <!-- ############################################## -->
-    <!-- add section -->
-    <section class="add_section">
-        <hr>
-        <div class="container flex-center">
-            <div class="add_info">
-                <h2>CONSOLE BUNDLE DEALS - FROM $199.99</h2>
-                <p>Play your way and experience the power of gaming at home or on the go</p>
-                <a class="confirm shop_now_add_info_btn" href="#">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    Shop Now
-                </a>
-            </div><!-- ./add-info -->
-            <div class="add_img">
-                <img src="https://cdn.game.net/image/upload/w_355,f_auto,q_auto/v1/game_img/merch2021/HomepageAssets/Gradient/Console-SW-XBS-PS4.png"
-                    alt="add_img">
-            </div><!-- ./add_img -->
-        </div><!-- ./container -->
-        <hr>
-    </section>
-
-    <!-- ################################################################# -->
-    <!-- section pupular games -->
-    <section class="popular_games_section">
-        <div class="container">
-            <div class="section_title">
-                Most Popular Games
-            </div><!-- ./most popular games -->
-            <div class="popular_games_content">
-                <div class="slider flex-center">
-                    <div class="slider_content">
-
-
-
-
-
-
-                        <!-- ###################    1   ##########################     -->
-
-                        <div class="item">
-                            <div class="img_info">
-                                <img src="https://cdn.shopify.com/s/files/1/0337/2734/8781/products/Gas_Station_5_300x420_crop_center.jpg?v=1582564384"
-                                    alt="game_img">
-                                <div class="view_item_btn">
-                                    <a href="#">quick view</a>
-                                </div><!-- ./view_item_btn -->
-                                <div class="item_discount">-17%
-                                </div><!-- ./item_discount -->
-                                <div class="action_btns">
-                                    <div class="add_to_card_btn">
-                                        <span class="icon-shopping-cart"></span>
-                                    </div>
-                                    <div class="add_to_wich_list_btn">
-                                        <span class="icon-heart"></span>
-                                    </div>
-                                </div><!-- ./action_btns -->
-                            </div><!-- ./img_info -->
-                            <div class="item_info">
-                                <div class="tags">
-                                    <a href="#">Featured Product</a>
-                                    <a href="#">Horor</a>
-                                    <a href="#">ACTION</a>
-                                    <a href="#">FPS</a>
-
-
-                                </div><!-- ./tags -->
-                                <div class="item_title">
-                                    Gas Station 5
-                                </div><!-- ./item_title -->
-                                <div class="item_rate stars5">
-
-                                </div><!-- ./item_rate -->
-                                <div class="item_price">
-                                    <span class="price price_before">59.00</span>
-                                    <span class="price price_now">49.00</span>
-                                </div><!-- ./item_price -->
-                            </div><!-- ./item_info -->
-                        </div><!-- ./item -->
-
-                        <!-- ###################    2   ##########################     -->
-
-                        <div class="item">
-                            <div class="img_info">
-                                <img src="https://cdn.shopify.com/s/files/1/0337/2734/8781/products/War_3_300x420_crop_center.jpg?v=1582565299"
-                                    alt="game_img">
-                                <div class="view_item_btn">
-                                    <a href="#">quick view</a>
-                                </div><!-- ./view_item_btn -->
-                                <div class="item_discount">-17%
-                                </div><!-- ./item_discount -->
-                                <div class="action_btns">
-                                    <div class="add_to_card_btn">
-                                        <span class="icon-shopping-cart"></span>
-                                    </div>
-                                    <div class="add_to_wich_list_btn">
-                                        <span class="icon-heart"></span>
-                                    </div>
-                                </div><!-- ./action_btns -->
-                            </div><!-- ./img_info -->
-                            <div class="item_info">
-                                <div class="tags">
-                                    <a href="#">Featured Product</a>
-                                    <a href="#">Horor</a>
-                                    <a href="#">ACTION</a>
-                                    <a href="#">FPS</a>
-
-
-                                </div><!-- ./tags -->
-                                <div class="item_title">
-                                    Gas Station 5
-                                </div><!-- ./item_title -->
-                                <div class="item_rate stars5">
-
-                                </div><!-- ./item_rate -->
-                                <div class="item_price">
-                                    <span class="price price_before">59.00</span>
-                                    <span class="price price_now">49.00</span>
-                                </div><!-- ./item_price -->
-                            </div><!-- ./item_info -->
-                        </div><!-- ./item -->
-                        <!-- ###################    3   ##########################     -->
-
-                        <div class="item">
-                            <div class="img_info">
-                                <img src="https://exotique.com.mt/wp-content/uploads/2019/10/Grand-Theft-Auto-V.jpg"
-                                    alt="game_img">
-                                <div class="view_item_btn">
-                                    <a href="#">quick view</a>
-                                </div><!-- ./view_item_btn -->
-                                <div class="item_discount">-17%
-                                </div><!-- ./item_discount -->
-                                <div class="action_btns">
-                                    <div class="add_to_card_btn">
-                                        <span class="icon-shopping-cart"></span>
-                                    </div>
-                                    <div class="add_to_wich_list_btn">
-                                        <span class="icon-heart"></span>
-                                    </div>
-                                </div><!-- ./action_btns -->
-                            </div><!-- ./img_info -->
-                            <div class="item_info">
-                                <div class="tags">
-                                    <a href="#">Featured Product</a>
-                                    <a href="#">Horor</a>
-                                    <a href="#">ACTION</a>
-                                    <a href="#">FPS</a>
-
-
-                                </div><!-- ./tags -->
-                                <div class="item_title">
-                                    Gas Station 5
-                                </div><!-- ./item_title -->
-                                <div class="item_rate stars5">
-
-                                </div><!-- ./item_rate -->
-                                <div class="item_price">
-                                    <span class="price price_before">59.00</span>
-                                    <span class="price price_now">49.00</span>
-                                </div><!-- ./item_price -->
-                            </div><!-- ./item_info -->
-                        </div><!-- ./item -->
-
-
-
-
-
-
-
-                    </div><!-- ./slider_content -->
-                    <div class="slider_controller">
-                        <span class="bolet_controll bolet_active"></span>
-                        <span class="bolet_controll "></span>
-                        <span class="bolet_controll "></span>
-                    </div><!-- ./slider_controller -->
-                    <!-- ################################################     -->
-                </div><!-- ./slider -->
-
-
-
-
-
-
-
-                <div class="other_games flex-center">
-                    <div class="item">
-                        <div class="img_info">
-                            <img src="http://127.0.0.1:5000/static/images/Epic_Future_3_300x420_crop_center.jpg"
-                                alt="game_img">
-                            <div class="view_item_btn">
-                                <a href="#">quick view</a>
-                            </div><!-- ./view_item_btn -->
-                            <div class="item_discount">-17%
-                            </div><!-- ./item_discount -->
-                            <div class="action_btns">
-                                <div class="add_to_card_btn">
-                                    <span class="icon-shopping-cart"></span>
-                                </div>
-                                <div class="add_to_wich_list_btn">
-                                    <span class="icon-heart"></span>
-                                </div>
-                            </div><!-- ./action_btns -->
-                        </div><!-- ./img_info -->
-                        <div class="item_info">
-                            <div class="tags">
-                                <a href="#">Featured Product</a>
-                                <a href="#">Horor</a>
-                                <a href="#">ACTION</a>
-                                <a href="#">FPS</a>
-
-
-                            </div><!-- ./tags -->
-                            <div class="item_title">
-                                Gas Station 5
-                            </div><!-- ./item_title -->
-                            <div class="item_rate stars5">
-
-                            </div><!-- ./item_rate -->
-                            <div class="item_price">
-                                <span class="price price_before">59.00</span>
-                                <span class="price price_now">49.00</span>
-                            </div><!-- ./item_price -->
-                        </div><!-- ./item_info -->
-                    </div><!-- ./item -->
-                    <!-- ################################################     -->
-
-                    <div class="item">
-                        <div class="img_info">
-                            <img src="https://cdn.shopify.com/s/files/1/0337/2734/8781/products/War_2_300x420_crop_center.jpg?v=1582565571"
-                                alt="game_img">
-                            <div class="view_item_btn">
-                                <a href="#">quick view</a>
-                            </div><!-- ./view_item_btn -->
-                            <div class="item_discount">-17%
-                            </div><!-- ./item_discount -->
-                            <div class="action_btns">
-                                <div class="add_to_card_btn">
-                                    <span class="icon-shopping-cart"></span>
-                                </div>
-                                <div class="add_to_wich_list_btn">
-                                    <span class="icon-heart"></span>
-                                </div>
-                            </div><!-- ./action_btns -->
-                        </div><!-- ./img_info -->
-                        <div class="item_info">
-                            <div class="tags">
-                                <a href="#">Featured Product</a>
-                                <a href="#">Horor</a>
-                                <a href="#">ACTION</a>
-                                <a href="#">FPS</a>
-
-
-                            </div><!-- ./tags -->
-                            <div class="item_title">
-                                Gas Station 5
-                            </div><!-- ./item_title -->
-                            <div class="item_rate stars5">
-
-                            </div><!-- ./item_rate -->
-                            <div class="item_price">
-                                <span class="price price_before">59.00</span>
-                                <span class="price price_now">49.00</span>
-                            </div><!-- ./item_price -->
-                        </div><!-- ./item_info -->
-                    </div><!-- ./item -->
-                    <!-- ################################################     -->
-
-                    <div class="item">
-                        <div class="img_info">
-                            <img src="https://cdn.shopify.com/s/files/1/0337/2734/8781/products/Porto_Speed_300x420_crop_center.jpg?v=1582565516"
-                                alt="game_img">
-                            <div class="view_item_btn">
-                                <a href="#">quick view</a>
-                            </div><!-- ./view_item_btn -->
-                            <div class="item_discount">-17%
-                            </div><!-- ./item_discount -->
-                            <div class="action_btns">
-                                <div class="add_to_card_btn">
-                                    <span class="icon-shopping-cart"></span>
-                                </div>
-                                <div class="add_to_wich_list_btn">
-                                    <span class="icon-heart"></span>
-                                </div>
-                            </div><!-- ./action_btns -->
-                        </div><!-- ./img_info -->
-                        <div class="item_info">
-                            <div class="tags">
-                                <a href="#">Featured Product</a>
-                                <a href="#">Horor</a>
-                                <a href="#">ACTION</a>
-                                <a href="#">FPS</a>
-
-
-                            </div><!-- ./tags -->
-                            <div class="item_title">
-                                Gas Station 5
-                            </div><!-- ./item_title -->
-                            <div class="item_rate stars5">
-
-                            </div><!-- ./item_rate -->
-                            <div class="item_price">
-                                <span class="price price_before">59.00</span>
-                                <span class="price price_now">49.00</span>
-                            </div><!-- ./item_price -->
-                        </div><!-- ./item_info -->
-                    </div><!-- ./item -->
-                    <!-- ################################################     -->
-
-                    <div class="item">
-                        <div class="img_info">
-                            <img src="https://cdn.shopify.com/s/files/1/0337/2734/8781/products/War_3_300x420_crop_center.jpg?v=1582565299"
-                                alt="game_img">
-                            <div class="view_item_btn">
-                                <a href="#">quick view</a>
-                            </div><!-- ./view_item_btn -->
-                            <div class="item_discount">-17%
-                            </div><!-- ./item_discount -->
-                            <div class="action_btns">
-                                <div class="add_to_card_btn">
-                                    <span class="icon-shopping-cart"></span>
-                                </div>
-                                <div class="add_to_wich_list_btn">
-                                    <span class="icon-heart"></span>
-                                </div>
-                            </div><!-- ./action_btns -->
-                        </div><!-- ./img_info -->
-                        <div class="item_info">
-                            <div class="tags">
-                                <a href="#">Featured Product</a>
-                                <a href="#">Horor</a>
-                                <a href="#">ACTION</a>
-                                <a href="#">FPS</a>
-
-
-                            </div><!-- ./tags -->
-                            <div class="item_title">
-                                Gas Station 5
-                            </div><!-- ./item_title -->
-                            <div class="item_rate stars5">
-
-                            </div><!-- ./item_rate -->
-                            <div class="item_price">
-                                <span class="price price_before">59.00</span>
-                                <span class="price price_now">49.00</span>
-                            </div><!-- ./item_price -->
-                        </div><!-- ./item_info -->
-                    </div><!-- ./item -->
-                    <!-- ################################################     -->
-
-
-                    <div class="item">
-                        <div class="img_info">
-                            <img src="https://cdn.shopify.com/s/files/1/0337/2734/8781/products/Old_Wars_2_300x420_crop_center.jpg?v=1582565246"
-                                alt="game_img">
-                            <div class="view_item_btn">
-                                <a href="#">quick view</a>
-                            </div><!-- ./view_item_btn -->
-                            <div class="item_discount">-17%
-                            </div><!-- ./item_discount -->
-                            <div class="action_btns">
-                                <div class="add_to_card_btn">
-                                    <span class="icon-shopping-cart"></span>
-                                </div>
-                                <div class="add_to_wich_list_btn">
-                                    <span class="icon-heart"></span>
-                                </div>
-                            </div><!-- ./action_btns -->
-                        </div><!-- ./img_info -->
-                        <div class="item_info">
-                            <div class="tags">
-                                <a href="#">Featured Product</a>
-                                <a href="#">Horor</a>
-                                <a href="#">ACTION</a>
-                                <a href="#">FPS</a>
-
-
-                            </div><!-- ./tags -->
-                            <div class="item_title">
-                                Gas Station 5
-                            </div><!-- ./item_title -->
-                            <div class="item_rate stars5">
-
-                            </div><!-- ./item_rate -->
-                            <div class="item_price">
-                                <span class="price price_before">59.00</span>
-                                <span class="price price_now">49.00</span>
-                            </div><!-- ./item_price -->
-                        </div><!-- ./item_info -->
-                    </div><!-- ./item -->
-                    <!-- ################################################     -->
-
-
-                    <div class="item">
-                        <div class="img_info">
-                            <img src="https://cdn.shopify.com/s/files/1/0337/2734/8781/products/Need_For_Race_bfdb0e25-6245-49ae-9955-77199015474a_300x420_crop_center.jpg?v=1582565110"
-                                alt="game_img">
-                            <div class="view_item_btn">
-                                <a href="#">quick view</a>
-                            </div><!-- ./view_item_btn -->
-                            <div class="item_discount">-17%
-                            </div><!-- ./item_discount -->
-                            <div class="action_btns">
-                                <div class="add_to_card_btn">
-                                    <span class="icon-shopping-cart"></span>
-                                </div>
-                                <div class="add_to_wich_list_btn">
-                                    <span class="icon-heart"></span>
-                                </div>
-                            </div><!-- ./action_btns -->
-                        </div><!-- ./img_info -->
-                        <div class="item_info">
-                            <div class="tags">
-                                <a href="#">Featured Product</a>
-                                <a href="#">Horor</a>
-                                <a href="#">ACTION</a>
-                                <a href="#">FPS</a>
-
-
-                            </div><!-- ./tags -->
-                            <div class="item_title">
-                                Gas Station 5
-                            </div><!-- ./item_title -->
-                            <div class="item_rate stars5">
-
-                            </div><!-- ./item_rate -->
-                            <div class="item_price">
-                                <span class="price price_before">59.00</span>
-                                <span class="price price_now">49.00</span>
-                            </div><!-- ./item_price -->
-                        </div><!-- ./item_info -->
-                    </div><!-- ./item -->
-                    <!-- ################################################     -->
-
-
-                    <div class="item">
-                        <div class="img_info">
-                            <img src="https://cdn.shopify.com/s/files/1/0337/2734/8781/products/PFL_20192_300x420_crop_center.jpg?v=1582565399"
-                                alt="game_img">
-                            <div class="view_item_btn">
-                                <a href="#">quick view</a>
-                            </div><!-- ./view_item_btn -->
-                            <div class="item_discount">-17%
-                            </div><!-- ./item_discount -->
-                            <div class="action_btns">
-                                <div class="add_to_card_btn">
-                                    <span class="icon-shopping-cart"></span>
-                                </div>
-                                <div class="add_to_wich_list_btn">
-                                    <span class="icon-heart"></span>
-                                </div>
-                            </div><!-- ./action_btns -->
-                        </div><!-- ./img_info -->
-                        <div class="item_info">
-                            <div class="tags">
-                                <a href="#">Featured Product</a>
-                                <a href="#">Horor</a>
-                                <a href="#">ACTION</a>
-                                <a href="#">FPS</a>
-
-
-                            </div><!-- ./tags -->
-                            <div class="item_title">
-                                Gas Station 5
-                            </div><!-- ./item_title -->
-                            <div class="item_rate stars5">
-
-                            </div><!-- ./item_rate -->
-                            <div class="item_price">
-                                <span class="price price_before">59.00</span>
-                                <span class="price price_now">49.00</span>
-                            </div><!-- ./item_price -->
-                        </div><!-- ./item_info -->
-                    </div><!-- ./item -->
-                    <!-- ################################################     -->
-
-
-                    <div class="item">
-                        <div class="img_info">
-                            <img src="https://exotique.com.mt/wp-content/uploads/2019/10/Grand-Theft-Auto-V.jpg"
-                                alt="game_img">
-                            <div class="view_item_btn">
-                                <a href="#">quick view</a>
-                            </div><!-- ./view_item_btn -->
-                            <div class="item_discount">-17%
-                            </div><!-- ./item_discount -->
-                            <div class="action_btns">
-                                <div class="add_to_card_btn">
-                                    <span class="icon-shopping-cart"></span>
-                                </div>
-                                <div class="add_to_wich_list_btn">
-                                    <span class="icon-heart"></span>
-                                </div>
-                            </div><!-- ./action_btns -->
-                        </div><!-- ./img_info -->
-                        <div class="item_info">
-                            <div class="tags">
-                                <a href="#">Featured Product</a>
-                                <a href="#">Horor</a>
-                                <a href="#">ACTION</a>
-                                <a href="#">FPS</a>
-
-
-                            </div><!-- ./tags -->
-                            <div class="item_title">
-                                Gas Station 5
-                            </div><!-- ./item_title -->
-                            <div class="item_rate stars5">
-
-                            </div><!-- ./item_rate -->
-                            <div class="item_price">
-                                <span class="price price_before">59.00</span>
-                                <span class="price price_now">49.00</span>
-                            </div><!-- ./item_price -->
-                        </div><!-- ./item_info -->
-                    </div><!-- ./item -->
-                    <!-- ################################################     -->
-                </div><!-- ./other_games -->
-            </div><!-- ./popular_games_content -->
-        </div><!-- ./container -->
-    </section>
-
-
-    <!-- #################################################################
-     -->
-
-
-    <!-- hot deals section -->
-    <section class="deals_section">
-        <div class="container">
-            <div class="section_title">check out our Hot Deals </div>
-            <!-- Swiper -->
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide play_station_slid_add">
-                        <img src="https://site-cdn.givemesport.com/images/20/07/05/9621be202ebd3acab63018ccc98f6ae1/960.jpg"
-                            alt="img">
-
-                        <div class="slider_shadow shadow_light">
-                        </div><!-- ./slider_shadow -->
-                        <div class="slider_add_info">
-                            <a class="confirm " href="#">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                Shop Now
-                            </a>
-                        </div> <!-- ./slider_add_info -->
-                    </div>
-                    <div class="swiper-slide xbox_slider_add">
-                        <img src="https://image.jeuxvideo.com/medias-md/162400/1624002802-8803-card.jpg" alt="">
-                        <a class="confirm " href="#">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            Shop Now
-                        </a>
-                        <div class="slider_shadow shadow_light">
-                        </div><!-- ./slider_shadow -->
-                        <div class="slider_add_info">
-                            <a class="confirm " href="#">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                Shop Now
-                            </a>
-                        </div> <!-- ./slider_add_info -->
-                    </div>
-                    <div class="swiper-slide cyber_panck_slider_add">
-                        <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2020/09/cyberpunk-2077-character-customization-options-header.jpg?q=50&fit=crop&w=960&h=500&dpr=1.5"
-                            alt="">
-                        <a class="confirm " href="#">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            Show More
-                        </a>
-                        <div class="slider_shadow shadow_dark">
-                        </div><!-- ./slider_shadow -->
-                        <div class="slider_add_info">
-                            <a class="confirm " href="#">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                Shop Now
-                            </a>
-                        </div> <!-- ./slider_add_info -->
-                    </div>
-                    <div class="swiper-slide ">
-                        <img src="https://cdn.akamai.steamstatic.com/steam/apps/1262540/capsule_616x353.jpg?t=1598621991"
-                            alt="">
-
-                        <div class="slider_shadow shadow_light">
-                        </div><!-- ./slider_shadow -->
-                        <div class="slider_add_info">
-                            <a class="confirm " href="#">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                Shop Now
-                            </a>
-                        </div> <!-- ./slider_add_info -->
-                    </div>
-                    <div class="swiper-slide keyboard_slid_add">
-                        <img src="https://cdn.mos.cms.futurecdn.net/yzCUjLmpUSgVYeuE44eHk8-1200-80.jpg" alt="">
-                        <a class="confirm " href="#">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            Shop Now
-                        </a>
-                        <div class="slider_shadow shadow_light">
-                        </div><!-- ./slider_shadow -->
-                        <div class="slider_add_info">
-                            <a class="confirm " href="#">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                Shop Now
-                            </a>
-                        </div> <!-- ./slider_add_info -->
-                    </div>
-                    <!-- <div class="swiper-slide">Slide 6</div>
+        <!-- ./item_big -->
+      </div>
+      <!-- ./grid_item_big -->
+
+      <div class="item">
+        <div class="item_simple background_class">
+          <!-- <div class="off_discont"><span>50% OFF</span></div> -->
+
+          <a class="confirm shop_now_link" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Shop Now
+          </a>
+        </div>
+        <!-- ./grid_item_simple -->
+        <div class="item_simple background_class">
+          <div class="off_discont off_discont_type2"><span>20% OFF</span></div>
+
+          <a class="confirm shop_now_link" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Shop Now
+          </a>
+        </div>
+        <!-- ./grid_item_simple -->
+      </div>
+    </div>
+    <!-- ./extra_grid_show_content -->
+  </div>
+  <!-- ./container -->
+
+  <div class="features_extra_show">
+    <div class="item flex-center">
+      <div class="text">
+        <span class="title">FREE SHIPPING & RETURN </span>
+        <span class="desc">Free shipping on all orders over $99. </span>
+      </div>
+      <div class="icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          x="0px"
+          y="0px"
+          width="96"
+          height="96"
+          viewBox="0 0 172 172"
+          style="fill: #000000"
+        >
+          <g
+            fill="none"
+            fill-rule="nonzero"
+            stroke="none"
+            stroke-width="1"
+            stroke-linecap="butt"
+            stroke-linejoin="miter"
+            stroke-miterlimit="10"
+            stroke-dasharray=""
+            stroke-dashoffset="0"
+            font-family="none"
+            font-weight="none"
+            font-size="none"
+            text-anchor="none"
+            style="mix-blend-mode: normal"
+          >
+            <path d="M0,172v-172h172v172z" fill="none"></path>
+            <g fill="#b1d4e0">
+              <path
+                d="M23.29167,25.08333c-8.89025,0 -16.125,7.23475 -16.125,16.125v78.83333c0,8.89025 7.23475,16.125 16.125,16.125h2.56152c2.36282,8.23598 9.98109,14.33333 18.93848,14.33333c8.95739,0 16.57565,-6.09735 18.93848,-14.33333h31.22819c2.967,0 5.375,-2.40442 5.375,-5.375v-89.58333c0,-8.89025 -7.23475,-16.125 -16.125,-16.125zM45.78548,48.17204c3.12467,0 5.93993,1.29879 7.96452,3.36637c2.02458,-2.07116 4.83985,-3.36637 7.96452,-3.36637c6.15617,0 11.14193,4.99276 11.14193,11.14893c0,2.0425 -0.58638,3.92963 -1.54671,5.57796c6.13825,0.02508 11.10693,5.00709 11.10693,11.14893c0,5.88383 -4.56774,10.64569 -10.34408,11.06494c0.4945,1.26133 0.78385,2.62932 0.78385,4.06624c0,6.15617 -4.98576,11.14893 -11.14193,11.14893c-3.12467,0 -5.93993,-1.29879 -7.96452,-3.36637c-2.02458,2.07116 -4.83985,3.36637 -7.96452,3.36637c-6.15617,0 -11.14193,-4.99276 -11.14193,-11.14893c0,-1.43691 0.28935,-2.80491 0.78385,-4.06624c-5.77633,-0.41925 -10.34408,-5.18111 -10.34408,-11.06494c0,-6.14183 4.96868,-11.12384 11.10693,-11.14893c-0.96033,-1.64475 -1.54671,-3.53546 -1.54671,-5.57796c0,-6.15617 4.98576,-11.14893 11.14193,-11.14893zM107.5,57.33333v73.45833c0,10.82021 8.88812,19.70833 19.70833,19.70833c8.95739,0 16.57565,-6.09735 18.93848,-14.33333h2.56152c8.90458,0 16.125,-7.22042 16.125,-16.125v-22.80176c0,-2.2575 -0.47541,-4.49036 -1.39274,-6.55078l-10.56803,-23.77458c-2.58717,-5.8265 -8.36109,-9.58122 -14.73226,-9.58122zM53.75,64.5c-5.94117,0 -10.75,4.80883 -10.75,10.75c0,5.94117 4.80883,10.75 10.75,10.75c5.94117,0 10.75,-4.80883 10.75,-10.75c0,-5.94117 -4.81242,-10.74642 -10.75,-10.75zM121.83333,68.08333h16.30697c2.12492,0 4.04609,1.24924 4.90609,3.19141l5.8929,13.26953c1.0535,2.36858 -0.67764,5.03906 -3.26839,5.03906h-23.83757c-1.978,0 -3.58333,-1.60533 -3.58333,-3.58333v-14.33333c0,-1.978 1.60533,-3.58333 3.58333,-3.58333zM44.79167,121.83333c5.00379,0 8.95833,3.95455 8.95833,8.95833c0,5.00379 -3.95455,8.95833 -8.95833,8.95833c-5.00379,0 -8.95833,-3.95455 -8.95833,-8.95833c0,-5.00379 3.95455,-8.95833 8.95833,-8.95833zM127.20833,121.83333c5.00379,0 8.95833,3.95455 8.95833,8.95833c0,5.00379 -3.95455,8.95833 -8.95833,8.95833c-5.00379,0 -8.95833,-3.95455 -8.95833,-8.95833c0,-5.00379 3.95455,-8.95833 8.95833,-8.95833z"
+              ></path>
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <div class="item flex-center">
+      <div class="text">
+        <span class="title">MONEY BACK GUARANTEE </span>
+        <span class="desc">100% money back guarantee. </span>
+      </div>
+      <!-- ./text -->
+      <div class="icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          x="0px"
+          y="0px"
+          width="48"
+          height="48"
+          viewBox="0 0 172 172"
+          style="fill: #000000"
+        >
+          <g
+            fill="none"
+            fill-rule="nonzero"
+            stroke="none"
+            stroke-width="1"
+            stroke-linecap="butt"
+            stroke-linejoin="miter"
+            stroke-miterlimit="10"
+            stroke-dasharray=""
+            stroke-dashoffset="0"
+            font-family="none"
+            font-weight="none"
+            font-size="none"
+            text-anchor="none"
+            style="mix-blend-mode: normal"
+          >
+            <path d="M0,172v-172h172v172z" fill="none"></path>
+            <g fill="#b1d4e0">
+              <path
+                d="M86,14.33333c-39.5815,0 -71.66667,32.08517 -71.66667,71.66667c0,39.5815 32.08517,71.66667 71.66667,71.66667c5.18867,0 10.23669,-0.57737 15.11719,-1.62369c-1.89917,-7.10934 -0.14636,-15.11798 5.50098,-20.75814c7.98367,-7.998 20.75691,-8.34547 29.17058,-1.0498l11.92578,-11.92578c6.28517,-10.65683 9.95215,-23.04374 9.95215,-36.30924c0,-39.5815 -32.08517,-71.66667 -71.66667,-71.66667zM87.53972,40.48047h0.04199c1.98517,0 3.59733,1.61216 3.59733,3.59733v6.84473c1.90633,0.3655 11.0697,2.44059 14.15137,13.87142c1.13233,4.20683 -2.13063,8.32845 -6.4808,8.32845h-0.028c-3.18917,0 -5.84094,-2.27866 -6.56477,-5.389c-1.18967,-5.06683 -4.02016,-6.00488 -5.389,-6.00488c-0.96033,0 -5.417,0.25162 -5.417,8.32845c0,14.09684 24.78939,9.70758 24.78939,32.68392c0,16.68399 -13.70267,18.93142 -16.125,19.23242v5.94889c0,1.98517 -1.59817,3.58333 -3.58333,3.58333c-1.98517,0 -3.59733,-1.59817 -3.59733,-3.58333v-5.94889c-1.88483,-0.258 -12.83248,-1.47185 -16.25098,-14.22135c-1.1395,-4.26417 2.03813,-8.46842 6.4528,-8.46842c3.096,0 5.89178,2.09871 6.53679,5.12304c1.4835,6.966 6.00723,6.60677 6.80273,6.60677c1.0535,0 6.22884,-0.19048 6.22884,-8.18848c0,-15.9745 -24.78939,-8.88006 -24.78939,-32.82389c0,-16.41167 13.59752,-18.98024 16.02702,-19.28841v-6.63477c0,-1.98517 1.61216,-3.59733 3.59733,-3.59733zM164.90332,128.31413c-1.81496,0 -3.62432,0.69886 -5.01107,2.08561l-24.48145,24.46745l-8.63639,-9.46224c-2.7735,-2.7735 -7.26263,-2.7735 -10.03614,0c-2.7735,2.77351 -2.7735,7.26264 0,10.03614l13.66146,14.48731c2.77351,2.7735 7.2698,2.7735 10.03614,0l29.49252,-29.49252c2.7735,-2.7735 2.7735,-7.26263 0,-10.03614c-1.38676,-1.38675 -3.21011,-2.08561 -5.02507,-2.08561z"
+              ></path>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <!-- ./icon -->
+    </div>
+    <div class="item flex-center">
+      <div class="text">
+        <span class="title">ONLINE SUPPORT 24/7 </span>
+        <span class="desc">Lorem ipsum dolor sit amet. </span>
+      </div>
+      <!-- ./text -->
+      <div class="icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          x="0px"
+          y="0px"
+          width="80"
+          height="80"
+          viewBox="0 0 172 172"
+          style="fill: #000000"
+        >
+          <g
+            fill="none"
+            fill-rule="nonzero"
+            stroke="none"
+            stroke-width="1"
+            stroke-linecap="butt"
+            stroke-linejoin="miter"
+            stroke-miterlimit="10"
+            stroke-dasharray=""
+            stroke-dashoffset="0"
+            font-family="none"
+            font-weight="none"
+            font-size="none"
+            text-anchor="none"
+            style="mix-blend-mode: normal"
+          >
+            <path d="M0,172v-172h172v172z" fill="none"></path>
+            <g fill="#b1d4e0">
+              <path
+                d="M34.4,6.88c-5.68406,0 -10.32,4.63594 -10.32,10.32v20.7475l-3.44,3.44c-8.68062,12.69844 -13.76,28.07094 -13.76,44.6125c0,43.69875 35.42125,79.12 79.12,79.12c43.69875,0 79.12,-35.42125 79.12,-79.12c0,-43.69875 -35.42125,-79.12 -79.12,-79.12c-15.14406,0 -29.25344,4.34031 -41.28,11.7175v-1.3975c0,-5.68406 -4.63594,-10.32 -10.32,-10.32zM34.4,13.76c1.89469,0 3.44,1.54531 3.44,3.44v15.05c13.18219,-11.825 30.23438,-18.49 48.16,-18.49c39.82875,0 72.24,32.41125 72.24,72.24c0,39.82875 -32.41125,72.24 -72.24,72.24c-39.82875,0 -72.24,-32.41125 -72.24,-72.24c0,-11.5025 2.82188,-22.95125 8.0625,-33.11l6.02,3.1175c-4.81062,9.31219 -7.2025,19.43063 -7.2025,29.9925c0,36.03938 29.32063,65.36 65.36,65.36c36.03938,0 65.36,-29.32062 65.36,-65.36c0,-36.03937 -29.32062,-65.36 -65.36,-65.36c-16.4475,0 -32.08875,6.22156 -44.075,17.2h16.555c1.89469,0 3.44,1.54531 3.44,3.44c0,1.89469 -1.54531,3.44 -3.44,3.44h-27.52v-27.52c0,-1.89469 1.54531,-3.44 3.44,-3.44zM86,27.52c1.90813,0 3.44,1.54531 3.44,3.44c0,1.89469 -1.53187,3.44 -3.44,3.44c-1.89469,0 -3.44,-1.54531 -3.44,-3.44c0,-1.89469 1.54531,-3.44 3.44,-3.44zM114.2725,35.045c0.44344,0.05375 0.88688,0.18813 1.29,0.43c1.63938,0.95406 2.13656,3.09063 1.1825,4.73c-0.95406,1.63938 -3.09062,2.24406 -4.73,1.29c-1.63937,-0.95406 -2.13656,-3.09062 -1.1825,-4.73c0.72563,-1.23625 2.10969,-1.89469 3.44,-1.72zM133.4075,55.255c1.33031,-0.16125 2.63375,0.48375 3.3325,1.72c0.94063,1.65281 0.36281,3.78938 -1.29,4.73c-1.65281,0.94063 -3.68187,0.36281 -4.6225,-1.29c-0.94062,-1.65281 -0.36281,-3.78937 1.29,-4.73c0.41656,-0.24187 0.84656,-0.37625 1.29,-0.43zM63.21,58.1575c9.20469,0 15.91,5.87219 15.91,13.8675c0,5.13313 -2.40531,9.29875 -10.535,17.5225l-10.8575,10.965v0.5375h22.2525v6.7725h-32.68v-5.4825l16.34,-16.985c6.49031,-6.75906 8.0625,-9.33906 8.0625,-12.9c0,-4.43437 -3.81625,-7.74 -8.815,-7.74c-5.34812,0 -8.9225,3.42656 -8.9225,8.6v0.1075h-7.095v-0.1075c0,-8.93594 6.79938,-15.1575 16.34,-15.1575zM108.6825,59.34h10.6425v32.3575h6.7725v6.7725h-6.7725v9.3525h-7.2025v-9.3525h-23.65v-6.9875c4.34031,-7.92812 11.56969,-19.20219 20.21,-32.1425zM111.8,66.005c-4.79719,6.94719 -10.41406,15.45313 -16.125,25.37v0.5375h16.555v-25.9075zM30.96,82.56c1.89469,0 3.44,1.54531 3.44,3.44c0,1.90813 -1.54531,3.44 -3.44,3.44c-1.89469,0 -3.44,-1.53187 -3.44,-3.44c0,-1.89469 1.54531,-3.44 3.44,-3.44zM141.04,82.56c1.90813,0 3.44,1.54531 3.44,3.44c0,1.90813 -1.53187,3.44 -3.44,3.44c-1.90812,0 -3.44,-1.53187 -3.44,-3.44c0,-1.89469 1.53188,-3.44 3.44,-3.44zM37.84,109.865c1.33031,-0.16125 2.62031,0.48375 3.3325,1.72c0.94063,1.65281 0.36281,3.78938 -1.29,4.73c-1.65281,0.94063 -3.68187,0.36281 -4.6225,-1.29c-0.94062,-1.65281 -0.36281,-3.78937 1.29,-4.73c0.41656,-0.24187 0.84656,-0.37625 1.29,-0.43zM133.945,110.4025c0.44344,0.05375 0.88688,0.18813 1.29,0.43c1.63938,0.95406 2.2575,3.09063 1.29,4.73c-0.95406,1.63938 -3.09062,2.13656 -4.73,1.1825c-1.63937,-0.95406 -2.24406,-3.09062 -1.29,-4.73c0.71219,-1.23625 2.10969,-1.78719 3.44,-1.6125zM58.695,130.075c0.44344,0.05375 0.88688,0.18813 1.29,0.43c1.63938,0.95406 2.13656,3.09063 1.1825,4.73c-0.95406,1.63938 -3.09062,2.2575 -4.73,1.29c-1.63937,-0.95406 -2.13656,-3.09062 -1.1825,-4.73c0.72563,-1.23625 2.10969,-1.89469 3.44,-1.72zM112.7675,130.505c1.33031,-0.16125 2.63375,0.48375 3.3325,1.72c0.92719,1.65281 0.36281,3.68188 -1.29,4.6225c-1.65281,0.94063 -3.68187,0.36281 -4.6225,-1.29c-0.94062,-1.65281 -0.36281,-3.68187 1.29,-4.6225c0.41656,-0.22844 0.84656,-0.37625 1.29,-0.43zM86,137.6c1.90813,0 3.44,1.53188 3.44,3.44c0,1.90813 -1.53187,3.44 -3.44,3.44c-1.89469,0 -3.44,-1.53187 -3.44,-3.44c0,-1.90812 1.54531,-3.44 3.44,-3.44z"
+              ></path>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <!-- ./icons -->
+    </div>
+  </div>
+</section>
+<!-- ./ extra show -->
+<!-- extra_show end -->
+
+<!-- ##############################################################-->
+
+<!-- offers_section start -->
+<section class="offers_section">
+  <div class="container">
+    <div class="section_title">Featured Product and Offers</div>
+    <!-- ./ -->
+    <div class="offers_content flex-center">
+      <!-- ./###########  1 ################# -->
+
+      <div class="item">
+        <div class="img_info">
+          <img
+            src="../static/images/Epic_Future_3_300x420_crop_center.jpg"
+            alt="game_img"
+          />
+          <div class="view_item_btn">
+            <a href="#">quick view</a>
+          </div>
+          <!-- ./view_item_btn -->
+          <div class="item_discount">-17%</div>
+          <!-- ./item_discount -->
+          <div class="action_btns">
+            <div class="add_to_card_btn">
+              <span class="icon-shopping-cart"></span>
+            </div>
+            <div class="add_to_wich_list_btn">
+              <span class="icon-heart"></span>
+            </div>
+          </div>
+          <!-- ./action_btns -->
+        </div>
+        <!-- ./img_info -->
+        <div class="item_info">
+          <div class="tags">
+            <a href="#">Featured Product</a>
+            <a href="#">Esports</a>
+          </div>
+          <!-- ./tags -->
+          <div class="item_title">epic Future 3</div>
+          <!-- ./item_title -->
+          <div class="item_rate stars4"></div>
+          <!-- ./item_rate -->
+          <div class="item_price">
+            <span class="price price_before">59.00</span>
+            <span class="price price_now">49.00</span>
+          </div>
+          <!-- ./item_price -->
+        </div>
+        <!-- ./item_info -->
+      </div>
+      <!-- ./item -->
+      <!-- ./################################# -->
+
+      <div class="item">
+        <div class="img_info">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0337/2734/8781/products/War_2_300x420_crop_center.jpg?v=1582565571"
+            alt="game_img"
+          />
+          <div class="view_item_btn">
+            <a href="#">quick view</a>
+          </div>
+          <!-- ./view_item_btn -->
+          <div class="item_discount">-17%</div>
+          <!-- ./item_discount -->
+          <div class="action_btns">
+            <div class="add_to_card_btn">
+              <span class="icon-shopping-cart"></span>
+            </div>
+            <div class="add_to_wich_list_btn">
+              <span class="icon-heart"></span>
+            </div>
+          </div>
+          <!-- ./action_btns -->
+        </div>
+        <!-- ./img_info -->
+        <div class="item_info">
+          <div class="tags">
+            <a href="#">ACTION</a>
+            <a href="#">FEATURED PRODUCT</a>
+          </div>
+          <!-- ./tags -->
+          <div class="item_title">War 2</div>
+          <!-- ./item_title -->
+          <div class="item_rate stars5"></div>
+          <!-- ./item_rate -->
+          <div class="item_price">
+            <span class="price price_before">59.00</span>
+            <span class="price price_now">49.00</span>
+          </div>
+          <!-- ./item_price -->
+        </div>
+        <!-- ./item_info -->
+      </div>
+      <!-- ./item -->
+
+      <!-- ./################################# -->
+
+      <div class="item">
+        <div class="img_info">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0337/2734/8781/products/Porto_Speed_300x420_crop_center.jpg?v=1582565516"
+            alt="game_img"
+          />
+          <div class="view_item_btn">
+            <a href="#">quick view</a>
+          </div>
+          <!-- ./view_item_btn -->
+          <div class="item_discount">-17%</div>
+          <!-- ./item_discount -->
+          <div class="action_btns">
+            <div class="add_to_card_btn">
+              <span class="icon-shopping-cart"></span>
+            </div>
+            <div class="add_to_wich_list_btn">
+              <span class="icon-heart"></span>
+            </div>
+          </div>
+          <!-- ./action_btns -->
+        </div>
+        <!-- ./img_info -->
+        <div class="item_info">
+          <div class="tags">
+            <a href="#">Featured Product</a>
+            <a href="#">FPS</a>
+          </div>
+          <!-- ./tags -->
+          <div class="item_title">need for speed</div>
+          <!-- ./item_title -->
+          <div class="item_rate stars4"></div>
+          <!-- ./item_rate -->
+          <div class="item_price">
+            <span class="price price_before">59.00</span>
+            <span class="price price_now">49.00</span>
+          </div>
+          <!-- ./item_price -->
+        </div>
+        <!-- ./item_info -->
+      </div>
+      <!-- ./item -->
+
+      <!-- ./################################# -->
+
+      <div class="item">
+        <div class="img_info">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0337/2734/8781/products/Gas_Station_5_300x420_crop_center.jpg?v=1582564384"
+            alt="game_img"
+          />
+          <div class="view_item_btn">
+            <a href="#">quick view</a>
+          </div>
+          <!-- ./view_item_btn -->
+          <div class="item_discount">-17%</div>
+          <!-- ./item_discount -->
+          <div class="action_btns">
+            <div class="add_to_card_btn">
+              <span class="icon-shopping-cart"></span>
+            </div>
+            <div class="add_to_wich_list_btn">
+              <span class="icon-heart"></span>
+            </div>
+          </div>
+          <!-- ./action_btns -->
+        </div>
+        <!-- ./img_info -->
+        <div class="item_info">
+          <div class="tags">
+            <a href="#">Featured Product</a>
+            <a href="#">Horor</a>
+            <a href="#">ACTION</a>
+            <a href="#">FPS</a>
+          </div>
+          <!-- ./tags -->
+          <div class="item_title">Gas Station 5</div>
+          <!-- ./item_title -->
+          <div class="item_rate stars5"></div>
+          <!-- ./item_rate -->
+          <div class="item_price">
+            <span class="price price_before">59.00</span>
+            <span class="price price_now">49.00</span>
+          </div>
+          <!-- ./item_price -->
+        </div>
+        <!-- ./item_info -->
+      </div>
+      <!-- ./item -->
+    </div>
+    <!-- ./offers_content -->
+  </div>
+  <!-- ./container -->
+</section>
+<!-- offers_section end -->
+
+<!-- ##############################################################-->
+<!-- adds section start -->
+<section class="add_section">
+  <hr />
+  <div class="container flex-center">
+    <div class="add_info">
+      <h2>CONSOLE BUNDLE DEALS - FROM $199.99</h2>
+      <p>
+        Play your way and experience the power of gaming at home or on the go
+      </p>
+      <a class="confirm shop_now_add_info_btn" href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Shop Now
+      </a>
+    </div>
+    <!-- ./add-info -->
+    <div class="add_img">
+      <img
+        src="https://cdn.game.net/image/upload/w_355,f_auto,q_auto/v1/game_img/merch2021/HomepageAssets/Gradient/Console-SW-XBS-PS4.png"
+        alt="add_img"
+      />
+    </div>
+    <!-- ./add_img -->
+  </div>
+  <!-- ./container -->
+  <hr />
+</section>
+<!-- adds section end -->
+
+<!-- ################################################################# -->
+<!-- popular_games_section start -->
+<section class="popular_games_section">
+  <div class="container">
+    <div class="section_title">Most Popular Games</div>
+    <!-- ./most popular games -->
+    <div class="popular_games_content">
+      <div class="slider flex-center">
+        <div class="slider_content">
+          <!-- ###################    1   ##########################     -->
+
+          <div class="item">
+            <div class="img_info">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0337/2734/8781/products/Gas_Station_5_300x420_crop_center.jpg?v=1582564384"
+                alt="game_img"
+              />
+              <div class="view_item_btn">
+                <a href="#">quick view</a>
+              </div>
+              <!-- ./view_item_btn -->
+              <div class="item_discount">-17%</div>
+              <!-- ./item_discount -->
+              <div class="action_btns">
+                <div class="add_to_card_btn">
+                  <span class="icon-shopping-cart"></span>
+                </div>
+                <div class="add_to_wich_list_btn">
+                  <span class="icon-heart"></span>
+                </div>
+              </div>
+              <!-- ./action_btns -->
+            </div>
+            <!-- ./img_info -->
+            <div class="item_info">
+              <div class="tags">
+                <a href="#">Featured Product</a>
+                <a href="#">Horor</a>
+                <a href="#">ACTION</a>
+                <a href="#">FPS</a>
+              </div>
+              <!-- ./tags -->
+              <div class="item_title">Gas Station 5</div>
+              <!-- ./item_title -->
+              <div class="item_rate stars5"></div>
+              <!-- ./item_rate -->
+              <div class="item_price">
+                <span class="price price_before">59.00</span>
+                <span class="price price_now">49.00</span>
+              </div>
+              <!-- ./item_price -->
+            </div>
+            <!-- ./item_info -->
+          </div>
+          <!-- ./item -->
+
+          <!-- ###################    2   ##########################     -->
+
+          <div class="item">
+            <div class="img_info">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0337/2734/8781/products/War_3_300x420_crop_center.jpg?v=1582565299"
+                alt="game_img"
+              />
+              <div class="view_item_btn">
+                <a href="#">quick view</a>
+              </div>
+              <!-- ./view_item_btn -->
+              <div class="item_discount">-17%</div>
+              <!-- ./item_discount -->
+              <div class="action_btns">
+                <div class="add_to_card_btn">
+                  <span class="icon-shopping-cart"></span>
+                </div>
+                <div class="add_to_wich_list_btn">
+                  <span class="icon-heart"></span>
+                </div>
+              </div>
+              <!-- ./action_btns -->
+            </div>
+            <!-- ./img_info -->
+            <div class="item_info">
+              <div class="tags">
+                <a href="#">Featured Product</a>
+                <a href="#">Horor</a>
+                <a href="#">ACTION</a>
+                <a href="#">FPS</a>
+              </div>
+              <!-- ./tags -->
+              <div class="item_title">Gas Station 5</div>
+              <!-- ./item_title -->
+              <div class="item_rate stars5"></div>
+              <!-- ./item_rate -->
+              <div class="item_price">
+                <span class="price price_before">59.00</span>
+                <span class="price price_now">49.00</span>
+              </div>
+              <!-- ./item_price -->
+            </div>
+            <!-- ./item_info -->
+          </div>
+          <!-- ./item -->
+          <!-- ###################    3   ##########################     -->
+
+          <div class="item">
+            <div class="img_info">
+              <img
+                src="https://exotique.com.mt/wp-content/uploads/2019/10/Grand-Theft-Auto-V.jpg"
+                alt="game_img"
+              />
+              <div class="view_item_btn">
+                <a href="#">quick view</a>
+              </div>
+              <!-- ./view_item_btn -->
+              <div class="item_discount">-17%</div>
+              <!-- ./item_discount -->
+              <div class="action_btns">
+                <div class="add_to_card_btn">
+                  <span class="icon-shopping-cart"></span>
+                </div>
+                <div class="add_to_wich_list_btn">
+                  <span class="icon-heart"></span>
+                </div>
+              </div>
+              <!-- ./action_btns -->
+            </div>
+            <!-- ./img_info -->
+            <div class="item_info">
+              <div class="tags">
+                <a href="#">Featured Product</a>
+                <a href="#">Horor</a>
+                <a href="#">ACTION</a>
+                <a href="#">FPS</a>
+              </div>
+              <!-- ./tags -->
+              <div class="item_title">Gas Station 5</div>
+              <!-- ./item_title -->
+              <div class="item_rate stars5"></div>
+              <!-- ./item_rate -->
+              <div class="item_price">
+                <span class="price price_before">59.00</span>
+                <span class="price price_now">49.00</span>
+              </div>
+              <!-- ./item_price -->
+            </div>
+            <!-- ./item_info -->
+          </div>
+          <!-- ./item -->
+        </div>
+        <!-- ./slider_content -->
+        <div class="slider_controller">
+          <span class="bolet_controll bolet_active"></span>
+          <span class="bolet_controll"></span>
+          <span class="bolet_controll"></span>
+        </div>
+        <!-- ./slider_controller -->
+        <!-- ################################################     -->
+      </div>
+      <!-- ./slider -->
+
+      <div class="other_games flex-center">
+        <div class="item">
+          <div class="img_info">
+            <img
+              src="http://127.0.0.1:5000/static/images/Epic_Future_3_300x420_crop_center.jpg"
+              alt="game_img"
+            />
+            <div class="view_item_btn">
+              <a href="#">quick view</a>
+            </div>
+            <!-- ./view_item_btn -->
+            <div class="item_discount">-17%</div>
+            <!-- ./item_discount -->
+            <div class="action_btns">
+              <div class="add_to_card_btn">
+                <span class="icon-shopping-cart"></span>
+              </div>
+              <div class="add_to_wich_list_btn">
+                <span class="icon-heart"></span>
+              </div>
+            </div>
+            <!-- ./action_btns -->
+          </div>
+          <!-- ./img_info -->
+          <div class="item_info">
+            <div class="tags">
+              <a href="#">Featured Product</a>
+              <a href="#">Horor</a>
+              <a href="#">ACTION</a>
+              <a href="#">FPS</a>
+            </div>
+            <!-- ./tags -->
+            <div class="item_title">Gas Station 5</div>
+            <!-- ./item_title -->
+            <div class="item_rate stars5"></div>
+            <!-- ./item_rate -->
+            <div class="item_price">
+              <span class="price price_before">59.00</span>
+              <span class="price price_now">49.00</span>
+            </div>
+            <!-- ./item_price -->
+          </div>
+          <!-- ./item_info -->
+        </div>
+        <!-- ./item -->
+        <!-- ################################################     -->
+
+        <div class="item">
+          <div class="img_info">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0337/2734/8781/products/War_2_300x420_crop_center.jpg?v=1582565571"
+              alt="game_img"
+            />
+            <div class="view_item_btn">
+              <a href="#">quick view</a>
+            </div>
+            <!-- ./view_item_btn -->
+            <div class="item_discount">-17%</div>
+            <!-- ./item_discount -->
+            <div class="action_btns">
+              <div class="add_to_card_btn">
+                <span class="icon-shopping-cart"></span>
+              </div>
+              <div class="add_to_wich_list_btn">
+                <span class="icon-heart"></span>
+              </div>
+            </div>
+            <!-- ./action_btns -->
+          </div>
+          <!-- ./img_info -->
+          <div class="item_info">
+            <div class="tags">
+              <a href="#">Featured Product</a>
+              <a href="#">Horor</a>
+              <a href="#">ACTION</a>
+              <a href="#">FPS</a>
+            </div>
+            <!-- ./tags -->
+            <div class="item_title">Gas Station 5</div>
+            <!-- ./item_title -->
+            <div class="item_rate stars5"></div>
+            <!-- ./item_rate -->
+            <div class="item_price">
+              <span class="price price_before">59.00</span>
+              <span class="price price_now">49.00</span>
+            </div>
+            <!-- ./item_price -->
+          </div>
+          <!-- ./item_info -->
+        </div>
+        <!-- ./item -->
+        <!-- ################################################     -->
+
+        <div class="item">
+          <div class="img_info">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0337/2734/8781/products/Porto_Speed_300x420_crop_center.jpg?v=1582565516"
+              alt="game_img"
+            />
+            <div class="view_item_btn">
+              <a href="#">quick view</a>
+            </div>
+            <!-- ./view_item_btn -->
+            <div class="item_discount">-17%</div>
+            <!-- ./item_discount -->
+            <div class="action_btns">
+              <div class="add_to_card_btn">
+                <span class="icon-shopping-cart"></span>
+              </div>
+              <div class="add_to_wich_list_btn">
+                <span class="icon-heart"></span>
+              </div>
+            </div>
+            <!-- ./action_btns -->
+          </div>
+          <!-- ./img_info -->
+          <div class="item_info">
+            <div class="tags">
+              <a href="#">Featured Product</a>
+              <a href="#">Horor</a>
+              <a href="#">ACTION</a>
+              <a href="#">FPS</a>
+            </div>
+            <!-- ./tags -->
+            <div class="item_title">Gas Station 5</div>
+            <!-- ./item_title -->
+            <div class="item_rate stars5"></div>
+            <!-- ./item_rate -->
+            <div class="item_price">
+              <span class="price price_before">59.00</span>
+              <span class="price price_now">49.00</span>
+            </div>
+            <!-- ./item_price -->
+          </div>
+          <!-- ./item_info -->
+        </div>
+        <!-- ./item -->
+        <!-- ################################################     -->
+
+        <div class="item">
+          <div class="img_info">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0337/2734/8781/products/War_3_300x420_crop_center.jpg?v=1582565299"
+              alt="game_img"
+            />
+            <div class="view_item_btn">
+              <a href="#">quick view</a>
+            </div>
+            <!-- ./view_item_btn -->
+            <div class="item_discount">-17%</div>
+            <!-- ./item_discount -->
+            <div class="action_btns">
+              <div class="add_to_card_btn">
+                <span class="icon-shopping-cart"></span>
+              </div>
+              <div class="add_to_wich_list_btn">
+                <span class="icon-heart"></span>
+              </div>
+            </div>
+            <!-- ./action_btns -->
+          </div>
+          <!-- ./img_info -->
+          <div class="item_info">
+            <div class="tags">
+              <a href="#">Featured Product</a>
+              <a href="#">Horor</a>
+              <a href="#">ACTION</a>
+              <a href="#">FPS</a>
+            </div>
+            <!-- ./tags -->
+            <div class="item_title">Gas Station 5</div>
+            <!-- ./item_title -->
+            <div class="item_rate stars5"></div>
+            <!-- ./item_rate -->
+            <div class="item_price">
+              <span class="price price_before">59.00</span>
+              <span class="price price_now">49.00</span>
+            </div>
+            <!-- ./item_price -->
+          </div>
+          <!-- ./item_info -->
+        </div>
+        <!-- ./item -->
+        <!-- ################################################     -->
+
+        <div class="item">
+          <div class="img_info">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0337/2734/8781/products/Old_Wars_2_300x420_crop_center.jpg?v=1582565246"
+              alt="game_img"
+            />
+            <div class="view_item_btn">
+              <a href="#">quick view</a>
+            </div>
+            <!-- ./view_item_btn -->
+            <div class="item_discount">-17%</div>
+            <!-- ./item_discount -->
+            <div class="action_btns">
+              <div class="add_to_card_btn">
+                <span class="icon-shopping-cart"></span>
+              </div>
+              <div class="add_to_wich_list_btn">
+                <span class="icon-heart"></span>
+              </div>
+            </div>
+            <!-- ./action_btns -->
+          </div>
+          <!-- ./img_info -->
+          <div class="item_info">
+            <div class="tags">
+              <a href="#">Featured Product</a>
+              <a href="#">Horor</a>
+              <a href="#">ACTION</a>
+              <a href="#">FPS</a>
+            </div>
+            <!-- ./tags -->
+            <div class="item_title">Gas Station 5</div>
+            <!-- ./item_title -->
+            <div class="item_rate stars5"></div>
+            <!-- ./item_rate -->
+            <div class="item_price">
+              <span class="price price_before">59.00</span>
+              <span class="price price_now">49.00</span>
+            </div>
+            <!-- ./item_price -->
+          </div>
+          <!-- ./item_info -->
+        </div>
+        <!-- ./item -->
+        <!-- ################################################     -->
+
+        <div class="item">
+          <div class="img_info">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0337/2734/8781/products/Need_For_Race_bfdb0e25-6245-49ae-9955-77199015474a_300x420_crop_center.jpg?v=1582565110"
+              alt="game_img"
+            />
+            <div class="view_item_btn">
+              <a href="#">quick view</a>
+            </div>
+            <!-- ./view_item_btn -->
+            <div class="item_discount">-17%</div>
+            <!-- ./item_discount -->
+            <div class="action_btns">
+              <div class="add_to_card_btn">
+                <span class="icon-shopping-cart"></span>
+              </div>
+              <div class="add_to_wich_list_btn">
+                <span class="icon-heart"></span>
+              </div>
+            </div>
+            <!-- ./action_btns -->
+          </div>
+          <!-- ./img_info -->
+          <div class="item_info">
+            <div class="tags">
+              <a href="#">Featured Product</a>
+              <a href="#">Horor</a>
+              <a href="#">ACTION</a>
+              <a href="#">FPS</a>
+            </div>
+            <!-- ./tags -->
+            <div class="item_title">Gas Station 5</div>
+            <!-- ./item_title -->
+            <div class="item_rate stars5"></div>
+            <!-- ./item_rate -->
+            <div class="item_price">
+              <span class="price price_before">59.00</span>
+              <span class="price price_now">49.00</span>
+            </div>
+            <!-- ./item_price -->
+          </div>
+          <!-- ./item_info -->
+        </div>
+        <!-- ./item -->
+        <!-- ################################################     -->
+
+        <div class="item">
+          <div class="img_info">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0337/2734/8781/products/PFL_20192_300x420_crop_center.jpg?v=1582565399"
+              alt="game_img"
+            />
+            <div class="view_item_btn">
+              <a href="#">quick view</a>
+            </div>
+            <!-- ./view_item_btn -->
+            <div class="item_discount">-17%</div>
+            <!-- ./item_discount -->
+            <div class="action_btns">
+              <div class="add_to_card_btn">
+                <span class="icon-shopping-cart"></span>
+              </div>
+              <div class="add_to_wich_list_btn">
+                <span class="icon-heart"></span>
+              </div>
+            </div>
+            <!-- ./action_btns -->
+          </div>
+          <!-- ./img_info -->
+          <div class="item_info">
+            <div class="tags">
+              <a href="#">Featured Product</a>
+              <a href="#">Horor</a>
+              <a href="#">ACTION</a>
+              <a href="#">FPS</a>
+            </div>
+            <!-- ./tags -->
+            <div class="item_title">Gas Station 5</div>
+            <!-- ./item_title -->
+            <div class="item_rate stars5"></div>
+            <!-- ./item_rate -->
+            <div class="item_price">
+              <span class="price price_before">59.00</span>
+              <span class="price price_now">49.00</span>
+            </div>
+            <!-- ./item_price -->
+          </div>
+          <!-- ./item_info -->
+        </div>
+        <!-- ./item -->
+        <!-- ################################################     -->
+
+        <div class="item">
+          <div class="img_info">
+            <img
+              src="https://exotique.com.mt/wp-content/uploads/2019/10/Grand-Theft-Auto-V.jpg"
+              alt="game_img"
+            />
+            <div class="view_item_btn">
+              <a href="#">quick view</a>
+            </div>
+            <!-- ./view_item_btn -->
+            <div class="item_discount">-17%</div>
+            <!-- ./item_discount -->
+            <div class="action_btns">
+              <div class="add_to_card_btn">
+                <span class="icon-shopping-cart"></span>
+              </div>
+              <div class="add_to_wich_list_btn">
+                <span class="icon-heart"></span>
+              </div>
+            </div>
+            <!-- ./action_btns -->
+          </div>
+          <!-- ./img_info -->
+          <div class="item_info">
+            <div class="tags">
+              <a href="#">Featured Product</a>
+              <a href="#">Horor</a>
+              <a href="#">ACTION</a>
+              <a href="#">FPS</a>
+            </div>
+            <!-- ./tags -->
+            <div class="item_title">Gas Station 5</div>
+            <!-- ./item_title -->
+            <div class="item_rate stars5"></div>
+            <!-- ./item_rate -->
+            <div class="item_price">
+              <span class="price price_before">59.00</span>
+              <span class="price price_now">49.00</span>
+            </div>
+            <!-- ./item_price -->
+          </div>
+          <!-- ./item_info -->
+        </div>
+        <!-- ./item -->
+        <!-- ################################################     -->
+      </div>
+      <!-- ./other_games -->
+    </div>
+    <!-- ./popular_games_content -->
+  </div>
+  <!-- ./container -->
+</section>
+<!-- popular_games_section end -->
+
+<!-- ###########################################################-->
+
+<!--  deals section start -->
+<section class="deals_section">
+  <div class="container">
+    <div class="section_title">check out our Hot Deals</div>
+    <!-- Swiper -->
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide play_station_slid_add">
+          <img
+            src="https://site-cdn.givemesport.com/images/20/07/05/9621be202ebd3acab63018ccc98f6ae1/960.jpg"
+            alt="img"
+          />
+
+          <div class="slider_shadow shadow_light"></div>
+          <!-- ./slider_shadow -->
+          <div class="slider_add_info">
+            <a class="confirm" href="#">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Shop Now
+            </a>
+          </div>
+          <!-- ./slider_add_info -->
+        </div>
+        <div class="swiper-slide xbox_slider_add">
+          <img
+            src="https://image.jeuxvideo.com/medias-md/162400/1624002802-8803-card.jpg"
+            alt=""
+          />
+          <a class="confirm" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Shop Now
+          </a>
+          <div class="slider_shadow shadow_light"></div>
+          <!-- ./slider_shadow -->
+          <div class="slider_add_info">
+            <a class="confirm" href="#">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Shop Now
+            </a>
+          </div>
+          <!-- ./slider_add_info -->
+        </div>
+        <div class="swiper-slide cyber_panck_slider_add">
+          <img
+            src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2020/09/cyberpunk-2077-character-customization-options-header.jpg?q=50&fit=crop&w=960&h=500&dpr=1.5"
+            alt=""
+          />
+          <a class="confirm" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Show More
+          </a>
+          <div class="slider_shadow shadow_dark"></div>
+          <!-- ./slider_shadow -->
+          <div class="slider_add_info">
+            <a class="confirm" href="#">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Shop Now
+            </a>
+          </div>
+          <!-- ./slider_add_info -->
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://cdn.akamai.steamstatic.com/steam/apps/1262540/capsule_616x353.jpg?t=1598621991"
+            alt=""
+          />
+
+          <div class="slider_shadow shadow_light"></div>
+          <!-- ./slider_shadow -->
+          <div class="slider_add_info">
+            <a class="confirm" href="#">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Shop Now
+            </a>
+          </div>
+          <!-- ./slider_add_info -->
+        </div>
+        <div class="swiper-slide keyboard_slid_add">
+          <img
+            src="https://cdn.mos.cms.futurecdn.net/yzCUjLmpUSgVYeuE44eHk8-1200-80.jpg"
+            alt=""
+          />
+          <a class="confirm" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Shop Now
+          </a>
+          <div class="slider_shadow shadow_light"></div>
+          <!-- ./slider_shadow -->
+          <div class="slider_add_info">
+            <a class="confirm" href="#">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Shop Now
+            </a>
+          </div>
+          <!-- ./slider_add_info -->
+        </div>
+        <!-- <div class="swiper-slide">Slide 6</div>
                     <div class="swiper-slide">Slide 7</div>
                     <div class="swiper-slide">Slide 8</div>
                     <div class="swiper-slide">Slide 9</div>
                     <div class="swiper-slide">Slide 10</div> -->
-                </div>
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
-                <!-- Add Arrows -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-            </div>
-        </div><!-- K/container -->
-    </section>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+      <!-- Add Arrows -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+  <!-- K/container -->
+</section>
+<!-- deals section end -->
 
+<!-- ###########################################################-->
 
-    <!-- ./gift section -->
-    <section class="gift_section">
-        <div class="container">
-            <div class="section_title">
-                Best Gaming Gift Card Spring Deals
-            </div>
-            <div class="gift_section_content flex-center">
-                <div class="gift_item">
-                    <div class="gift_item_content">
-                        <img src="https://images.g2a.com/newlayout/1024x600/1x1x0/steam-gift-card-10-eur-steam-key-for-eur-currency-only-i10000000258072/5a5ce623ae653a15dc59d173"
-                            alt="img">
-                        <div class="view_item_btn">
-                            <a href="#">learn more</a>
-                        </div><!-- ./view_item_btn -->
-                    </div><!-- ./gift_item_content -->
-                </div><!-- ./git_item -->
+<!-- ./gift section start -->
+<section class="gift_section">
+  <div class="container">
+    <div class="section_title">Best Gaming Gift Card Spring Deals</div>
+    <div class="gift_section_content flex-center">
+      <div class="gift_item">
+        <div class="gift_item_content">
+          <img
+            src="https://images.g2a.com/newlayout/1024x600/1x1x0/steam-gift-card-10-eur-steam-key-for-eur-currency-only-i10000000258072/5a5ce623ae653a15dc59d173"
+            alt="img"
+          />
+          <div class="view_item_btn">
+            <a href="#">learn more</a>
+          </div>
+          <!-- ./view_item_btn -->
+        </div>
+        <!-- ./gift_item_content -->
+      </div>
+      <!-- ./git_item -->
 
-                <div class="gift_item">
-                    <div class="gift_item_content">
-                        <img src="https://www.allkeyshop.com/blog/wp-content/uploads/ps-store-1.jpg" alt="img">
-                        <div class="view_item_btn">
-                            <a href="#">learn more</a>
-                        </div><!-- ./view_item_btn -->
-                    </div><!-- ./gift_item_content -->
-                </div><!-- ./git_item -->
-            </div><!-- ./gift_section_content -->
+      <div class="gift_item">
+        <div class="gift_item_content">
+          <img
+            src="https://www.allkeyshop.com/blog/wp-content/uploads/ps-store-1.jpg"
+            alt="img"
+          />
+          <div class="view_item_btn">
+            <a href="#">learn more</a>
+          </div>
+          <!-- ./view_item_btn -->
+        </div>
+        <!-- ./gift_item_content -->
+      </div>
+      <!-- ./git_item -->
+    </div>
+    <!-- ./gift_section_content -->
+  </div>
+  <!-- ./container -->
+</section>
+<!-- ./gift section endt -->
+<!-- ###########################################################-->
 
-        </div><!-- ./container -->
-    </section>
-
-
-    <!-- ./payment methods section -->
-    <section class="payment_methods_section">
-        <div class="container">
-            <div class="section_title">
-                we accept multiple payment methods !
-            </div>
-            <!-- Swiper -->
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-
-                    <div class="swiper-slide">
-                        <img src="https://lh3.googleusercontent.com/proxy/zhtD0is1iRQgL2l7m5unRnI4eTA-Q9aTFsXmyX4sBweL6OAt-XOEx0aQ6gcvIvjuP6r0hc5qRO0KJUzMUom-wzIxtlaNRhqYQrKxet7tNPm84Oe8BLvZlf87AvX_vnFHqubB"
-                            alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://www.bitcoinhunts.com/wp-content/uploads/2020/07/cryptocurrency-1.jpg" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://smhttp-nex.nexcesscdn.net/803313/static/images/blog/2014-02-20/credit-banner.png"
-                            alt="">
-                    </div>
-                    <!-- <div class="swiper-slide">Slide 4</div>
+<!-- ./payment methods section start -->
+<section class="payment_methods_section">
+  <div class="container">
+    <div class="section_title">we accept multiple payment methods !</div>
+    <!-- Swiper -->
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img
+            src="https://miro.medium.com/max/4000/1*SaXNDepA2B9V5pFiof1Q3A.png"
+            alt=""
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://www.bitcoinhunts.com/wp-content/uploads/2020/07/cryptocurrency-1.jpg"
+            alt=""
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://smhttp-nex.nexcesscdn.net/803313/static/images/blog/2014-02-20/credit-banner.png"
+            alt=""
+          />
+        </div>
+        <!-- <div class="swiper-slide">Slide 4</div>
                     <div class="swiper-slide">Slide 5</div>
                     <div class="swiper-slide">Slide 6</div>
                     <div class="swiper-slide">Slide 7</div>
                     <div class="swiper-slide">Slide 8</div>
                     <div class="swiper-slide">Slide 9</div>
                     <div class="swiper-slide">Slide 10</div> -->
-                </div>
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
-            </div>
-        </div><!-- ./container -->
-    </section>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+  <!-- ./container -->
+</section>
+<!-- ./payment methods section end -->
 
-    <footer id="main_footer">
-        <div class="container">
-            <div class="footer_content">
-                <div class="column_footer">
-                    <img src="../static/images/logo.png" alt="logo_footer">
-                </div>
-                <div class="column_footer">
-                    <div class="footer_title">main_links</div>
-                    <div class="main_links footer_links">
-                        <ul>
-                            <li><a href="#">home</a></li>
-                            <li><a href="#">services</a></li>
-                            <li><a href="#">contact us</a></li>
-                            <li><a href="#">about us</a></li>
-                            <li><a href="#">sing up</a></li>
-                            <li><a href="#">sing in</a></li>
-                            <li><a href="#">your compt</a></li>
-                        </ul>
-                    </div><!-- ./main_links -->
-                </div>
-                <div class="column_footer">
-                    <div class="footer_title">Tags</div>
-                    <div class="tags-links footer_links">
-                        <ul>
-                            <li><a href="#">fps</a></li>
-                            <li><a href="#">hot summer</a></li>
-                            <li><a href="#">shooter</a></li>
-                            <li><a href="#">speed</a></li>
-                            <li><a href="#">horor</a></li>
-                            <li><a href="#">sport</a></li>
-                            <li><a href="#">adventure</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="column_footer">
-                    <div class="footer_title">
-                        follow us on:
-                    </div>
-                    <div class="social_media_footer_links">
-                        <a href="#">
-                            <span class="icon-facebook-square"></span>
-                        </a>
-                        <a href="#"><span class="icon-github-square"></span></a>
-                        <a href="#"><span class="icon-twitter"></span></a>
-                        <a href="#"><span class="icon-pinterest"></span></a>
-                        <a href="#"><span class="icon-instagram"></span></a>
-                    </div>
-                </div>
+<!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
+{% endblock %} {% block js_src %}
 
-            </div><!-- ./footer_content -->
-        </div><!-- ./container -->
-        <div class="footer_of_footer">
-            ©Copyright 2021 by yasser and ammar. All Rights Reserved.
+<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper(".swiper-container", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
 
-        </div><!-- ./footer_of_footer -->
-    </footer>
-
-
-    <!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
-
-
-
-
-
-
-
-    <script src="../static/js/main.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 1,
-            spaceBetween: 30,
-            loop: true,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        });
-    </script>
-
-</body>
-
-</html>
+{% endblock %}

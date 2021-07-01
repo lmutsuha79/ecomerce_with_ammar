@@ -1,0 +1,628 @@
+// ################################################
+.extra_show_section{
+    margin-top: 100px;
+    .container{
+
+    }
+
+    .extra_show_content{
+        height: 70vh;
+
+        .item{
+            width: 100%;
+
+            height: 100%;
+            
+            .item_big{
+                // background-image: url(https://cdn.shopify.com/s/files/1/0337/2734/8781/files/shop31_home_banner1.jpg);
+                background-image: url(https://hb.imgix.net/eff21a2d1510373ac10d1512bd4fa470a5ec4ada.jpg?auto=compress,format&fit=crop&h=353&w=616&s=be5b568aa7a3c6a79b97c381ed623541);
+                width: 100%;
+                
+                height: 100%;
+            }
+            .item_simple{
+                &:nth-child(1){
+                    background-image: url(https://cdn.shopify.com/s/files/1/0337/2734/8781/files/shop30_home_banner3.jpg);
+
+                }
+                &:nth-child(2){
+                    background-image: url(https://www.gannett-cdn.com/presto/2021/05/14/USAT/acee7f67-a20f-426a-a66d-984969049dc1-Galaxy-Global-Assets-Range1-Blog-post-16x9-4K-04-26apr21-FI.jpg);
+
+                }
+            }
+
+
+        }
+
+        @media (max-width:767px){
+            height: 140vh;
+        }
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        @media (max-width:767px) {
+            flex-direction: column;
+            .item{
+            
+    
+                &:nth-child(1){
+                    
+    
+                }
+                &:nth-child(2){
+    
+                    .item_simple{
+                        width: 100%;
+                        height: 50%;
+                        &:nth-child(1){
+                            margin: 20px 0px;
+                            // background-image: url(https://cdn.shopify.com/s/files/1/0337/2734/8781/files/shop30_home_banner3.jpg);
+                        }
+                        &:nth-child(2){
+            
+                            // background-image: url(https://www.gannett-cdn.com/presto/2021/05/14/USAT/acee7f67-a20f-426a-a66d-984969049dc1-Galaxy-Global-Assets-Range1-Blog-post-16x9-4K-04-26apr21-FI.jpg);
+                        }
+            
+                    }
+                }
+              
+                
+            }
+        }
+        @media (min-width:767px) {
+            .item{
+            
+           
+    
+                &:nth-child(1){
+                    width: calc(100% - (100%/3));
+                    padding-right: 20px;
+    
+                }
+                &:nth-child(2){
+                    padding-bottom: 20px;
+                    width: calc(100%/3);
+    
+                    .item_simple{
+                        width: 100%;
+                        height: 50%;
+                        &:nth-child(1){
+                            margin-bottom: 20px;
+                            // background-image: url(https://cdn.shopify.com/s/files/1/0337/2734/8781/files/shop30_home_banner3.jpg);
+                            background-image: url(https://cdn.wccftech.com/wp-content/uploads/2020/06/PS5-Reveal.jpg);
+                        }
+                        &:nth-child(2){
+            
+                            background-image: url(https://www.gannett-cdn.com/presto/2021/05/14/USAT/acee7f67-a20f-426a-a66d-984969049dc1-Galaxy-Global-Assets-Range1-Blog-post-16x9-4K-04-26apr21-FI.jpg);
+                        }
+            
+                    }
+                }
+              
+                
+            }
+        }
+        
+        .background_class{
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            overflow: hidden;
+
+            position: relative;
+            &::before{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                // z-index: 99;
+                opacity: 0.2;
+                transition: var(--slow-transition);
+                background: rgb(255,255,255);
+                background: linear-gradient(152deg, rgba(255,255,255,0) 0%, rgba(12,45,72,1) 85%);
+            }
+            &:hover{
+                &::before{
+                    opacity: 0.8;
+                }
+            }
+            // for shop_now_link right to not over flow from right
+
+
+            &:hover .shop_now_link{
+                opacity: 1;
+                visibility: visible;
+                right: 20px;
+
+
+            }
+
+        }
+        .shop_now_link{
+            // transition: var(--slow-transition) ease;
+            opacity: 0;
+            visibility: hidden;
+            right: -40px;
+            // width: max-content;
+            // height: max-content;
+            // background-color: var(--Midnight-blue);
+            // color: var(--baby-color);
+            // font-weight: 600;
+            position: absolute;
+            bottom: 20px;
+            border-radius: 5px;
+            
+        }
+        .item_big,.item_simple{
+            position: relative;
+        }
+        .item_big{
+            .shop_now_link{
+                padding: 20px 40px;
+            }
+        }
+        .item_simple{
+            .shop_now_link{
+                padding: 10px 20px;
+            }
+        }
+
+
+
+     
+
+
+
+    }
+    // ##########################################
+// 7/24  free_shiping  mony_back 
+.features_extra_show{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    @media(max-width:768px){
+        display: block;
+        margin-top: 70px;
+
+
+    }
+    .item{
+        line-height: 1.2rem;
+        width: calc(100%/3);
+       
+        text-align: center;
+       // center with flext class .flex-center
+       flex-direction: column-reverse;
+
+
+       &:hover{
+           .icon{
+               transform: translateY(-5px);
+           }
+       }
+        .text{
+
+        }
+        .icon{
+
+
+            transition: var(--slow-transition) ease;
+
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+            overflow: hidden;
+            svg{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        
+
+        &:nth-child(2){
+
+        }
+        &:nth-child(1){
+            border-right: 1px solid var(--gray-color);
+
+
+        }
+        &:nth-child(3){
+            border-left: 1px solid var(--gray-color);
+
+        }
+        span{
+            display: block;
+         
+        }
+        .title{
+            color: white;
+            font-weight: 600;
+            
+
+        }
+        .desc{
+            font-size: 0.8rem;
+            color: var(--gray-color);
+
+        }
+
+        @media(max-width:768px){
+            width: 100%;
+            text-align: center;
+            padding: 10px 0px;
+
+            &:nth-child(2){
+                padding: 10px 0px;
+                border-top: 1px solid var(--gray-color);
+                border-bottom: 1px solid var(--gray-color);
+                border-right: 0px;
+                border-left: 0px;
+            }
+            &:nth-child(1),&:nth-child(3){
+                border: 0px;
+            }            
+        }
+    }
+
+}
+}
+
+
+// offers_section
+
+.offers_section{
+    .container{
+
+    }
+    .section_title{
+       
+    }
+
+    .offers_content{
+        // flex_center;
+        flex-wrap: wrap;
+
+        .item{
+            padding: 20px 10px;
+            width: 250px;
+            height: auto;
+
+        }
+     
+
+
+    }
+//  other style is in genral rules 
+//  image_info 
+//  item_info
+
+
+
+}
+// ###########################################################
+
+
+
+// add_section
+// #############################################################
+.add_section{
+    hr{
+        border: 1px solid var(--baby-color);
+    }
+
+    .container{
+        flex-wrap: wrap;
+
+    }
+    .add_info{
+        text-align: center;
+        width: 600px;
+        h2{
+            color: var(--baby-color);
+
+        }
+        p{
+            color: var(--over-blue);
+        }
+        .shop_now_add_info_btn{
+            padding: 10px;
+            border: 1px solid var(--blue-color);
+            margin-top: 10px;
+        }
+    }
+    .add_img{
+
+    }
+}
+// ##################################################
+
+
+
+// popular_games_section
+// #############################"#######################
+
+.popular_games_section{
+
+    .container{
+
+    }
+    .section_title{}
+
+    .popular_games_content{
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+    .slider{
+        width: 25%;
+        padding: 20px 10px;
+        text-align: center;
+        border: 1px solid var(--Midnight-blue);
+        border-radius: 5px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+        overflow: hidden;
+        .item{
+            // position: absolute;
+            width: 100%;
+            
+        }
+       
+    }
+
+    .slider_content{
+        height: 430px;        // for position absolute problems
+
+        width: 300%;
+        display: flex;
+        z-index: 99;
+        left: -0%;
+        position: absolute;
+        transition: var(--slow-transition) ease;
+
+    }
+    .slider_controller{
+        width: 100%;
+        // height: 20px;
+        margin-top: 470px;
+        span{
+            background-color: var(--Midnight-blue);
+            margin: 0px 5px;
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: 0.1s ease;
+            &:hover{
+                border: 2px solid var(--baby-color)
+
+                // background-color: var(--blue-color);
+            }
+        }
+        .bolet_active{
+            border: 2px solid var(--baby-color)
+        }
+    }
+
+
+
+
+
+
+    .other_games{
+        width: 75%;
+        flex-wrap: wrap;
+        .item{
+            padding: 0px 10px;
+            margin: 40px 0px;
+            width: 200px;
+            height: 350px;
+            text-align: center;
+
+        }
+    }
+    @media (max-width:768px){
+        .slider,.other_games{
+            width: 100%;
+        }
+      .slider{
+          .item{
+              width: 100%;
+          }
+      }
+
+    }
+    @media (max-width:480px){
+        .slider{
+            .item{
+                width: 100%;
+            }
+        }
+    }
+}
+// #############################"#######################
+
+
+
+  :root{
+    --swiper-theme-color: var(--Midnight-blue);
+  }
+  //{################################################""""
+
+  // deal section
+  .deals_section{
+    height: 450px;
+    width: 100%;
+ 
+    
+      .container{
+          height: 100%;
+      }
+      .confirm{
+        padding: 20px;
+        position: absolute;
+        transition: 0.2s ease;
+        transition-delay: 0.2s;
+    }
+    // using slider js
+    .swiper-container{
+        width: 70%;
+        @media(max-width:776px){
+            width: 100%;
+        }
+    }
+
+      .swiper-slide{
+          img{
+              width: 100%;
+              height: 100%;
+          }
+          .slid_item_info{
+              position: absolute;
+          }
+          .key_bord_slid_info{
+              bottom: 50px;
+              width: 85%;
+            
+              .confirm{
+                  margin-top: 20px;
+
+              }
+          }
+          &:hover .slider_shadow{
+              bottom: 0%;
+          }
+          &:hover .confirm{
+              opacity: 1;
+              visibility: visible;
+          }
+      }
+      .play_station_slid_add{
+        .confirm{
+            bottom: 20px;
+            left: 20px;
+            padding: 20px;
+            
+        }
+      }
+      .cyber_panck_slider_add{
+          .confirm{
+              bottom: 40px;
+              padding: 15px;
+          }
+      }
+      .xbox_slider_add{
+          .confirm{
+            top: 50%;
+            left: 10%;
+          }
+      }
+      .keyboard_slid_add{
+        .confirm{
+            bottom: 0px;
+            right: -30px;
+          }
+      }
+      .confirm{
+          opacity: 0;
+          visibility: hidden;
+          z-index: 99;
+      }
+      .slider_shadow{
+        width: 100%;
+        background-color: black;
+        position: absolute;
+        bottom: -70%;
+        left: 0;
+        height: 0%;
+        transition: var(--slow-transition) ease;
+      }
+      .shadow_light{
+        box-shadow: 0px 40px 175px 64px var(--baby-color);
+
+
+      }
+      .shadow_dark{
+        box-shadow: 0px 40px 175px 170px var(--dark-blue);
+
+      }
+    
+      
+  }
+//   ##################################################################
+
+// gift section 
+
+.gift_section{
+    margin-top: 100px;
+    .container{
+   
+    }
+    .gift_section_content{
+        // flex center class;
+        flex-wrap: wrap;
+    }
+    .gift_item{
+        width: 45%;
+        height: 400px;
+        padding: 10px;
+
+        @media(max-width: 576px){
+            width: 280px;
+            height: 400px;
+        }
+
+    }
+    .gift_item_content{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+
+        
+
+        img{
+            width: 100%;
+            height: 100%;
+        }
+
+        &:hover .view_item_btn{
+            opacity: 1;
+            visibility: visible;
+            height: 50px;
+        }
+    }
+}
+
+// ############################################################
+
+// patment methods section
+.payment_methods_section{
+    height: 200px;
+    .container{
+        height: 100%;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        filter: grayscale(100%);
+        cursor: pointer;
+        transition: var(--slow-transition) ease;
+        &:hover{
+            filter: grayscale(0%);
+
+        }
+    }
+    .swiper-container{
+        border-radius: 7px;
+
+    }
+}
