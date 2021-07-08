@@ -1,0 +1,99 @@
+{% extends 'base.html' %} {%block title%}trend page{%endblock%} {% block
+page_style_css %}
+<!-- css with python code-->
+
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{ url_for('static',filename='style/games_page_style.css') }}"
+/>
+
+{% endblock %}
+ {% block content %}
+<!-- content start-->
+
+<div class="container flex-center">
+  <section id="games_show">
+    <div class="games_show_content flex-center">
+      <!-- ####### item ########### -->
+        {% for element in data %}
+            <div class="item">
+                <div class="img_info">
+                  {% for img in element['keyImages']%}
+                      {% if img['type'] == 'OfferImageTall' %}
+                          <img
+                            src="{{ img['url'] }}"
+                            alt="game_img"/>
+                      {% endif  %}
+                  {% endfor %}
+
+                  <div class="view_item_btn">
+                    <a href="#">quick view</a>
+                  </div>
+                  <!-- ./view_item_btn -->
+                      {% if element['price']['totalPrice']['discount'] != 0 %}
+                          <div class="item_discount">-{{ element['price']['totalPrice']['discount']| int*100 //element['price']['totalPrice']['originalPrice']| int}}%</div>
+                      {% endif %}
+
+                  <!-- ./item_discount -->
+                  <div class="action_btns">
+                    <div class="add_to_card_btn">
+                      <span class="icon-shopping-cart"></span>
+                    </div>
+                    <div class="add_to_wich_list_btn">
+                      <span class="icon-heart"></span>
+                    </div>
+                  </div>
+                  <!-- ./action_btns -->
+                </div>
+                <!-- ./img_info -->
+                <div class="item_info">
+                  <div class="tags">
+                    <a>{{ element['seller']['name'] }}</a>
+                  </div>
+                  <!-- ./tags -->
+                  <div class="item_title">{{ element['title'] }}</div>
+                  <!-- ./item_title -->
+                  <div class="item_rate stars5"></div>
+                  <!-- ./item_rate -->
+                  <div class="item_price">
+                      {% if element['price']['totalPrice']['discount'] == 0 %}
+                          {% if element['price']['totalPrice']['discountPrice'] == 0%}
+                          <span class="price price_now">Free</span>
+                          {% else  %}
+                            <span class="price price_now">{{ element['price']['totalPrice']['fmtPrice']['discountPrice'] }}</span>
+                          {% endif  %}
+                      {% else %}
+                          <span class="price price_before">{{ element['price']['totalPrice']['fmtPrice']['originalPrice'] }}</span>
+                          <span class="price price_now">{{ element['price']['totalPrice']['fmtPrice']['discountPrice'] }}</span>
+                      {% endif %}
+                  </div>
+                  <!-- ./item_price -->
+                </div>
+                <!-- ./item_info -->
+          </div>
+        {% endfor %}
+      <!-- ####### item ########### -->
+    </div><!-- ./games_show_content -->
+  </section><!-- games_show -->
+</div><!-- ./container -->
+
+
+<!-- content end-->
+{% endblock %}
+
+
+ {% block js_src %}
+<!-- js code-->
+  <script>
+    let sort_option_title = document.querySelector('.sort_option_title');
+    sort_option_title.onclick = function(){
+      document.querySelector('.hidden_sort_option_list').classList.toggle('sort_list_open');
+      document.querySelector('.icon-angle-double-up').classList.toggle('sort_arrow_down');
+    }
+
+  </script>
+
+
+
+{% endblock %}
