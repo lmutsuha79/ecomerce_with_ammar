@@ -62,6 +62,7 @@
                         <ul>
                             <li><a href="/">Home</a></li>
                             <li><a href="/games">Games</a></li>
+                            <li><a href="/trend">Trend</a></li>
                             <li><a href="/one_game_page">game_page-ex</a></li>
 
                         </ul>
@@ -69,7 +70,12 @@
                 </div><!-- ./nav_links -->
                 <div class="user_links">
                     <ul>
-                        <li><a href="{{ url_for('login_page') }}"><span class="icon-user"></span></a></li>
+                        {% if current_user.is_authenticated %}
+                        <li><a href="{{ url_for('profile_page') }}"><span class="icon-user"></span></a></li>
+                        <li><a href="{{ url_for('logout_page') }}"><span class=""></span> SignOut</a></li>
+                        {% else %}
+                            <li><a href="{{ url_for('login_page') }}"><span class="icon-user"></span></a></li>
+                        {% endif%}
                         <li><a href="#"><span class="icon-search"></span></a></li>
                         <li><a href="#"><span class="icon-heart"></span></a></li>
                         <li><a href="#"><span class="icon-shopping-cart"></span></a></li>

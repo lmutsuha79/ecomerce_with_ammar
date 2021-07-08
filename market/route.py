@@ -113,10 +113,10 @@ def games():
     return render_template('games.html')
 
 
-
 @app.route('/one_game_page')
 def one_game_page():
     return render_template('one_game_page.html')
+
 
 @app.route('/trend')
 def trend_page():
