@@ -77,6 +77,9 @@
 .icon-user:before {
   content: "\f007";
 }
+.icon-sign-out:before {
+  content: "\f08b";
+}
 
 .icon-plus-circle:before {
   content: "\f055";
@@ -691,7 +694,7 @@ section {
 }
 
 .item_info .item_price .price::before {
-  content: '$';
+  /*content: '$';*/
   color: inherit;
   font-size: inherit;
   font-weight: inherit;

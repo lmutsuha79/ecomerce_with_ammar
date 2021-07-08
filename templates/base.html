@@ -60,14 +60,21 @@
                         <ul>
                             <li><a href="#">Home</a></li>
                             <li><a href="#">Top ever</a></li>
-                            <li><a href="#">Trend</a></li>
+                            <li><a href="{{ url_for('trend_page') }}">Trend</a></li>
 
                         </ul>
                     </nav>
                 </div><!-- ./nav_links -->
                 <div class="user_links">
                     <ul>
-                        <li><a href="{{ url_for('login_page') }}"><span class="icon-user"></span></a></li>
+                        <li>
+                            {% if current_user.is_authenticated %}
+                                <a href="{{ url_for('profile_page') }}"><span class="icon-user"></span></a>
+                                <a href="{{ url_for('logout_page') }}"><span class="icon-sign-out"></span></a>
+                            {% else %}
+                                <a href="{{ url_for('login_page') }}"><span class="icon-user"></span></a>
+                            {% endif%}
+                        </li>
                         <li><a href="#"><span class="icon-search"></span></a></li>
                         <li><a href="#"><span class="icon-heart"></span></a></li>
                         <li><a href="#"><span class="icon-shopping-cart"></span></a></li>
