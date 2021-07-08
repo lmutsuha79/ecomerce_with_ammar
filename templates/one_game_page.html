@@ -1,0 +1,194 @@
+
+{% extends 'base.html' %}
+
+{%block title%}the one game page{%endblock%}
+
+{% block page_style_css %}
+<!-- css with python code-->
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style/one_page_game.css') }}">
+
+{% endblock %}
+
+
+
+{% block content %} 
+<!-- content start-->
+
+<div class="back_to_brows">
+    <div class="container">
+        <span class="icon-chevron-down"></span>    
+        <a href="/games">back to brows</a>
+    </div><!-- ./container -->
+    
+</div><!-- ./back_to_brows -->
+<hr>
+
+<div class="game_container">
+    <div class="container flex-center">
+        <div class="game_info">
+            <div class="slide_img_show">
+                <!-- Swiper -->
+        <!-- Swiper -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="https://www.techadvisor.com/cmsdata/features/3791050/gtav-review_thumb800.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="https://i.ytimg.com/vi/uQIYXqmf3rU/maxresdefault.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="https://www.somagnews.com/wp-content/uploads/2020/02/e6-5-e1582050779268.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="https://cdn.ndtv.com/tech/gadgets/gta-5-characters.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="https://staticg.sportskeeda.com/editor/2020/06/7e4d6-15934007906029-800.jpg" alt=""></div>
+                <!-- <div class="swiper-slide">Slide 6</div>
+                <div class="swiper-slide">Slide 7</div>
+                <div class="swiper-slide">Slide 8</div>
+                <div class="swiper-slide">Slide 9</div>
+                <div class="swiper-slide">Slide 10</div> -->
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div><!-- ./swiper_container -->
+            </div><!-- ./slide_img_show -->
+            <h2 class="game_title">Grand Theft Auto</h2>
+
+            <div class="game_description">
+                <p class="short_desc">Grand Theft Auto V is an action-adventure game played from either a third-person or first-person perspective. Players complete missions—linear scenarios with set objectives—to progress through the story. Outside of the missions, players may freely roam the open world.</p>
+            </div><!-- ./game_description -->
+            <div class="system_requirements">
+                <h3>system_requirements:</h3>
+                <div class="system_requirements_content">
+                    <div class="item">
+                        <span class="title">Memory</span>
+                        <span class="value">+ 6gb</span>
+                    </div><!-- ./item  -->
+                    <div class="item">
+                        <span class="title">Platform</span>
+                        <span class="value">Windows</span>
+                    </div><!-- ./item  -->
+
+                    <div class="item">
+                        <span class="title">GPU</span>
+                        <span class="value">NVIDIA 9800 GT 1GB / AMD HD 4870 1GB (DX 10, 10.1, 11)
+                        </span>
+                    </div><!-- ./item  -->
+
+                    <div class="item">
+                        <span class="title">CPU</span>
+                        <span class="value">
+                            Intel Core 2 Quad CPU Q6600 @ 2.40GHz (4 CPUs) / AMD Phenom 9850 Quad-Core Processor (4 CPUs) @ 2.5GHz
+                        </span>
+                    </div><!-- ./item  -->
+
+                    <div class="item">
+                        <span class="title">Sspace</span>
+                        <span class="value">+ 90gb</span>
+                    </div><!-- ./item  -->
+
+                    <div class="item">
+                        <span class="title">Sound Card</span>
+                        <span class="value">100% DirectX 10 compatible
+                        </span>
+                    </div><!-- ./item  -->
+                    
+                </div><!--./system_requirements_content -->
+            </div><!-- ./system_requirements -->
+
+            <div class="more_info">
+                <section class="more_info_section">
+                    <div class="title">
+                        Grand Theft Auto V: Premium Edition
+                    </div><!-- ./title -->
+                    <div class="info_content">
+                        The Grand Theft Auto V: Premium Edition includes the complete Grand Theft Auto V story experience, free access to the ever evolving Grand Theft Auto Online and all existing gameplay upgrades and content including The Doomsday Heist, Gunrunning, Smuggler’s Run, Bikers and much more. You’ll also get the Criminal Enterprise Starter Pack, the fastest way to jumpstart your criminal empire in Grand Theft Auto Online.
+                    </div><!-- ./info_contet -->
+                </section><!-- ./more_info_section -->
+
+                <!-- ############ -->
+                <section class="more_info_section">
+                    <div class="title">
+                        Grand Theft Auto V: Life Style
+                    </div><!-- ./title -->
+                    <div class="info_content">
+                        The Grand Theft Auto V: Life style includes the complete Grand Theft Auto V story experience, free access to the ever evolving Grand Theft Auto Online and all existing gameplay upgrades and content including The Doomsday Heist, Gunrunning, Smuggler’s Run, Bikers and much more. You’ll also get the Criminal Enterprise Starter Pack, the fastest way to jumpstart your criminal empire in Grand Theft Auto Online.
+                            <img src="https://img.gta5-mods.com/q95/images/playstation-3-timecyc/0586ca-GTA5%202016-10-13%2020-41-30-940.jpg" alt="">
+                        The Grand Theft Auto V: Life style includes the complete Grand Theft Auto V story experience, free access to the ever evolving Grand Theft Auto Online and all existing gameplay upgrades and content including The Doomsday Heist, Gunrunning, Smuggler’s Run, Bikers and much more. You’ll also get the Criminal Enterprise Starter Pack, the fastest way to jumpstart your criminal empire in Grand Theft Auto Online.
+
+                    </div><!-- ./info_contet -->
+                </section><!-- ./more_info_section -->
+
+                <!-- ############## -->
+
+                <section class="more_info_section">
+                    <div class="title">
+                        Grand Theft Auto V: Premium Edition
+                    </div><!-- ./title -->
+                    <div class="info_content">
+                        The Grand Theft Auto V: Premium Edition includes the complete Grand Theft Auto V story experience, free access to the ever evolving Grand Theft Auto Online and all existing gameplay upgrades and content including The Doomsday Heist, Gunrunning, Smuggler’s Run, Bikers and much more. You’ll also get the Criminal Enterprise Starter Pack, the fastest way to jumpstart your criminal empire in Grand Theft Auto Online.
+                    </div><!-- ./info_contet -->
+                </section><!-- ./more_info_section -->
+            </div><!-- ./more_info -->
+        </div><!-- ./game_info -->
+
+        <div class="game_shop">
+            <div class="game_shop_img">
+                <img src="https://upload.wikimedia.org/wikipedia/en/a/a5/Grand_Theft_Auto_V.png" alt="">
+            </div><!-- ./game_shop_img -->
+            <div class="shop_game_tags flex-center">
+                <a href="#">rase</a><a href="#">action</a><a href="#">police</a>
+            </div><!-- ./game_shop_img -->
+            <div class="game_shop_price">
+                <span class="dicount">100%</span>
+                <span class="old_price">55$</span>
+                <span class="current_price">free</span>
+            </div><!-- ./game_shop_price -->
+            <div class="get_game_btn flex-center">
+                <span class="icon-shopping-cart"></span>
+                get
+            </div><!-- ./get_game_btn -->
+
+            <div class="add_to_wich_list_btn flex-center">
+                <span class="icon-plus-circle"></span>
+
+                add to wich list
+            </div><!-- ./add_to_wich_list_btn -->
+
+           
+        </div><!-- ./game_shop -->
+
+    </div><!-- ./container -->
+</div><!-- ./game_container -->
+
+
+
+<!-- content end-->
+{% endblock %}
+
+
+
+{% block js_src %} 
+<!-- js code-->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+</script>
+
+{% endblock %}

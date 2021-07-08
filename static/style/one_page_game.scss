@@ -1,0 +1,291 @@
+// remove this when complete the project
+
+:root{
+    --baby-color : #B1D4E0;
+    --blue-color : #2E8BC0;
+    --over-blue : #299fe3;
+    --gray-color:#839199;
+    --dark-blue : #0C2D48;
+    --baby-gray:#b1d4e07d;
+    // --Midnight-blue : #145DA0;
+    
+        --Midnight-blue : #134675;
+// 
+
+    --slow-transition : 0.3s;
+    --nav_height : 100px;
+
+    
+}
+// end variables
+
+hr{
+    border: 1px solid var(--baby-color);
+}
+
+.back_to_brows{
+
+    a,span{
+        color: var(--baby-color);
+        transition: 0.2s ease;
+    }
+    a{
+        padding: 5px;
+        padding-left: 20px;
+    }
+    span{
+        position: absolute;
+        transform: rotate(90deg);
+    }
+
+    &:hover{
+        a,span{
+            color: var(--blue-color);
+        }
+    }
+}
+
+
+// slider
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-button-next,.swiper-button-prev{
+    color: var(--baby-color);
+    -webkit-transition: 0.1s ease;
+    transition: 0.1s ease;
+    background: var(--dark-blue);
+    padding: -2px;
+    width: 50px;
+    height: 50px;
+    border-radius: 3px;
+    transition: 0.2s ease;
+
+    &::after{
+        transform: scale(0.7);
+    }
+    &:hover{
+        background-color: var(--Midnight-blue);
+    }
+  }
+  // ############################
+.game_container{
+    .container{
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: flex-start;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+    }
+    .game_info{
+       width: 65%;
+
+       
+
+       .slide_img_show{
+           height: 400px;
+            margin-bottom: 20px;
+        }
+       .game_title{
+           color: var(--baby-color);
+           font-weight: 600;
+       }
+       .game_description{
+           p{
+               color: var(--baby-gray);
+           }
+       }
+
+       .system_requirements{
+           border: 1px solid var(--baby-color);
+           margin: 20px 0px;
+           padding: 10px;
+
+           h3{
+               color: var(--baby-color);
+               text-decoration: underline;
+               margin-bottom: 10px;
+           }
+           .system_requirements_content{
+               display: flex;
+                   flex-direction: column;
+                   gap: 10px;
+               .item{
+                   
+                   
+               }
+               .item .title{
+                   color: var(--baby-gray);
+                   &::after{
+                    content: ':';
+                }
+
+               }
+               .item .value{
+                color: var(--baby-color);
+
+
+                  
+               }
+           }
+       }
+       .more_info{
+           .more_info_section{
+               margin-bottom: 20px;
+               margin-top: 0px;// to remove style of section in main.css
+           }
+           .title{
+               color: var(--baby-color);
+               font-weight: 600;
+               margin-bottom: 10px;
+               text-decoration: underline;
+               &::after{
+                   content: ":";
+               }
+           }
+           .info_content{
+                color: var(--baby-gray);
+                img{
+                    padding: 10px;
+                    margin: 10px 0px;
+                    border-radius: 3px;
+                }
+           }
+       }
+    }
+
+
+
+
+
+
+    .game_shop{
+        width: 30%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        .game_shop_img{
+
+        }
+        .shop_game_tags{
+            gap: 10px;
+            flex-wrap: wrap;
+            a{
+                color: var(--baby-color);
+                background-color: var(--Midnight-blue);
+                padding: 3px 5px;
+                border-radius: 3px;
+                transition: 0.2s ease;
+                &:hover{
+                    background-color: var(--over-blue);
+                }
+                
+            }
+        }
+        .game_shop_price{
+            .dicount{
+                color: var(--baby-color);
+                background-color: var(--blue-color);
+                padding: 3px 8px;
+                border-radius: 3px;
+                &::before{
+                    content: '-';
+                }
+
+            }
+            .old_price{
+                text-decoration: line-through;
+                color: var(--gray-color);
+
+            }
+            .current_price{
+                color: var(--baby-color);
+                font-weight: 600;
+            }
+
+        }
+        .get_game_btn,.add_to_wich_list_btn{
+            font-weight: 600;
+            padding: 10px;
+            cursor: pointer;
+            transition: var(--slow-transition) ease;
+            border-radius: 3px;
+            gap: 10px;
+
+            
+
+        }
+        .get_game_btn{
+            background-color: var(--blue-color);
+            color: var(--baby-color);
+            &:hover{
+                background-color: var(--over-blue);
+                color: white;
+            }
+
+
+
+        }
+        .add_to_wich_list_btn{
+            border: 2px solid var(--blue-color);
+            color: var(--baby-color);
+            &:hover{
+                border-color: var(--over-blue);
+                
+                color: white;
+            }
+
+        }
+
+    }
+
+
+}
+
+@media (max-width:768px) {
+    .game_container .game_info{
+        width: 100%;
+        order: 2;
+
+        
+
+    }
+    .game_container .game_shop{
+        width: 100%;
+        .game_shop_img{
+            margin: 0 auto;
+            width: 220px;
+            height: 280px;
+        }
+
+    }
+    
+}

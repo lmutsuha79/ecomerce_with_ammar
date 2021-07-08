@@ -111,3 +111,9 @@ def page_not_found(e):
 @app.route('/games')
 def games():
     return render_template('games.html')
+
+
+
+@app.route('/one_game_page')
+def one_game_page():
+    return render_template('one_game_page.html')

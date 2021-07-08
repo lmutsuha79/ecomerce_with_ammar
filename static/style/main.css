@@ -162,6 +162,7 @@ section {
 }
 
 #main_header {
+  overflow-y: hidden;
   z-index: 999;
   height: 70px;
   width: 100%;
